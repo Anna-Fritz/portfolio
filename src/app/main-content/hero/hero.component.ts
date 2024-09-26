@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from '../../shared/header/header.component';
 
 @Component({
-  selector: 'app-landing-page',
+  selector: 'app-hero',
   standalone: true,
   imports: [HeaderComponent],
-  templateUrl: './landing-page.component.html',
-  styleUrl: './landing-page.component.scss'
+  templateUrl: './hero.component.html',
+  styleUrl: './hero.component.scss'
 })
-export class LandingPageComponent {
+export class HeroComponent {
 
 }
