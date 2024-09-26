@@ -4,6 +4,7 @@ $hoverGreen: #2F5B53;
 $darkGreen: #2B3A37;
 $validationRed: #EC7B7BCC;
 $blurredWhite: #FFFFFFCC;
+$lightGray: #D9D9D9;
 $bgColorGradient: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);
 
 @mixin dFlex($jc:center, $ai:center, $g:0) {
@@ -17,6 +18,17 @@ body {
     margin: 0;
     background-color: $bgColor;
     font-family: 'Fira Code';
+}
+
+.btn {
+    @include dFlex();
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 12px 24px;
+    border: solid 1px white;
+    border-radius: 24px;
+    font-family: 'Karla';
 }
 
 
