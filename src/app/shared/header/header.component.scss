@@ -1,0 +1,74 @@
+@import './../../../styles.scss';
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 64px;
+    >nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        >a {
+            position: relative;
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            &:hover .hover-dot {
+                visibility: visible;
+            }
+        }
+        .language-toggle {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+            border: solid 1px $lightGreen;
+            border-radius: 20px;
+            padding: 5px 12px;
+            color: $hoverGreen;
+            cursor: pointer;
+            &:hover {
+                border: solid 1px white;
+                color: $lightGreen;
+            }
+        }
+    }
+}
+
+.hover-dot {
+    visibility: hidden;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    height: 9px;
+    width: 9px;
+    background-color: $lightGreen;
+    border-radius: 5px;
+}
+
+.toggle-element {
+    position: absolute;
+    // right: -1px;
+    z-index: 1;
+    background-color: $lightGreen;
+    height: 105%;
+    width: 55%;
+    border-radius: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+}
+
+.right {
+    right: -1px;
+}
+
+.left {
+    left: -1px;
+}
