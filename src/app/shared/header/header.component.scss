@@ -3,7 +3,7 @@
 header {
     position: absolute;
     @include dFlex($jc: space-between);
-    padding: 32px 64px;
+    padding: 80px 104px;
     >nav{
         @include dFlex($jc: space-between, $g: 20px);
         >a {

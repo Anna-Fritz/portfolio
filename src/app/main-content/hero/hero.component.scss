@@ -25,6 +25,44 @@ section {
             width: 100%;
         }
     }
+    .vertical-elements {
+        position: absolute;
+        bottom: 0;
+        @include dFlex($jc:space-between,$ai:flex-end);
+        width: 100%;
+        padding: 0 24px 0 104px;
+        box-sizing: border-box;
+        .left-vertical {
+            @include dFlex($g: 20px);
+            flex-direction: column;
+            .arrow {
+                padding: 12px 10px;
+                border: solid 1px $lightGreen;
+                border-radius: 20px;
+            }
+            .left-line {
+                width: 1px;
+                height: 240px;
+                background-color: $lightGreen;
+            }    
+        }
+        .right-vertical {
+            @include dFlex($g: 20px);
+            flex-direction: column;
+            >a {
+                text-decoration: none;
+                color: white;
+                font-size: 16px;
+                transform: rotate(-90deg);
+                margin-bottom: 80px;
+            }
+            .right-line {
+                width: 1px;
+                height: 186px;
+                background-color: white;
+            }    
+        }
+    }
 }
 
 .header {
@@ -33,3 +71,5 @@ section {
     left: 0;
     right: 0;
 }
+
+

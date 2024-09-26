@@ -10,4 +10,6 @@ import { HeaderComponent } from '../../shared/header/header.component';
 })
 export class HeroComponent {
 
+  mail = 'anna.fritz@email.com';
+
 }
