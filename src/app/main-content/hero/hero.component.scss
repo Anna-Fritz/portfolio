@@ -41,6 +41,10 @@ section {
                 padding: 12px 10px;
                 border: solid 1px $lightGreen;
                 border-radius: 20px;
+                >img {
+                    animation: moveArrow 0.7s alternate-reverse infinite;
+                }
+
             }
             .left-line {
                 width: 1px;
@@ -68,6 +72,16 @@ section {
     }
 }
 
+@keyframes moveArrow {
+    0% {
+      transform: translateY(-40%);
+    }  
+    100% {
+      transform: translateY(70%);
+    }  
+}
+
+
 .header {
     position: absolute;
     top: 0;
@@ -84,7 +98,6 @@ section {
     }  
 }
 
-
 .banner {
     position: absolute;
     z-index: 6;
@@ -93,7 +106,7 @@ section {
     padding: 17px;
     background-color: #FFFFFF1F;
     transform: rotate(-3deg);
-    backdrop-filter: blur(5.3px);
+    backdrop-filter: blur(3.5px);
     @include dFlex();
     overflow: hidden;
     .moving-text {
@@ -102,7 +115,7 @@ section {
         font-size: 32px;
         font-family: 'Karla';
         white-space: nowrap;
-        animation: moveText 10s linear infinite; // Animation bleibt gleich
+        animation: moveText 10s linear infinite;
     }
 }
 
