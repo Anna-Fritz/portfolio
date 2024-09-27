@@ -14,6 +14,17 @@ $bgColorGradient: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);
     gap: $g;
 }
 
+@mixin hoverDot($b:-15px, $l:45%) {
+    visibility: hidden;
+    position: absolute;
+    bottom: $b;
+    left: $l;
+    height: 7px;
+    width: 7px;
+    background-color: $lightGreen;
+    border-radius: 5px;
+}
+
 body {
     margin: 0;
     background-color: $bgColor;
@@ -29,6 +40,14 @@ body {
     border: solid 1px white;
     border-radius: 24px;
     font-family: 'Karla';
+    cursor: pointer;
+}
+
+.dot {
+    height: 7px;
+    width: 7px;
+    background-color: $lightGreen;
+    border-radius: 5px;
 }
 
 

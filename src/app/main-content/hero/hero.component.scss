@@ -9,6 +9,7 @@ section {
         @include dFlex();
         flex-direction: column;
         font-family: 'Karla';
+        z-index: 5;
         >span {
             color: $lightGray;
         }
@@ -27,11 +28,12 @@ section {
     }
     .vertical-elements {
         position: absolute;
-        bottom: 0;
+        bottom: -17px;
         @include dFlex($jc:space-between,$ai:flex-end);
         width: 100%;
         padding: 0 24px 0 104px;
         box-sizing: border-box;
+        z-index: 4;
         .left-vertical {
             @include dFlex($g: 20px);
             flex-direction: column;
@@ -52,9 +54,10 @@ section {
             >a {
                 text-decoration: none;
                 color: white;
-                font-size: 16px;
+                font-size: 18px;
                 transform: rotate(-90deg);
                 margin-bottom: 80px;
+                font-family: 'Karla';
             }
             .right-line {
                 width: 1px;
@@ -70,6 +73,37 @@ section {
     top: 0;
     left: 0;
     right: 0;
+}
+
+@keyframes moveText {
+    0% {
+      transform: translate(60%);
+    }  
+    100% {
+      transform: translate(-41%);
+    }  
+}
+
+
+.banner {
+    position: absolute;
+    z-index: 6;
+    bottom: 19px;
+    width: 104%;
+    padding: 17px;
+    background-color: #FFFFFF1F;
+    transform: rotate(-3deg);
+    backdrop-filter: blur(5.3px);
+    @include dFlex();
+    overflow: hidden;
+    .moving-text {
+        @include dFlex($jc: space-between, $g: 48px);
+        color: $lightGreen;
+        font-size: 32px;
+        font-family: 'Karla';
+        white-space: nowrap;
+        animation: moveText 10s linear infinite; // Animation bleibt gleich
+    }
 }
 
 
