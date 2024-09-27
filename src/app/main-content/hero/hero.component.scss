@@ -8,10 +8,12 @@
 }
 
 section {
+    position: relative;
     height: 100vh;
     width: 100%;
     background: $bgColorGradient;
     @include dFlex();
+    overflow: hidden;
     .headline {
         @include dFlex();
         flex-direction: column;
