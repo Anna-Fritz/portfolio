@@ -79,7 +79,7 @@ section {
                 &:hover .hover-dot {
                     visibility: visible;
                 }
-                &:hover >svg >path {
+                &:hover >a >svg >path {
                     fill: white;
                 }
     
