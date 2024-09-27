@@ -31,7 +31,18 @@ body {
     font-family: 'Fira Code';
 }
 
+@keyframes moveBtnText {
+    0% {
+      transform: translate(110%);
+    }  
+    100% {
+      transform: translate(-130%);
+    }  
+}
+
+
 .btn {
+    position: relative;
     @include dFlex();
     text-decoration: none;
     color: white;
@@ -41,6 +52,14 @@ body {
     border-radius: 24px;
     font-family: 'Karla';
     cursor: pointer;
+    overflow: hidden;
+    &:hover {
+        border: solid 1px $lightGreen;
+    }
+    &:hover span {
+        color: $lightGreen;
+        animation: moveBtnText 2s linear infinite;
+    }
 }
 
 .dot {
