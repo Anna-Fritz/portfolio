@@ -9,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AboutMeComponent {
 
+  showStripes(stripes: HTMLElement) {
+    stripes.style.top = "5%";
+    stripes.style.left = "-8%";
+  }
 }

@@ -9,9 +9,35 @@ section {
     .main-content {
         @include dFlex($jc: space-between, $ai: space-between, $g: 8%);
         width: 100%;
-        >div >img {
-            border-radius: 30px;
-            width: 30vw;
+        >div {
+            position: relative;
+            height: 100%;
+            .photo {
+                border-radius: 30px;
+                width: 30vw;
+            }
+            .bg-stripes {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 98%;
+                width: 100%;
+                border-radius: 30px;
+                transition: 1s ease-in-out;
+                background: repeating-linear-gradient(
+                    45deg,
+                    $lightGreen,
+                    $lightGreen 1px,
+                    transparent 1px,
+                    transparent 25px,
+                    );
+            }
+            .upper-photo {
+                position: absolute;
+                border-radius: 30px;
+                width: 30vw;
+                z-index: 2;  
+            }
         }
         .about-me-cont{
             @include dFlex($ai: flex-start, $jc: flex-end);
@@ -50,4 +76,9 @@ section {
         }
     
     }
+}
+
+.hover-stripes {
+    left: -8%;
+    top: 5%;
 }
