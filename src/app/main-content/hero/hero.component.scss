@@ -37,7 +37,7 @@ section {
     }
     .vertical-elements {
         position: absolute;
-        bottom: -17px;
+        bottom: 0;
         @include dFlex($jc:space-between,$ai:flex-end);
         width: 100%;
         padding: 0 24px 0 104px;
@@ -127,7 +127,7 @@ section {
 .banner {
     position: absolute;
     z-index: 6;
-    bottom: 19px;
+    bottom: 37px;
     width: 104%;
     padding: 17px;
     background-color: #FFFFFF1F;

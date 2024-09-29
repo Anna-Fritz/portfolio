@@ -1,0 +1,51 @@
+@import './../../../styles.scss';
+
+footer {
+    background: $bgColor;
+    padding: 32px 104px;
+    @include dFlex($jc: space-between);
+    .left-section {
+        // @include dFlex($ai: flex-start);
+        // flex-direction: column;
+        >img {
+            margin-bottom: 24px;
+        }
+        >p {
+            color: white;
+            font-family: 'Karla thin';
+            margin-bottom: 12px;
+        }
+    }
+    .middle-section >span {
+        color: $lightGreen;
+        font-size: 18px;
+    }
+    .right-section {
+        @include dFlex($ai: flex-start);
+        flex-direction: column;
+        >a {
+            position: relative;
+            font-family: 'Karla thin';
+            text-decoration: none;
+            color: white;
+            margin-bottom: 12px;
+            &:hover {
+                color: $lightGreen;
+            }
+            &:hover .hover-dot {
+                visibility: visible;
+            }
+        }
+    }
+}
+
+.hover-dot {
+    visibility: hidden;
+    position: absolute;
+    bottom: 5px;
+    left: -15px;
+    height: 7px;
+    width: 7px;
+    background-color: $lightGreen;
+    border-radius: 5px;
+}
