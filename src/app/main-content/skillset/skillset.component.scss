@@ -1,7 +1,7 @@
 @import './../../../styles.scss';
 
 section {
-    background: #1C1C1C;
+    background: radial-gradient(22.43% 43.85% at 1.22% 52.45%, #2F5B53 0%, #1C1C1C 100%);
     width: 100%;
     padding: 0 120px 120px 120px; 
     box-sizing: border-box;
@@ -23,7 +23,7 @@ section {
                 padding: 32px;
                 border: solid 1px $lightGreen;
                 border-radius: 30px;
-                background-color: $darkGreen;
+                background-color: #3DCFB61A;
                 @include dFlex($ai: flex-start, $g:40px);
                 flex-direction: column;
                 .headline{
@@ -59,7 +59,6 @@ section {
     .skills-icons {
         @include dFlex($jc:flex-start, $ai: space-between, $g: 20px);
         flex-wrap: wrap;
-        // flex: 140%;
         margin-top: 48px;
         .icon-cont {
             @include dFlex($jc: space-between, $g: 10px);
