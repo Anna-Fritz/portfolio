@@ -1,1 +1,61 @@
 @import './../../../styles.scss';
+
+section {
+    background-color: $bgColor;
+    padding: 0 0 104px 104px;
+    width: 100%;
+    .content {
+        width: 60vw;
+        >span {
+            color: $lightGreen;
+            font-family: 'Karla';
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
+        h1 {
+            color: $lightGreen;
+            font-size: 64px;
+            margin: 0;
+        }
+        >p {
+            color: white;
+            font-size: 18px;
+            font-family: 'Karla';
+            margin: 32px 0;
+            font-family: Karla;
+            line-height: 21.6px;
+            text-align: justified;
+        }
+        .projects-overview {
+            .line {
+                height: 1px;
+                width: 100%;
+                background-color: $lightGreen;
+            }
+            .project {
+                @include dFlex($jc:space-between);
+                padding: 32px;
+                &:hover {
+                    background-color: $hoverGreen;
+                    cursor: pointer;
+                }
+                >span {
+                    color: white;
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+                .project-stack {
+                    >span {
+                        color: white;
+                        font-size: 18px;
+                        font-family: 'Karla';
+                    }
+                    .green {
+                        color: $lightGreen;
+                        margin: 0 8px;
+                    }    
+                }
+            }    
+        }
+        }
+}
