@@ -92,6 +92,12 @@ section {
                 visibility: visible;
             }
         }
+        .challenge-icon {
+            position: relative;
+            &:hover .challenge-popup {
+                visibility: visible;
+            }
+        }
     }
 }
 
@@ -99,7 +105,7 @@ section {
     visibility: hidden;
     position: absolute;
     z-index: 5;
-    top: -108%;
+    top: -136%;
     .popup-bubble {
         background-color: white;
         padding: 12px 16px;
@@ -141,5 +147,36 @@ section {
         box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
     }
 }
+
+.challenge-popup {
+    visibility: hidden;
+    position: absolute;
+    z-index: 5;
+    top: -124%;
+    right: 8px;
+    .popup-bubble {
+        background-color: white;
+        padding: 12px 16px;
+        border-radius: 10px;
+        width: 120%;
+        @include dFlex($jc: space-between, $g: 10px);
+        flex-direction: column;
+        font-family: 'Karla';
+        >span {
+            color: $lightGreen;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+        }
+    }
+    >img {
+        position: relative;
+        margin-left: 80px;
+        top: -1px;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    }
+}
+
 
 
