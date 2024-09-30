@@ -63,7 +63,7 @@ section {
         // height: 30vh;
         margin-top: 48px;
         .icon-cont {
-            @include dFlex($jc: space-between, $g: 10px);
+            @include dFlex($g: 20px);
             flex-direction: column;
             width: 104px;
             height: 12vh;
