@@ -56,6 +56,27 @@ section {
             }                
         }
     }
+    .skills-icons {
+        @include dFlex($jc:flex-start, $ai: space-between, $g: 20px);
+        flex-wrap: wrap;
+        // flex: 140%;
+        margin-top: 48px;
+        .icon-cont {
+            @include dFlex($jc: space-between, $g: 10px);
+            flex-direction: column;
+            width: 104px;
+            transition: 2s ease;
+            height: 12vh;
+
+            &:hover >img {
+                transform: scale(1.1);
+            }
+            >span {
+                color: white;
+                text-align: center;
+            }
+        }
+    }
 }
 
 

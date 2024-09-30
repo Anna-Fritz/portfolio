@@ -14,5 +14,13 @@
                 </a>
             </div>
         </div>
+        <div class="skills-icons">
+            @for (skill of skillIcons; track skill.name) {
+                <div class="icon-cont">
+                    <img src="{{skill.src}}" alt="">
+                    <span>{{skill.name}}</span>    
+                </div>
+            }
+        </div>
     </div>
 </section>
