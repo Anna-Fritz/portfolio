@@ -86,8 +86,60 @@ section {
                 text-align: center;
             }
         }
+        .growth-icon {
+            position: relative;
+            &:hover .growth-popup {
+                visibility: visible;
+            }
+        }
     }
 }
 
+.growth-popup {
+    visibility: hidden;
+    position: absolute;
+    z-index: 5;
+    top: -108%;
+    .popup-bubble {
+        background-color: white;
+        padding: 12px 16px;
+        border-radius: 10px;
+        width: 180%;
+        // width: 188px;
+        // height: 112px;
+        @include dFlex($jc: space-between, $g: 10px);
+        flex-direction: column;
+        font-family: 'Karla';
+        >span {
+            color: $lightGreen;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .popup-icons {
+            @include dFlex($g: 15px);
+            // margin-top: 12px;
+            // height: 4vh;
+            // margin-bottom: 8px;
+            .popup-icon {
+                @include dFlex($ai: space-between, $g: 5px);
+                flex-direction: column;
+                // height: 24px;
+                >span {
+                    color: $lightGreen;
+                    font-size: 12px;
+                    text-align: center;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    >img {
+        position: relative;
+        margin-left: 44px;
+        top: -1px;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    }
+}
 
 

@@ -53,14 +53,5 @@ export class SkillsetComponent {
       name: 'Scrum',
       src: './../../../assets/icons/skills/scrum.svg'
     },
-    {
-      name: 'Growth Mindset',
-      src: './../../../assets/icons/skills/growth_mindset.svg'
-    },
-    {
-      name: 'Challenge me',
-      src: './../../../assets/icons/skills/challenge_me.svg'
-    }
   ]
-
 }
