@@ -1,1 +1,62 @@
 @import './../../../styles.scss';
+
+section {
+    background: #1C1C1C;
+    width: 100%;
+    padding: 120px; 
+    box-sizing: border-box;
+    @include dFlex();
+    .main-content {
+        @include dFlex($jc: space-between, $ai: space-between, $g: 8%);
+        width: 100%;
+        .skills-text-cont{
+            @include dFlex($ai:flex-start);
+            flex-direction: column;
+            width: 110%;
+            .skills-subtitle {
+                font-size: 24px;
+                color: $lightGreen;
+                font-family: 'Karla';
+                margin-bottom: 24px;
+            }
+            .skills-text {
+                padding: 32px;
+                border: solid 1px $lightGreen;
+                border-radius: 30px;
+                background-color: $darkGreen;
+                @include dFlex($ai: flex-start, $g:40px);
+                flex-direction: column;
+                .headline{
+                    font-size: 64px;
+                    font-weight: 700;
+                    color: $lightGreen;
+                }
+                .paragraph {
+                    color: white;
+                    font-family: 'Karla';
+                    font-size: 18px;
+                    margin: 0;
+                }
+                .skill-question {
+                    color: white;
+                    font-size: 24px;
+                    font-weight: 700;
+                    .green {
+                        color: $lightGreen;
+                    }
+                }
+                >div >p {
+                    color: white;
+                    font-family: 'Karla';
+                    margin: 16px 0 0 0;
+                }
+                >a {
+                    width: 104px;
+                }
+            }                
+        }
+    }
+}
+
+
+

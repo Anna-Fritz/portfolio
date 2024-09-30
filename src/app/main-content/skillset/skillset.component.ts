@@ -8,5 +8,4 @@ import { Component } from '@angular/core';
   styleUrl: './skillset.component.scss'
 })
 export class SkillsetComponent {
-
 }

@@ -88,16 +88,9 @@ body {
     font-family: 'Karla';
     font-style: normal;
     font-weight: 400;
+    text-align: justified;
+    line-height: 21.6px;
     src: url('./assets/fonts/karla-v31-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Karla thin';
-    font-style: normal;
-    font-weight: 300;
-    src: url('./assets/fonts/karla-v31-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
 
 
