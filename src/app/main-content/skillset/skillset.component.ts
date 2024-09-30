@@ -56,6 +56,10 @@ export class SkillsetComponent {
     {
       name: 'Growth Mindset',
       src: './../../../assets/icons/skills/growth_mindset.svg'
+    },
+    {
+      name: 'Challenge me',
+      src: './../../../assets/icons/skills/challenge_me.svg'
     }
   ]
 

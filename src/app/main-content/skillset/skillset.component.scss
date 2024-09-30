@@ -3,7 +3,7 @@
 section {
     background: #1C1C1C;
     width: 100%;
-    padding: 120px; 
+    padding: 0 120px 120px 120px; 
     box-sizing: border-box;
     @include dFlex();
     .main-content {
@@ -65,11 +65,14 @@ section {
             @include dFlex($jc: space-between, $g: 10px);
             flex-direction: column;
             width: 104px;
-            transition: 2s ease;
             height: 12vh;
 
-            &:hover >img {
-                transform: scale(1.1);
+            >img {
+                transition: 0.4s ease;
+                &:hover {
+                    transform: scale(1.15);
+                    filter: drop-shadow(0px 0px 8px $lightGreen);
+                }
             }
             >span {
                 color: white;
