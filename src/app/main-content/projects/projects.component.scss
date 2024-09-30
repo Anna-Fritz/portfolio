@@ -36,7 +36,7 @@ section {
                 @include dFlex($jc:space-between);
                 padding: 32px;
                 &:hover {
-                    background-color: $hoverGreen;
+                    background-color: #3DCFB61A;
                     cursor: pointer;
                 }
                 >span {
