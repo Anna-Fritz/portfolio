@@ -2,8 +2,9 @@
 
 section {
     // padding: 104px;
-    background-color: pink;
-    height: 100%;
-    width: 90%;
+    background: $bgColorGradient;
+    height: 600px;
+    width: 85.5%;
+    border: solid 1px $lightGreen;
     border-radius: 60px;
 }

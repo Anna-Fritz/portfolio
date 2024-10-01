@@ -8,5 +8,34 @@ import { Component } from '@angular/core';
   styleUrl: './single-project.component.scss'
 })
 export class SingleProjectComponent {
-
+  project: {
+    id: number,
+    name: string,
+    description: string,
+    skills: { icon: string, name: string }[],
+    githubSrc: string,
+    liveTestSrc: string,
+    img: string,
+  } = {
+    id: 1,
+    name: "Join",
+    description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ",
+    skills: [
+      {
+        icon: 'assets/icons/project_skills/javascript.svg',
+        name: 'Javascript'
+      },
+      {
+        icon: 'assets/icons/project_skills/css.svg',
+        name: 'CSS'
+      },
+      {
+        icon: 'assets/icons/project_skills/html.svg',
+        name: 'HTML'
+      }
+    ],
+    githubSrc: 'https://',
+    liveTestSrc: 'https://',
+    img: 'portfolio/src/assets/img/join.png',
+  }
 }
