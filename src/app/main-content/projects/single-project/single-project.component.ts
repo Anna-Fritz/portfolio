@@ -38,6 +38,6 @@ export class SingleProjectComponent {
     ],
     githubSrc: 'https://',
     liveTestSrc: 'https://',
-    img: 'portfolio/src/assets/img/join.png',
+    img: 'assets/img/join.png',
   }
 }

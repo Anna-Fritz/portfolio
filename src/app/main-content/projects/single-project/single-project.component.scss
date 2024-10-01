@@ -4,12 +4,12 @@ section {
     padding: 72px;
     background: $bgColorGradient;
     // height: 400px;
-    // width: 77%;
+    width: 77%;
     border: solid 1px $lightGreen;
     border-radius: 30px;
     @include dFlex($jc: space-between, $g: 32px);
     .project-details {
-        @include dFlex($ai: flex-start, $jc: space-between, $g: 15px);
+        @include dFlex($ai: flex-start, $jc: space-between, $g: 40px);
         flex-direction: column;
         width: 50%;
         height: 100%;
@@ -73,6 +73,45 @@ section {
             }
         }
 
+    }
+    .project-img-cont {
+        @include dFlex($ai: flex-end, $jc: space-between, $g: 56px);
+        flex-direction: column;
+        // height: 100%;
+        // width: auto;
+        .close {
+            cursor: pointer;
+        }
+        .project-img {
+            height: 300px;
+            width: auto;
+            border-radius: 30px;
+        }
+        .next-project {
+            position: relative;
+            @include dFlex($g: 15px);
+            cursor: pointer;
+            // &:hover {
+            //     gap: 20px;
+            // }
+            &:hover >img {
+                right: -20px;
+            }
+            >span {
+                color: $lightGreen;
+                font-size: 18px;
+                font-family: 'Karla';
+                margin-right: 32px;
+                &:hover {
+                    color: white;
+                }    
+            }
+            >img {
+                position: absolute;
+                right: 0;
+                transition: 1s ease;
+            }
+        }
     }
 }
 
