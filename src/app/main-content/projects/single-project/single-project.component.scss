@@ -30,7 +30,7 @@ section {
                 letter-spacing: -0.03em;
                 text-align: left;
                 color: white;
-                margin-top: 16px;
+                margin-top: 24px;
             }
         } 
         .main-details {
@@ -88,7 +88,7 @@ section {
 
     }
     .project-img-cont {
-        @include dFlex($ai: flex-end, $jc: space-between, $g: 56px);
+        @include dFlex($ai: flex-end, $jc: space-between, $g: 48px);
         flex-direction: column;
         // height: 100%;
         // width: auto;
@@ -103,7 +103,7 @@ section {
             }
         }
         .project-img {
-            height: 300px;
+            height: 35vh;
             width: auto;
             border-radius: 30px;
         }

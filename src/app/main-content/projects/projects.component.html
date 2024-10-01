@@ -7,7 +7,7 @@
     </p>
     <div class="projects-overview">
       <div class="line"></div>
-      <div class="project">
+      <div (close)="projectdata.closePopup(projectPopup)" (click)="projectdata.openPopup(0, projectPopup)" class="project">
         <span>Portfolio
             <img src="assets/icons/arrow-right-up.svg" alt="arrow">
         </span>
@@ -85,6 +85,6 @@
   </div>
 </section>
 
-<!-- <app-single-project class="project-popup"></app-single-project> -->
+<app-single-project #projectPopup class="project-popup"></app-single-project>
 
 

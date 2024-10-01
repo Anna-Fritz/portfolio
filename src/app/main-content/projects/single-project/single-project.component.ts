@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { Project } from './../../../interfaces/project.interface'
 
 @Component({
   selector: 'app-single-project',
@@ -8,16 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './single-project.component.scss'
 })
 export class SingleProjectComponent {
-  project: {
-    start: number,
-    id: number,
-    name: string,
-    description: string,
-    skills: { icon: string, name: string }[],
-    githubSrc: string,
-    liveTestSrc: string,
-    img: string,
-  } = {
+  project: Project = {
     start: 0,
     id: 1,
     name: "Join",
@@ -25,7 +17,7 @@ export class SingleProjectComponent {
     skills: [
       {
         icon: 'assets/icons/project_skills/javascript.svg',
-        name: 'Javascript'
+        name: 'JavaScript'
       },
       {
         icon: 'assets/icons/project_skills/css.svg',
@@ -39,5 +31,11 @@ export class SingleProjectComponent {
     githubSrc: 'https://',
     liveTestSrc: 'https://',
     img: 'assets/img/join.png',
+  }
+
+  @Output()close = new EventEmitter();
+
+  closePopup(){
+    this.close.emit();
   }
 }
