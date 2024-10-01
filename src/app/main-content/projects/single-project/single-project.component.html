@@ -1,22 +1,28 @@
 <section>
     <div class="project-details">
-        <span>{{project.id}}</span>
-        <h1>{{project.name}}</h1>
-        <p>{{project.description}}</p>
-        <div class="skills">
-            @for(skill of project.skills; track project.name) {
-                <div class="skillset">
-                    <img src="{{skill.icon}}">
-                    <span>{{skill.name}}</span>
-                </div>
-            }    
+        <div>
+            <span>{{project.start}}</span>
+            <span>{{project.id}}</span>  
+            <div class="title">{{project.name}}</div>  
+        </div>
+        <div class="main-details">
+            <div class="subtitle">What is this project about?</div>
+            <p>{{project.description}}</p>
+            <div class="skills">
+                @for(skill of project.skills; track project.name) {
+                    <div class="skill">
+                        <img src="{{skill.icon}}">
+                        <span>{{skill.name}}</span>
+                    </div>
+                }    
+            </div>    
         </div>
         <div class="buttons">
             <a class="btn" href="{{project.githubSrc}}">Github
-                <img src="assets/icons/arrow-right-up.svg" alt="">
+                <img src="assets/icons/arrow-right-up-green.svg" alt="">
             </a>
             <a class="btn" href="{{project.githubSrc}}">Live Test
-                <img src="assets/icons/arrow-right-up.svg" alt="">
+                <img src="assets/icons/arrow-right-up-green.svg" alt="">
             </a>    
         </div>
     </div>

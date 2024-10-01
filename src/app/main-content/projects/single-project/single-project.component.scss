@@ -1,10 +1,78 @@
 @import './../../../../styles.scss';
 
 section {
-    // padding: 104px;
+    padding: 72px;
     background: $bgColorGradient;
-    height: 600px;
-    width: 85.5%;
+    // height: 400px;
+    // width: 77%;
     border: solid 1px $lightGreen;
-    border-radius: 60px;
+    border-radius: 30px;
+    @include dFlex($jc: space-between, $g: 32px);
+    .project-details {
+        @include dFlex($ai: flex-start, $jc: space-between, $g: 15px);
+        flex-direction: column;
+        width: 50%;
+        height: 100%;
+        >div {
+            >span {
+                font-family: 'Karla';
+                font-size: 128px;
+                font-weight: 700;
+                line-height: 100px;
+                letter-spacing: -0.02em;
+                text-align: left;
+                color: $lightGreen;
+            }
+            .title {
+                font-size: 64px;
+                font-weight: 700;
+                line-height: 51.2px;
+                letter-spacing: -0.03em;
+                text-align: left;
+                color: white;
+                margin-top: 16px;
+            }
+        } 
+        .main-details {
+            @include dFlex($ai: flex-start, $jc: space-between, $g: 15px);
+            flex-direction: column;
+            .subtitle {
+                font-size: 24px;
+                color: $lightGreen;
+                font-weight: 700;
+            }
+            >p {
+                font-family: 'Karla';
+                font-size: 18px;
+                color: white;
+            }
+            .skills {
+                @include dFlex($jc: space-between, $g:15px);
+                .skill{
+                    @include dFlex($g: 8px);
+                    >img {
+                        height: 24px;
+                    }
+                    >span {
+                        color: white;
+                        font-family: 'Karla';
+                    }
+                }
+            }    
+        }
+        .buttons {
+            @include dFlex($jc: space-between, $g: 24px);
+            >a {
+                // width: 32px;
+                font-family: 'Karla';
+                font-size: 18px;
+                >img {
+                    height: 22px;
+                    margin-left: 4px;
+                }
+            }
+        }
+
+    }
 }
+

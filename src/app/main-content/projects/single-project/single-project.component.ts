@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 })
 export class SingleProjectComponent {
   project: {
+    start: number,
     id: number,
     name: string,
     description: string,
@@ -17,6 +18,7 @@ export class SingleProjectComponent {
     liveTestSrc: string,
     img: string,
   } = {
+    start: 0,
     id: 1,
     name: "Join",
     description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ",
