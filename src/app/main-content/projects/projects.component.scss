@@ -1,11 +1,13 @@
 @import './../../../styles.scss';
 
 section {
+    position: relative;
     background-color: $bgColor;
     padding: 0 0 104px 104px;
     width: 100%;
+    box-sizing: border-box;
     .content {
-        width: 60vw;
+        width: 57vw;
         >span {
             color: $lightGreen;
             font-family: 'Karla';
@@ -117,4 +119,15 @@ section {
             }    
         }
     }
+}
+
+.project-popup {
+    position: absolute;
+    @include dFlex();
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.2);
+    // visibility: hidden;
 }
