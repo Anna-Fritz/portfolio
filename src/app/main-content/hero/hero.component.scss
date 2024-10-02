@@ -1,5 +1,9 @@
 @import './../../../styles.scss';
 
+body {
+    background: $bgColorGradient;  
+}
+
 .header {
     position: absolute;
     top: 0;
@@ -7,11 +11,14 @@
     right: 0;
 }
 
+.bg-area{
+    background: $bgColorGradient;
+}
+
 section {
     position: relative;
     height: 100vh;
     width: 100%;
-    background: $bgColorGradient;
     @include dFlex();
     overflow: hidden;
     .headline {
@@ -142,6 +149,14 @@ section {
         font-family: 'Karla';
         white-space: nowrap;
         animation: moveText 10s linear infinite;
+    }
+}
+
+
+@media(min-width: 1440px) {
+    section {
+        width: 1440px;
+        margin: 0 auto;
     }
 }
 

@@ -82,3 +82,11 @@ section {
     left: -8%;
     top: 5%;
 }
+
+
+@media(min-width: 1440px) {
+    section {
+        width: 1440px;
+        margin: 0 auto;
+    }
+}

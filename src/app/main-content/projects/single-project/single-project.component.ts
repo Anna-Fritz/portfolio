@@ -20,10 +20,8 @@ export class SingleProjectComponent {
   showNextProject(index: number) {
     if(index == this.projectdata.project.length - 1) {
       this.projectdata.index = 0;
-      console.log("index", index)
     } else {
       this.projectdata.index = index + 1;
-      console.log("index", index)
     }
   }
 }

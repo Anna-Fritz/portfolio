@@ -3,6 +3,7 @@
 footer {
     background: $bgColor;
     padding: 32px 104px;
+    box-sizing: border-box;
     @include dFlex($jc: space-between);
     .left-section {
         // @include dFlex($ai: flex-start);
@@ -48,4 +49,12 @@ footer {
     width: 7px;
     background-color: $lightGreen;
     border-radius: 5px;
+}
+
+
+@media(min-width: 1440px) {
+    footer {
+        width: 1440px;
+        margin: 0 auto;
+    }
 }
