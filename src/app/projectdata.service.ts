@@ -17,15 +17,18 @@ export class ProjectdataService {
     skills: [
       {
         icon: 'assets/icons/project_skills/angular.svg',
-        name: 'Angular'
+        name: 'Angular',
+        separator: '|'
       },
       {
         icon: 'assets/icons/project_skills/typescript.svg',
-        name: 'TypeScript'
+        name: 'TypeScript', 
+        separator: '|'
       },
       {
         icon: 'assets/icons/project_skills/css.svg',
-        name: 'CSS'
+        name: 'CSS',
+        separator: '|'
       },
       {
         icon: 'assets/icons/project_skills/html.svg',
@@ -44,11 +47,13 @@ export class ProjectdataService {
     skills: [
       {
         icon: 'assets/icons/project_skills/javascript.svg',
-        name: 'JavaScript'
+        name: 'JavaScript',
+        separator: '|'
       },
       {
         icon: 'assets/icons/project_skills/html.svg',
-        name: 'HTML'
+        name: 'HTML',
+        separator: '|'
       },
       {
         icon: 'assets/icons/project_skills/css.svg',
@@ -67,19 +72,23 @@ export class ProjectdataService {
     skills: [
       {
         icon: 'assets/icons/project_skills/javascript.svg',
-        name: 'JavaScript'
+        name: 'JavaScript',
+        separator: '|'
       },
       {
         icon: 'assets/icons/project_skills/css.svg',
-        name: 'CSS'
+        name: 'CSS',
+        separator: '|'
       },
       {
         icon: 'assets/icons/project_skills/html.svg',
-        name: 'HTML'
+        name: 'HTML',
+        separator: '|'
       },
       {
         icon: 'assets/icons/project_skills/firebase.svg',
-        name: 'Firebase'
+        name: 'Firebase',
+        separator: '|'
       },
       {
         icon: 'assets/icons/project_skills/scrum.svg',
@@ -98,15 +107,18 @@ export class ProjectdataService {
     skills: [
       {
         icon: 'assets/icons/project_skills/javascript.svg',
-        name: 'Javascript'
+        name: 'Javascript',
+        separator: '|'
       },
       {
         icon: 'assets/icons/project_skills/css.svg',
-        name: 'CSS'
+        name: 'CSS',
+        separator: '|'
       },
       {
         icon: 'assets/icons/project_skills/html.svg',
-        name: 'HTML'
+        name: 'HTML',
+        separator: '|'
       },
       {
         icon: 'assets/icons/project_skills/api.svg',

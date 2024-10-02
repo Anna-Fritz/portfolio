@@ -3,7 +3,7 @@ export interface Project {
     id: number,
     name: string,
     description: string,
-    skills: { icon: string, name: string }[],
+    skills: { icon: string, name: string, separator?: string}[],
     githubSrc: string,
     liveTestSrc: string,
     img: string,

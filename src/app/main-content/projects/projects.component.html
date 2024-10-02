@@ -6,80 +6,24 @@
       Explore a selection of my work here - <br>Interact with projects to see my skills in action.
     </p>
     <div class="projects-overview">
-      <div class="line"></div>
-      <div (click)="openPopup(0)" class="project">
-        <span>Portfolio
-            <img src="assets/icons/arrow-right-up.svg" alt="arrow">
-        </span>
-        <div class="project-stack">
-          <span>Angular</span>
-          <span class="green">|</span>
-          <span>TypeScript</span>
-          <span class="green">|</span>
-          <span>HTML</span>
-          <span class="green">|</span>
-          <span>SCSS</span>
-        </div>
-        <img class="project-img" src="assets/img/portfolio.png" alt="project preview">
-        <div class="stripes-cont">
-            <div #stripes class="bg-stripes"></div>
-        </div>
-      </div>
-      <div class="line"></div>
-      <div (click)="openPopup(1)" class="project">
-        <span>El Pollo Loco
-            <img src="assets/icons/arrow-right-up.svg" alt="arrow">
-        </span>
-        <div class="project-stack">
-          <span>JavaScript</span>
-          <span class="green">|</span>
-          <span>HTML</span>
-          <span class="green">|</span>
-          <span>CSS</span>
-        </div>
-        <img class="project-img" src="assets/img/el_pollo_loco.png" alt="project preview">
-        <div class="stripes-cont">
-            <div #stripes class="bg-stripes"></div>
-        </div>
-      </div>
-      <div class="line"></div>
-      <div (click)="openPopup(2)"class="project">
-        <span>Join
-            <img src="assets/icons/arrow-right-up.svg" alt="arrow">
-        </span>
-        <div class="project-stack">
-          <span>JavaScript</span>
-          <span class="green">|</span>
-          <span>HTML</span>
-          <span class="green">|</span>
-          <span>CSS</span>
-          <span class="green">|</span>
-          <span>Firebase</span>
-        </div>
-          <img class="project-img" src="assets/img/join.png" alt="project preview">
+      @for (project of projectdata.project; track $index) {
+        <div class="line"></div>
+        <div (click)="openPopup($index)" class="project">
+          <span>{{project.name}}
+              <img src="assets/icons/arrow-right-up.svg" alt="arrow">
+          </span>
+          <div class="project-stack">
+            @for (skill of projectdata.project[$index].skills; track $index) {
+              <span>{{skill.name}}</span>
+              <span class="green">{{skill.separator}}</span>
+            }
+          </div>
+          <img class="project-img" src="{{project.img}}" alt="project preview">
           <div class="stripes-cont">
               <div #stripes class="bg-stripes"></div>
           </div>
-      </div>
-      <div class="line"></div>
-      <div (click)="openPopup(3)" class="project">
-        <span>Pokedex
-            <img src="assets/icons/arrow-right-up.svg" alt="arrow">
-        </span>
-        <div class="project-stack">
-          <span>JavaScript</span>
-          <span class="green">|</span>
-          <span>HTML</span>
-          <span class="green">|</span>
-          <span>CSS</span>
-          <span class="green">|</span>
-          <span>Rest-Api</span>
-        </div>
-        <img class="project-img" src="assets/img/pokedex.png" alt="project preview">
-        <div class="stripes-cont">
-            <div #stripes class="bg-stripes"></div>
-        </div>
-      </div>
+        </div>  
+      }
       <div class="line"></div>
     </div>
   </div>
