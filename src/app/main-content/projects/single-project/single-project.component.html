@@ -36,7 +36,7 @@
         </div>
         <!-- <img class="close-icon" src="assets/icons/close.svg" alt="close icon"> -->
         <img class="project-img" src="{{projectdata.project[projectdata.index].img}}" alt="project image">
-        <div class="next-project">
+        <div (click)="showNextProject(projectdata.index)" class="next-project">
             <span>Next project</span>
             <img src="assets/icons/arrow_forward.svg" alt="arrow forward">
         </div>
