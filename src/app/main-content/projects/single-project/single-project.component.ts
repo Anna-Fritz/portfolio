@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Project } from './../../../interfaces/project.interface'
+import { ProjectdataService } from '../../../projectdata.service';
 
 @Component({
   selector: 'app-single-project',
@@ -9,6 +10,10 @@ import { Project } from './../../../interfaces/project.interface'
   styleUrl: './single-project.component.scss'
 })
 export class SingleProjectComponent {
+
+  projectdata = inject(ProjectdataService);
+
+
   project: Project = {
     start: 0,
     id: 1,
@@ -33,9 +38,9 @@ export class SingleProjectComponent {
     img: 'assets/img/join.png',
   }
 
-  @Output()close = new EventEmitter();
-
-  closePopup(){
-    this.close.emit();
+  closePopup() {
+    this.projectdata.isOpen = false;
+    this.project = this.projectdata.project[this.projectdata.index];
   }
+
 }

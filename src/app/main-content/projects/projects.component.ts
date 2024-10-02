@@ -10,11 +10,13 @@ import { ProjectdataService } from '../../projectdata.service';
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
+
   projectdata = inject(ProjectdataService);
 
 
-  openPopup(index: number, projectPopup: HTMLElement) {
-
+  openPopup(index: number) {
+    this.projectdata.isOpen = true;
+    this.projectdata.index = index;
   }
 
 }

@@ -7,7 +7,7 @@
     </p>
     <div class="projects-overview">
       <div class="line"></div>
-      <div (close)="projectdata.closePopup(projectPopup)" (click)="projectdata.openPopup(0, projectPopup)" class="project">
+      <div (click)="openPopup(0)" class="project">
         <span>Portfolio
             <img src="assets/icons/arrow-right-up.svg" alt="arrow">
         </span>
@@ -26,7 +26,7 @@
         </div>
       </div>
       <div class="line"></div>
-      <div class="project">
+      <div (click)="openPopup(1)" class="project">
         <span>El Pollo Loco
             <img src="assets/icons/arrow-right-up.svg" alt="arrow">
         </span>
@@ -43,7 +43,7 @@
         </div>
       </div>
       <div class="line"></div>
-      <div class="project">
+      <div (click)="openPopup(2)"class="project">
         <span>Join
             <img src="assets/icons/arrow-right-up.svg" alt="arrow">
         </span>
@@ -62,7 +62,7 @@
           </div>
       </div>
       <div class="line"></div>
-      <div class="project">
+      <div (click)="openPopup(3)" class="project">
         <span>Pokedex
             <img src="assets/icons/arrow-right-up.svg" alt="arrow">
         </span>
@@ -85,6 +85,8 @@
   </div>
 </section>
 
-<app-single-project #projectPopup class="project-popup"></app-single-project>
+@if (projectdata.isOpen) {
+  <app-single-project #projectPopup class="project-popup"></app-single-project>
+}
 
 

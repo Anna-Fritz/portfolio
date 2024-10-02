@@ -5,6 +5,9 @@ import { Project } from './interfaces/project.interface'
   providedIn: 'root'
 })
 export class ProjectdataService {
+  isOpen: boolean = false;
+  index: number = 0;
+
   project: Project[] = [
     {
     start: 0,
@@ -21,8 +24,8 @@ export class ProjectdataService {
         name: 'TypeScript'
       },
       {
-        icon: 'assets/icons/project_skills/scss.svg',
-        name: 'SCSS'
+        icon: 'assets/icons/project_skills/css.svg',
+        name: 'CSS'
       },
       {
         icon: 'assets/icons/project_skills/html.svg',
@@ -117,14 +120,5 @@ export class ProjectdataService {
 ]
 
   constructor() { }
-
-  openPopup(index: number, projectPopup: any) {
-    projectPopup.style.visibility = "visible";
-  }
-
-  closePopup(projectPopup: any) {
-    projectPopup.style.visibility = "hidden";
-  }
-
 
 }
