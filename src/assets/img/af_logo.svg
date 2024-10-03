@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="47.909061mm"
+   height="48.992565mm"
+   viewBox="0 0 47.909061 48.992565"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(-50.092321,-54.966254)">
+    <path
+       style="font-size:36.6889px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';fill:#ffffff;fill-opacity:1stroke-width:0.264583"
+       d="M 50.378939,89.072639 70.134155,62.809988 h 4.719936 l 0.103537,41.148832 -3.959104,-0.0108 0.130169,-22.829457 -10.494988,-0.09409 -6.56438,8.048127 z m 12.22748,-10.83111 8.60063,0.04658 0.111032,-7.273286 c 0,-2.219895 0.04225,-3.158295 0.07528,-4.73633 -1.298835,1.887826 -2.322059,3.397647 -3.18944,4.572511 z"
+       id="text1"
+       aria-label="AF" />
+    <path
+       d="M 76.719238,93.293502 V 54.966255 h 17.717491 v 3.631476 l -14.242068,-0.08871 v 19.754174 h 12.325211 v 3.099217 H 80.194661 v 11.93109 z"
+       id="text19"
+       style="font-size:36.689px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       aria-label="F" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       x="75.580643"
+       y="103.73256"
+       id="text20"><tspan
+         id="tspan19"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="75.580643"
+         y="103.73256">nna</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+       x="81.345032"
+       y="93.159271"
+       id="text20-6"><tspan
+         id="tspan19-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.264583"
+         x="81.345032"
+         y="93.159271">ritz</tspan></text>
+    <path
+       style="fill:#008000;fill-opacity:1;stroke-width:0.264583"
+       d="m 50.10912,78.3333 42.41352,-0.01837 -3e-6,3.010906 -42.430316,-0.263901 z"
+       id="path20" />
+  </g>
+</svg>

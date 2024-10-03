@@ -2,31 +2,86 @@
 
 header {
     position: absolute;
-    @include dFlex($jc: space-between);
-    padding: 80px 104px;
-    >nav{
-        @include dFlex($jc: space-between, $g: 20px);
-        >a {
-            position: relative;
-            color: white;
-            font-size: 20px;
-            text-decoration: none;
-            &:hover .hover-dot {
-                visibility: visible;
+    // @include dFlex($jc: space-between);
+    // padding: 80px 8%;
+    width: 100%;
+    // box-sizing: border-box;
+    .desktop-header {
+        @include dFlex($jc: space-between);
+        padding: 80px 8%;
+        width: 100%;
+        box-sizing: border-box;
+            >nav{
+            @include dFlex($jc: space-between, $g: 20px);
+            >a {
+                position: relative;
+                color: white;
+                font-size: 20px;
+                text-decoration: none;
+                &:hover .hover-dot {
+                    visibility: visible;
+                }
             }
+            // .language-toggle {
+            //     position: relative;
+            //     z-index: 2;
+            //     @include dFlex($jc: space-between, $g: 24px);
+            //     border: solid 1px $lightGreen;
+            //     border-radius: 20px;
+            //     padding: 5px 12px;
+            //     color: $hoverGreen;
+            //     cursor: pointer;
+            //     &:hover {
+            //         border: solid 1px white;
+            //         color: $lightGreen;
+            //     }
+            // }
         }
-        .language-toggle {
+        >img {
+            height: 112px;
+        }
+    }
+    .mobile-header {
+        @include dFlex($jc: space-between);
+        padding: 80px 8%;
+        width: 100%;
+        box-sizing: border-box;
+        >img {
+            height: 112px;  
+        }
+        .menu-cont {
             position: relative;
-            z-index: 2;
-            @include dFlex($jc: space-between, $g: 24px);
-            border: solid 1px $lightGreen;
-            border-radius: 20px;
-            padding: 5px 12px;
-            color: $hoverGreen;
-            cursor: pointer;
-            &:hover {
-                border: solid 1px white;
-                color: $lightGreen;
+            // @include dFlex($jc: flex-end, $ai: space-between);
+            // flex-direction: column;
+            .menu {
+                @include dFlex($jc: space-between, $g: 14px);
+                flex-direction: column;
+                cursor: pointer;
+                &:hover .line {
+                    background-color: $lightGreen;
+                }
+                .line {
+                    height: 5px;
+                    width: 60px;
+                    border-radius: 5px;
+                    background-color: white;
+                }
+            }
+            .dropdown {
+                position: absolute;
+                right: 0;
+                margin-top: 15px;
+                @include dFlex($jc: space-between, $ai: flex-start, $g: 30px);
+                flex-direction: column;
+                border: solid 1px $lightGreen;
+                border-radius: 30px;
+                background: $bgColorGradient;
+                padding: 40px 80px;
+                >a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 18px;
+                }  
             }
         }
     }
@@ -41,6 +96,21 @@ header {
     width: 7px;
     background-color: $lightGreen;
     border-radius: 5px;
+}
+
+.language-toggle {
+    position: relative;
+    z-index: 2;
+    @include dFlex($jc: space-between, $g: 24px);
+    border: solid 1px $lightGreen;
+    border-radius: 20px;
+    padding: 5px 12px;
+    color: $hoverGreen;
+    cursor: pointer;
+    &:hover {
+        border: solid 1px white;
+        color: $lightGreen;
+    }    
 }
 
 .toggle-element {
@@ -62,4 +132,17 @@ header {
 
 .left {
     left: -1px;
+}
+
+
+
+@media(min-width: 750px) {
+    .mobile-header {
+        display: none !important;
+    }
+}
+@media(max-width: 750px) {
+    .desktop-header {
+        display: none !important;
+    }
 }

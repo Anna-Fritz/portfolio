@@ -5,6 +5,8 @@ import { Project } from './interfaces/project.interface'
   providedIn: 'root'
 })
 export class ProjectdataService {
+  menuIsOpen = false;
+
   isOpen: boolean = false;
   index: number = 0;
 
@@ -132,5 +134,13 @@ export class ProjectdataService {
 ]
 
   constructor() { }
+
+   toggleMenu() {
+    if(this.menuIsOpen) {
+      this.menuIsOpen = false;
+    } else {
+      this.menuIsOpen = true;
+    }
+   }
 
 }

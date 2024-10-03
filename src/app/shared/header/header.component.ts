@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ProjectdataService } from '../../projectdata.service';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +12,8 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   currantLanguage = 'DE';
   toggleDirection = 'right';
+
+  project = inject(ProjectdataService);
 
   toggleLanguage() {
     if (this.currantLanguage == 'DE') {
