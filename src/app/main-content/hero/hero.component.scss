@@ -47,7 +47,7 @@ section {
         bottom: 0;
         @include dFlex($jc:space-between,$ai:flex-end);
         width: 100%;
-        padding: 0 24px 0 104px;
+        padding: 0 2% 0 8%;
         box-sizing: border-box;
         z-index: 4;
         .left-vertical {
@@ -76,7 +76,7 @@ section {
                 color: white;
                 font-size: 18px;
                 transform: rotate(-90deg);
-                margin-bottom: 80px;
+                margin-bottom: 88px;
                 font-family: 'Karla';
                 &:hover {
                     color: $lightGreen;
@@ -157,6 +157,19 @@ section {
     section {
         width: 1440px;
         margin: 0 auto;
+    }
+}
+@media(max-width: 900px) {
+    .mail {
+        display: none;
+    }
+    .vertical-elements {
+        padding: 0 80px 0 8%;
+    }
+}
+@media(min-width: 900px) {
+    .mail-icon{
+        display: none;
     }
 }
 

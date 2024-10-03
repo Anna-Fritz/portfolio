@@ -3,7 +3,7 @@
 section {
     position: relative;
     background-color: $bgColor;
-    padding: 0 0 104px 104px;
+    padding: 0 104px 104px 104px;
     width: 100%;
     box-sizing: border-box;
     .content {
@@ -38,6 +38,7 @@ section {
                 position: relative;
                 @include dFlex($jc:space-between);
                 padding: 32px;
+                max-width: 1440px;
                 &:hover {
                     background-color: #3DCFB61A;
                     cursor: pointer;
@@ -138,5 +139,8 @@ section {
     section {
         width: 1440px;
         margin: 0 auto;
+    }
+    .project {
+        width: 1440px;
     }
 }
