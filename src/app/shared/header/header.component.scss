@@ -43,26 +43,26 @@ header {
     }
     .mobile-header {
         @include dFlex($jc: space-between);
-        padding: 80px 8%;
+        padding: 6% 8%;
         width: 100%;
         box-sizing: border-box;
         >img {
-            height: 112px;  
+            height: 8vh;  
         }
         .menu-cont {
             position: relative;
             // @include dFlex($jc: flex-end, $ai: space-between);
             // flex-direction: column;
             .menu {
-                @include dFlex($jc: space-between, $g: 14px);
+                @include dFlex($jc: space-between, $g: 12px);
                 flex-direction: column;
                 cursor: pointer;
                 &:hover .line {
                     background-color: $lightGreen;
                 }
                 .line {
-                    height: 5px;
-                    width: 60px;
+                    height: 3px;
+                    width: 56px;
                     border-radius: 5px;
                     background-color: white;
                 }
