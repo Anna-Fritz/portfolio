@@ -3,18 +3,41 @@
 section {
     background: #1C1C1C;
     width: 100%;
-    padding: 120px; 
+    padding: 8%; 
     box-sizing: border-box;
     @include dFlex();
+    @media(min-width: 1440px) {
+        width: 1440px;
+        margin: 0 auto;
+    }
+    @media(max-width: 450px) {
+        padding: 0 15px;
+    }
+    
     .main-content {
         @include dFlex($jc: space-between, $ai: space-between, $g: 8%);
         width: 100%;
+        @media(max-width: 850px) {
+            flex-direction: column;
+            align-items: center;
+        }
+        
         >div {
             position: relative;
             height: 100%;
             .photo {
                 border-radius: 30px;
                 width: 30vw;
+                @media(max-width: 850px) {
+                    width: 40vw;
+                }  
+                @media(max-width: 630px) {
+                    width: 60vw;
+                    align-self: center;
+                }  
+                @media(max-width: 450px) {
+                    width: 100%;
+                }  
             }
             .bg-stripes {
                 position: absolute;
@@ -31,23 +54,61 @@ section {
                     transparent 1px,
                     transparent 25px,
                     );
+                @media(max-width: 1050px) {
+                        background: repeating-linear-gradient(
+                            45deg,
+                            $lightGreen,
+                            $lightGreen 1px,
+                            transparent 1px,
+                            transparent 21px,
+                            );            
+                }
+                @media(max-width: 850px) {
+                    background: repeating-linear-gradient(
+                        45deg,
+                        $lightGreen,
+                        $lightGreen 1px,
+                        transparent 1px,
+                        transparent 17px,
+                        );            
+                }
+                @media(max-width: 450px) {
+                    display: none;
+                }
+
             }
             .upper-photo {
                 position: absolute;
                 border-radius: 30px;
                 width: 30vw;
-                z-index: 2;  
+                z-index: 2;
+                @media(max-width: 850px) {
+                    width: 40vw;
+                }  
+                @media(max-width: 630px) {
+                    width: 60vw;
+                    align-self: center;
+                }  
+                @media(max-width: 450px) {
+                    width: 100%;
+                }  
             }
         }
         .about-me-cont{
             @include dFlex($ai: flex-start, $jc: flex-end);
             flex-direction: column;
             margin-top: 200px;
+            @media(max-width: 850px) {
+                margin-top: 56px;
+            }
             .about-me-description {
                 font-size: 24px;
                 color: $lightGreen;
                 font-family: 'Karla';
                 margin-bottom: 24px;
+                @media(max-width: 630px) {
+                    font-size: 18px;
+                }
             }        
         }
     }
@@ -61,6 +122,12 @@ section {
             font-weight: 700;
             margin-bottom: 32px;
             color: $lightGreen;
+            @media(max-width: 850px) {
+                font-size: 56px;
+            }
+            @media(max-width: 380px) {
+                font-size: 43px;
+            }
         }
         >p {
             color: white;
@@ -81,12 +148,4 @@ section {
 .hover-stripes {
     left: -8%;
     top: 5%;
-}
-
-
-@media(min-width: 1440px) {
-    section {
-        width: 1440px;
-        margin: 0 auto;
-    }
 }
