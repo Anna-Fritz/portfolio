@@ -15,7 +15,6 @@ section {
     }
     @media(max-width: 450px) {
         padding: 0 15px;
-        box-sizing: none;
     }
     .main-content {
         @include dFlex($jc: space-between, $ai: space-between, $g: 8%);
@@ -91,7 +90,9 @@ section {
             @include dFlex($g: 20px);
             flex-direction: column;
             width: 104px;
-            height: 12vh;
+            @media(max-width: 1050px) {
+                margin-bottom: 20px;
+            }    
             &:hover >span {
                 color: $lightGreen;
             }
@@ -101,10 +102,6 @@ section {
             }
             >img {
                 transition: 0.4s ease;
-                // &:hover {
-                //     transform: scale(1.15);
-                //     filter: drop-shadow(0px 0px 8px $lightGreen);
-                // }
             }
             >span {
                 color: white;
@@ -112,15 +109,19 @@ section {
             }
         }
         .growth-icon {
-            position: relative;
             &:hover .growth-popup {
                 visibility: visible;
             }
+            .icon-img {
+                position: relative;
+            }
         }
         .challenge-icon {
-            position: relative;
             &:hover .challenge-popup {
                 visibility: visible;
+            }
+            .icon-img {
+                position: relative;
             }
         }
     }
@@ -130,14 +131,18 @@ section {
     visibility: hidden;
     position: absolute;
     z-index: 5;
-    top: -142%;
+    bottom: 65px;
+    @include dFlex();
+    flex-direction: column;
+    right: -30px;
+    @media(max-width: 400px) {
+        align-items: flex-end;
+    }        
     .popup-bubble {
         background-color: white;
         padding: 12px 16px;
         border-radius: 10px;
         width: 180%;
-        // width: 188px;
-        // height: 112px;
         @include dFlex($jc: space-between, $g: 10px);
         flex-direction: column;
         font-family: 'Karla';
@@ -149,13 +154,9 @@ section {
         }
         .popup-icons {
             @include dFlex($g: 15px);
-            // margin-top: 12px;
-            // height: 4vh;
-            // margin-bottom: 8px;
             .popup-icon {
                 @include dFlex($ai: space-between, $g: 5px);
                 flex-direction: column;
-                // height: 24px;
                 >span {
                     color: $lightGreen;
                     font-size: 14px;
@@ -167,9 +168,11 @@ section {
     }
     >img {
         position: relative;
-        margin-left: 45px;
         top: -1px;
         box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        @media(max-width: 400px) {
+            margin-right: 43px;
+        }            
     }
 }
 
@@ -177,8 +180,16 @@ section {
     visibility: hidden;
     position: absolute;
     z-index: 5;
-    top: -136%;
-    right: 8px;
+    bottom: 65px;
+    @include dFlex();
+    flex-direction: column;
+    right: -38px;
+    @media(max-width: 650px) {
+        right: 0;
+    }
+    @media(max-width: 400px) {
+        right: -38px;
+    }            
     .popup-bubble {
         background-color: white;
         padding: 12px 16px;
@@ -197,9 +208,14 @@ section {
     }
     >img {
         position: relative;
-        margin-left: 80px;
         top: -1px;
         box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        @media(max-width: 650px) {
+            margin-left: 80px;
+        }   
+        @media(max-width: 400px) {
+            margin-left: 0;
+        }                 
     }
 }
 
