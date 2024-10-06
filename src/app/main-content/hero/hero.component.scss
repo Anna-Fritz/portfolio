@@ -65,9 +65,11 @@ section {
             }
             .left-line {
                 width: 1px;
-                // height: 240px;
                 height: 28vh;
                 background-color: $lightGreen;
+                @media(min-width: 1440px) {
+                    height: 240px;
+                }
             }    
         }
         .right-vertical {
@@ -99,8 +101,10 @@ section {
             .right-line {
                 width: 1px;
                 height: 22vh;
-                // height: 186px;
                 background-color: white;
+                @media(min-width: 1440px) {
+                    height: 186px;
+                }
             }    
         }
     }
@@ -159,6 +163,7 @@ section {
 
 @media(min-width: 1440px) {
     section {
+        height: 945px;
         width: 1440px;
         margin: 0 auto;
     }
@@ -193,6 +198,9 @@ section {
     .headline {
         position: absolute;
         top: 25vh;
+        @media(min-width: 1440px) {
+            top: 250px;
+        }
     }
     
     .moving-text >span {

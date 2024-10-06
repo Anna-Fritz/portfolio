@@ -9,6 +9,7 @@ section {
     @media(min-width: 1440px) {
         width: 1440px;
         margin: 0 auto;
+        padding: 132px;
     }
     @media(max-width: 450px) {
         padding: 0 15px;
@@ -26,7 +27,10 @@ section {
             height: 100%;
             .photo {
                 border-radius: 30px;
-                width: 30vw;
+                width: 25vw;
+                @media(min-width: 1440px) {
+                    width: 418px;
+                }
                 @media(max-width: 850px) {
                     width: 40vw;
                 }  
@@ -79,8 +83,11 @@ section {
             .upper-photo {
                 position: absolute;
                 border-radius: 30px;
-                width: 30vw;
+                width: 25vw;
                 z-index: 2;
+                @media(min-width: 1440px) {
+                    width: 418px;
+                }
                 @media(max-width: 850px) {
                     width: 40vw;
                 }  
