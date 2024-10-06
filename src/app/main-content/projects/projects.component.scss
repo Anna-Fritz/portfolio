@@ -3,21 +3,40 @@
 section {
     position: relative;
     background-color: $bgColor;
-    padding: 0 104px 104px 104px;
+    padding: 0 8% 8% 8%;
     width: 100%;
     box-sizing: border-box;
+    @media(min-width: 1440px) {
+        width: 1440px;
+        margin: 0 auto;
+    }  
+    @media(max-width: 500px) {
+        padding: 0 15px;
+    }  
     .content {
         width: 57vw;
+        @media(min-width: 1440px) {
+            width: 100%;
+        }    
+        @media(max-width: 983px) {
+            width: 100%;
+        }
         >span {
             color: $lightGreen;
             font-family: 'Karla';
             font-size: 24px;
             margin-bottom: 24px;
+            @media(max-width: 630px) {
+                font-size: 18px;
+            }
         }
         h1 {
             color: $lightGreen;
             font-size: 64px;
             margin: 0;
+            @media(max-width: 850px) {
+                font-size: 56px;
+            }   
         }
         >p {
             color: white;
@@ -37,8 +56,16 @@ section {
             .project {
                 position: relative;
                 @include dFlex($jc:space-between);
-                padding: 32px;
-                max-width: 1440px;
+                padding: 32px 0 32px 32px;
+                width: 100%;
+                box-sizing: border-box;
+                @media(max-width: 650px) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                @media(max-width: 500px) {
+                    padding: 32px 0 32px 0;
+                }
                 &:hover {
                     background-color: #3DCFB61A;
                     cursor: pointer;
@@ -54,14 +81,22 @@ section {
                 &:hover .stripes-cont {
                     visibility: visible;
                     opacity: 1;
-                    right: -47%;
-                    bottom: -68%;
+                    right: -382px;
+                    bottom: - 64px;
+                    @media(max-width: 1160px) {
+                        right: -330px;
+                    }
+                    // right: -47%;
+                    // bottom: -68%;
                 }
                 >span {
                     color: white;
                     font-size: 24px;
                     font-weight: 700;
                     position: relative;
+                    @media(max-width: 650px) {
+                        margin-bottom: 12px;
+                    }    
                     >img {
                         position: absolute;
                         bottom: 2px;
@@ -73,29 +108,48 @@ section {
                     }    
                 }
                 .project-stack {
+                    @include dFlex($jc: flex-start, $g: 0);
+                    @media(max-width: 650px) {
+                        // width: 100%;
+                        height: auto;
+                        flex-wrap: wrap !important;
+                    }    
                     >span {
                         color: white;
                         font-size: 18px;
                         font-family: 'Karla';
+                        @media(max-width: 500px) {
+                            margin-bottom: 10px;
+                        }
                     }
                     .green {
                         color: $lightGreen;
                         margin: 0 8px;
+                        @media(max-width: 500px) {
+                            margin: 0 8px 10px 8px;
+                        }
                     }    
                 }
                 .project-img {
                     position: absolute;
-                    right: -45%;
+                    right: -364px;
                     z-index: 2;
                     height: 192px;
                     border-radius: 20px;
                     visibility: hidden;
                     transition: 0.6s ease;
                     opacity: 0;
+                    @media(max-width: 1160px) {
+                        right: -312px;
+                    }
+                    @media(max-width: 983px) {
+                        display: none;
+                    }
                 }
                 .stripes-cont {
                     position: absolute;
-                    right: -45%;
+                    right: -364px;
+                    // right: -45%;
                     // right: -47%;
                     // bottom: -68%;
                     height: 192px;
@@ -103,6 +157,12 @@ section {
                     visibility: hidden;
                     transition: 0.6s ease;
                     opacity: 0;
+                    @media(max-width: 1160px) {
+                        right: -312px;
+                    }
+                    @media(max-width: 983px) {
+                        display: none;
+                    }
                     .bg-stripes {
                         height: 100%;
                         width: 100%;    
@@ -135,12 +195,12 @@ section {
 }
 
 
-@media(min-width: 1440px) {
-    section {
-        width: 1440px;
-        margin: 0 auto;
-    }
-    .project {
-        width: 1440px;
-    }
-}
+// @media(min-width: 1440px) {
+//     section {
+//         width: 1440px;
+//         margin: 0 auto;
+//     }
+//     .project {
+//         width: 1440px;
+//     }
+// }
