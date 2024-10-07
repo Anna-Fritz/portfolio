@@ -2,9 +2,17 @@
 
 footer {
     background: $bgColor;
-    padding: 32px 104px;
+    padding: 32px 8%;
     box-sizing: border-box;
     @include dFlex($jc: space-between);
+    @media(min-width: 1440px) {
+            width: 1440px;
+            margin: 0 auto;
+    }
+    @media(max-width: 400px) {
+        flex-direction: column;
+        gap: 20px;
+    }
     .left-section {
         // @include dFlex($ai: flex-start);
         // flex-direction: column;
@@ -15,11 +23,17 @@ footer {
             color: white;
             font-family: 'Karla';
             margin-bottom: 12px;
+            @media(max-width: 400px) {
+                text-align: center;
+            }        
         }
     }
     .middle-section >span {
         color: $lightGreen;
         font-size: 18px;
+        @media(max-width: 850px) {
+            display: none;
+        }
     }
     .right-section {
         @include dFlex($ai: flex-start);
@@ -36,6 +50,9 @@ footer {
             &:hover .hover-dot {
                 visibility: visible;
             }
+            @media(max-width: 400px) {
+                align-self: center;
+            }        
         }
     }
 }
@@ -51,10 +68,14 @@ footer {
     border-radius: 5px;
 }
 
-
-@media(min-width: 1440px) {
-    footer {
-        width: 1440px;
-        margin: 0 auto;
+.mobile-middle-section {
+    width: 100%;
+    color: $lightGreen;
+    font-size: 18px;
+    @include dFlex();
+    padding: 0 8% 32px 8%;
+    box-sizing: border-box;
+    @media(min-width: 850px) {
+        display: none;
     }
 }
