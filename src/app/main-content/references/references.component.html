@@ -2,7 +2,7 @@
      <span>What my colleagues say about me</span>
      <img src="./../../../assets/icons/quotes.svg" alt="quotes" class="quotes">
      <div class="main-content" [ngStyle]="{'transform': 'translateX(-' + currentIndex * itemWidth + 'px)'}">
-     @for (reference of references; track $index) {
+        @for (reference of references; track $index) {
             <div class="reference">
                 <span>{{reference.content}}</span>
                 <div class="referee">
@@ -35,4 +35,6 @@
             
         <!-- <img src="assets/icons/arrow_forward.svg" alt="next reference"> -->
      </div>
+     <div class="shadow"></div>
+
 </section>

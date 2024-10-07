@@ -9,6 +9,8 @@ section {
     flex-direction: column;
     box-sizing: border-box;
     overflow: hidden;
+    background: linear-gradient(90deg, #1C1C1C 0%, rgba(28, 28, 28, 0) 10%, rgba(28, 28, 28, 0) 90%, #1C1C1C 100%);
+
     @media(min-width: 1440px) {
         width: 1440px;
         margin: 0 auto;
@@ -32,7 +34,6 @@ section {
         // width: auto;
         height: 31vh;
         transition: transform 0.3s ease-in-out;
-        // background: linear-gradient(90deg, #1C1C1C 0%, rgba(28, 28, 28, 0) 10%, rgba(28, 28, 28, 0) 90%, #1C1C1C 100%);
         .reference {
             white-space: wrap;
             width: 40vw;
@@ -67,6 +68,15 @@ section {
             }
         }
     }
+    .shadow {
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 90%;
+        background: linear-gradient(90deg, #1C1C1C 0%, rgba(28, 28, 28, 0) 10%, rgba(28, 28, 28, 0) 90%, #1C1C1C 100%);
+    }    
     .switch-cont {
         @include dFlex($g: 15px);
         position: relative;
