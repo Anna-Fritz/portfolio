@@ -1,1 +1,104 @@
 @import './../../../styles.scss';
+
+section {
+    position: relative;
+    @include dFlex($jc: space-between);
+    height: 48vh;
+    // width: 100%;
+    padding-bottom: 24px;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: hidden;
+    @media(min-width: 1440px) {
+        width: 1440px;
+        margin: 0 auto;
+    }
+    >span {
+        font-size: 32px;
+        color: $lightGreen;
+    }
+    >img {
+        position: absolute;
+        z-index: 2;
+        left: 25%;
+        top: 68px;
+
+    }
+    .main-content {
+        @include dFlex($jc: space-between, $g: 56px);
+        // overflow-x: scroll;
+        white-space: nowrap;
+        padding-left: 130%;
+        // width: auto;
+        height: 31vh;
+        transition: transform 0.3s ease-in-out;
+        // background: linear-gradient(90deg, #1C1C1C 0%, rgba(28, 28, 28, 0) 10%, rgba(28, 28, 28, 0) 90%, #1C1C1C 100%);
+        .reference {
+            white-space: wrap;
+            width: 40vw;
+            height: 100%;
+            @include dFlex($jc: space-between, $ai: flex-start);
+            flex-direction: column;
+            background-color: $blurredGreen;
+            border: solid 1px $lightGreen;
+            border-radius: 25px;
+            padding: 40px 32px;
+            box-sizing: border-box;
+            >span {
+                color: white;
+                font-size: 18px;
+                font-family: 'Karla';
+            }
+            .referee {
+                @include dFlex($jc: space-between, $g: 10px);
+                width: 100%;
+                .line {
+                    background-color: white;
+                    height: 2px;
+                    width: auto;
+                    flex: 1;
+                    border-radius: 10px; 
+                }
+                >span {
+                    color: white;
+                    font-size: 16px;
+                    font-family: 'Karla';
+                }
+            }
+        }
+    }
+    .switch-cont {
+        @include dFlex($g: 15px);
+        position: relative;
+        .arrow-left {
+            position: absolute;
+            cursor: pointer;
+            left: -40px;
+            top: -7px;
+            transition: 1s ease;
+            &:hover {
+                left: -50px;
+            }
+            &:hover >svg >path {
+                fill: $lightGreen;
+            }
+        }
+        .arrow-right {
+            position: absolute;
+            cursor: pointer;
+            right: -60px;
+            top: 0;
+            transition: 1s ease;
+            &:hover {
+                right: -80px;
+            }
+            &:hover >svg >path {
+                fill: $lightGreen;
+            }
+        }
+        .dot {
+            background-color: white;
+        }
+
+    }
+}

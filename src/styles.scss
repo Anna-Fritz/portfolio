@@ -1,6 +1,7 @@
 $bgColor: #1C1C1C;
 $lightGreen: #3DCFB6;
 $hoverGreen: #2F5B53;
+$blurredGreen: #3DCFB64D;
 $darkGreen: #2B3A37;
 $validationRed: #EC7B7BCC;
 $blurredWhite: #FFFFFFCC;
@@ -22,6 +23,13 @@ body {
     margin: 0 ;
     background-color: $bgColor;
     font-family: 'Fira Code';
+    scroll-behavior: smooth;
+    scrollbar-color: gray;
+    scrollbar-width: thin;    
+}
+
+body::-webkit-scrollbar {
+    
 }
 
 @keyframes moveBtnText {
