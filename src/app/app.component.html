@@ -1,2 +1,5 @@
 <router-outlet></router-outlet>
-<!-- <app-footer></app-footer> -->
+<app-footer></app-footer>
+  @if (projectdata.isOpen) {
+  <app-single-project #projectPopup class="project-popup"></app-single-project>
+}

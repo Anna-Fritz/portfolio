@@ -181,14 +181,15 @@ section {
 }
 
 .project-popup {
-    position: absolute;
+    position: fixed;
     z-index: 10;
-    @include dFlex($ai: flex-end);
+    @include dFlex();
+    // @include dFlex($ai: flex-end);
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100%;
+    // height: 90%;
     background: rgba(0, 0, 0, 0.2);
 }
 

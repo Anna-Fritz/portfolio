@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Renderer2 } from '@angular/core';
 import { Project } from './../../../interfaces/project.interface'
 import { ProjectdataService } from '../../../projectdata.service';
 
@@ -13,8 +13,13 @@ export class SingleProjectComponent {
 
   projectdata = inject(ProjectdataService);
 
+  constructor(private renderer: Renderer2) {
+    
+  }
+
   closePopup() {
     this.projectdata.isOpen = false;
+    this.renderer.removeClass(document.body, 'no-scroll');
   }
 
   showNextProject(index: number) {
