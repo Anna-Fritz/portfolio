@@ -13,7 +13,7 @@ export class ReferencesComponent {
   currentIndex = 0;
   itemWidth = 632;
   isSelected = [
-    false, false, false, false
+    true, false, false, false
   ]
 
 
@@ -50,27 +50,24 @@ export class ReferencesComponent {
   nextRef(){
     this.currentIndex = (this.currentIndex + 1) % this.references.length;
     this.isSelected[this.currentIndex] = true;
-    this.isSelected[this.currentIndex+1] = false;
-    this.isSelected[this.currentIndex+2] = false;
-    this.isSelected[this.currentIndex+3] = false;
     this.isSelected[this.currentIndex-1] = false;
-
-
-    // if (this.currentIndex < this.references.length - 1) {
-    //   this.currentIndex++;
-    // } else if (this.currentIndex == this.references.length -2) {
-    //   this.currentIndex = 0;
-    //   this.itemWidth = 0;
+    if (this.currentIndex == 0) {
+      this.isSelected[this.isSelected.length-1] = false;
+    }
+    // if (this.currentIndex == this.references.length-2) {
+    //   this.currentIndex = 1;
     // }
   }
 
   previousRef(){
     this.currentIndex = (this.currentIndex - 1 + this.references.length) % this.references.length;
-    // if (this.currentIndex > 0) {
-    //   this.currentIndex--;
-    // } else if (this.currentIndex == 0) {
-    //   this.currentIndex = this.references.length - 1;
-    // }
+    this.isSelected[this.currentIndex] = true;
+    if(this.currentIndex < this.isSelected.length-1) {
+      this.isSelected[this.currentIndex+1] = false;
+    }
+    if (this.currentIndex == this.isSelected.length-1) {
+      this.isSelected[0] = false;
+    }
   }
 
 }
