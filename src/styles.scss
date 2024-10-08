@@ -2,6 +2,7 @@ $bgColor: #1C1C1C;
 $lightGreen: #3DCFB6;
 $hoverGreen: #2F5B53;
 $blurredGreen: #3DCFB64D;
+// $newGreen: #3DCFB61A;
 $darkGreen: #2B3A37;
 $validationRed: #EC7B7BCC;
 $blurredWhite: #FFFFFFCC;
@@ -29,7 +30,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-    
+
 }
 
 @keyframes moveBtnText {

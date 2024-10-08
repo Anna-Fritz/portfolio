@@ -3,7 +3,7 @@
      <img src="./../../../assets/icons/quotes.svg" alt="quotes" class="quotes">
      <div class="main-content" [ngStyle]="{'transform': 'translateX(-' + currentIndex * itemWidth + 'px)'}">
         @for (reference of references; track $index) {
-            <div class="reference">
+            <div class="reference" [ngClass]="{'reference-in-focus': references[$index].inFocus}">
                 <span>{{reference.content}}</span>
                 <div class="referee">
                     <div class="line"></div>

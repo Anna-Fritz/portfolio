@@ -22,17 +22,17 @@ section {
     .quotes {
         position: absolute;
         z-index: 2;
-        left: 26%;
-        top: 68px;
+        left: 25%;
+        top: 78px;
 
     }
     .main-content {
-        @include dFlex($jc: space-between, $g: 56px);
+        @include dFlex($jc: space-between, $g: 88px);
         // overflow-x: scroll;
         white-space: nowrap;
-        padding-left: 130%;
+        padding-left: 139%;
         // width: auto;
-        height: 31vh;
+        height: 27vh;
         transition: transform 0.3s ease-in-out;
         .reference {
             white-space: wrap;
@@ -40,14 +40,14 @@ section {
             height: 100%;
             @include dFlex($jc: space-between, $ai: flex-start);
             flex-direction: column;
-            background-color: $blurredGreen;
+            background-color: #3DCFB61A;
             border: solid 1px $lightGreen;
             border-radius: 25px;
             padding: 40px 32px;
             box-sizing: border-box;
             >span {
                 color: white;
-                font-size: 18px;
+                font-size: 17px;
                 font-family: 'Karla';
             }
             .referee {
@@ -112,9 +112,7 @@ section {
     }
 }
 
-.white-dot {
-    background-color: white;
-}
-.green-dot {
-    background-color: $lightGreen;
+.reference-in-focus {
+    transform: scale(1.1);
+    background-color: $blurredGreen !important;
 }
