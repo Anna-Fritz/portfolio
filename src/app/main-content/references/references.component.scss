@@ -20,6 +20,16 @@ section {
     >span {
         font-size: 32px;
         color: $lightGreen;
+        @media(max-width: 750px) {
+            font-size: 24px;
+        }
+        @media(max-width: 500px) {
+            padding: 0 40px;
+            text-align: center;
+        }
+        @media(max-width: 360px) {
+            padding: 0 20px;
+        }
     }
     .quotes {
         position: absolute;
@@ -47,10 +57,23 @@ section {
             padding-left: 2244px;
             gap: 102px;
         }
-        @media(max-width: 650px) {
-            padding-left: 259%;
+        @media(max-width: 950px) {
+            padding: 72px 0 72px 211%;
             gap: 9vw;
         }
+        @media(max-width: 650px) {
+            padding: 56px 0 56px 246%;
+            gap: 10vw;
+        }
+        @media(max-width: 540px) {
+            padding: 48px 0 48px 248%;
+            // gap: 10vw;
+        }
+        @media(max-width: 370px) {
+            padding-left: 252%;
+            // gap: 10vw;
+        }
+
 
         .reference {
             white-space: wrap;
@@ -58,7 +81,7 @@ section {
             // width: 570px;
             width: 40vw;
             min-height: 280px;
-            @include dFlex($jc: space-between, $ai: flex-start);
+            @include dFlex($jc: space-between, $ai: flex-start, $g: 16px);
             flex-direction: column;
             background-color: #3DCFB61A;
             border: solid 1px $lightGreen;
@@ -69,8 +92,11 @@ section {
                 height: 280px;
                 width: 630px;
             }
+            @media(max-width: 950px) {
+                width: 60vw;
+            }
             @media(max-width: 650px) {
-                width: 75vw;
+                width: 70vw;
             }
             >span {
                 color: $blurredWhite;
@@ -143,4 +169,7 @@ section {
     transform: scale(1.15);
     background-color: $blurredGreen !important;
     color: white;
+    @media(max-width: 1170px) {
+        transform: scale(1.25);
+    }
 }
