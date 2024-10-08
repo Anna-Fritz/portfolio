@@ -21,10 +21,10 @@ export class ReferencesComponent {
     content: string,
     name: string
   }[] = [
-    // {
-    //   content: 'Anna was an extremely dedicated team member from the DA who always gave her best to push our group project forward. Her creativity and attention to detail elevated our work to a new level. She was not only technically proficient but also an excellent communicator, capable of conveying ideas effectively. Thanks to her thorough research, we were able to complete the project with increased efficiency and success.',
-    //   name: 'Jennifer Petrus - Project Partner'
-    // },
+    {
+      content: 'Anna was an extremely dedicated team member from the DA who always gave her best to push our group project forward. Her creativity and attention to detail elevated our work to a new level. She was not only technically proficient but also an excellent communicator, capable of conveying ideas effectively. Thanks to her thorough research, we were able to complete the project with increased efficiency and success.',
+      name: 'Jennifer Petrus - Project Partner'
+    },
     {
       content: 'It was a pleasure working with Anna and the team. Thanks to the excellent communication and Annas tireless dedication, we achieved our goal on schedule and successfully completed the project. Anna is an outstanding team player, and I would be happy to work with her again in the future. I wish her all the best for the future.',
       name: 'Vadim Wart - Project Partner'
@@ -41,10 +41,10 @@ export class ReferencesComponent {
       content: 'Anna was an extremely dedicated team member from the DA who always gave her best to push our group project forward. Her creativity and attention to detail elevated our work to a new level. She was not only technically proficient but also an excellent communicator, capable of conveying ideas effectively. Thanks to her thorough research, we were able to complete the project with increased efficiency and success.',
       name: 'Jennifer Petrus - Project Partner'
     },
-    // {
-    //   content: 'It was a pleasure working with Anna and the team. Thanks to the excellent communication and Annas tireless dedication, we achieved our goal on schedule and successfully completed the project. Anna is an outstanding team player, and I would be happy to work with her again in the future. I wish her all the best for the future.',
-    //   name: 'Vadim Wart - Project Partner'
-    // },
+    {
+      content: 'It was a pleasure working with Anna and the team. Thanks to the excellent communication and Annas tireless dedication, we achieved our goal on schedule and successfully completed the project. Anna is an outstanding team player, and I would be happy to work with her again in the future. I wish her all the best for the future.',
+      name: 'Vadim Wart - Project Partner'
+    },
   ];
 
   nextRef(){
@@ -54,19 +54,24 @@ export class ReferencesComponent {
     if (this.currentIndex == 0) {
       this.isSelected[this.isSelected.length-1] = false;
     }
-    // if (this.currentIndex == this.references.length-2) {
-    //   this.currentIndex = 1;
-    // }
+    if (this.currentIndex == this.references.length-2) {
+      this.currentIndex = 0;
+      this.isSelected[0] = true;
+    }
   }
 
   previousRef(){
     this.currentIndex = (this.currentIndex - 1 + this.references.length) % this.references.length;
     this.isSelected[this.currentIndex] = true;
+    console.log("currentIndex:", this.currentIndex);
+    
     if(this.currentIndex < this.isSelected.length-1) {
       this.isSelected[this.currentIndex+1] = false;
     }
     if (this.currentIndex == this.isSelected.length-1) {
       this.isSelected[0] = false;
+      this.currentIndex = this.isSelected.length-3;
+      this.isSelected[this.isSelected.length-3] = true;
     }
   }
 
