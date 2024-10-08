@@ -3,7 +3,7 @@
 section {
     position: relative;
     @include dFlex($jc: space-between);
-    height: 48vh;
+    height: auto;
     // width: 100%;
     padding-bottom: 24px;
     flex-direction: column;
@@ -13,6 +13,8 @@ section {
 
     @media(min-width: 1440px) {
         width: 1440px;
+        // width: 1176px;
+        height: 454px;
         margin: 0 auto;
     }
     >span {
@@ -22,22 +24,40 @@ section {
     .quotes {
         position: absolute;
         z-index: 2;
-        left: 25%;
-        top: 78px;
+        left: 23.5vw;
+        top: 66px;
+        @media(min-width: 1440px) {
+            left: 338px;
+        }
 
     }
     .main-content {
-        @include dFlex($jc: space-between, $g: 88px);
+        @include dFlex($g: 7vw);
+        // @include dFlex($jc: space-between, $g: 6vw);
         // overflow-x: scroll;
         white-space: nowrap;
-        padding-left: 139%;
+        // padding: 56px 0 56px 2030px;
+
+        padding: 56px 0 56px 143%;
         // width: auto;
-        height: 27vh;
+        // height: auto;
+        // height: 27vh;
         transition: transform 0.3s ease-in-out;
+        @media(min-width: 1440px) {
+            padding-left: 2244px;
+            gap: 102px;
+        }
+        @media(max-width: 650px) {
+            padding-left: 259%;
+            gap: 9vw;
+        }
+
         .reference {
             white-space: wrap;
+            // width: 70%;
+            // width: 570px;
             width: 40vw;
-            height: 100%;
+            min-height: 280px;
             @include dFlex($jc: space-between, $ai: flex-start);
             flex-direction: column;
             background-color: #3DCFB61A;
@@ -45,8 +65,15 @@ section {
             border-radius: 25px;
             padding: 40px 32px;
             box-sizing: border-box;
+            @media(min-width: 1440px) {
+                height: 280px;
+                width: 630px;
+            }
+            @media(max-width: 650px) {
+                width: 75vw;
+            }
             >span {
-                color: white;
+                color: $blurredWhite;
                 font-size: 17px;
                 font-family: 'Karla';
             }
@@ -113,6 +140,7 @@ section {
 }
 
 .reference-in-focus {
-    transform: scale(1.1);
+    transform: scale(1.15);
     background-color: $blurredGreen !important;
+    color: white;
 }

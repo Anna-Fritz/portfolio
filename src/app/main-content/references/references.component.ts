@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
 export class ReferencesComponent {
 
   currentIndex = 0;
-  itemWidth = 652;
+  referenceWidth = 732;
   isSelected = [
     true, false, false, false
   ]
@@ -115,7 +115,6 @@ export class ReferencesComponent {
   previousRef(){
     this.currentIndex = (this.currentIndex - 1 + this.references.length) % this.references.length;
     this.isSelected[this.currentIndex] = true;
-    console.log("currentIndex:", this.currentIndex);
 
     if(this.currentIndex < this.references.length-2) {
     this.references[this.currentIndex+1].inFocus = true;
