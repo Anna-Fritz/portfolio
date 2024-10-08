@@ -21,10 +21,10 @@
         </div>
         <!-- <img src="assets/icons/arrow_back.svg" alt="previous reference"> -->
         <!-- <div class="dots"> -->
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>    
-            <div class="dot"></div>    
+            <div [ngStyle]="{'background-color': isSelected[0]? '#3DCFB6' : 'white'}" class="dot"></div>
+            <div [ngStyle]="{'background-color': isSelected[1]? '#3DCFB6' : 'white'}" class="dot"></div>
+            <div [ngStyle]="{'background-color': isSelected[2]? '#3DCFB6' : 'white'}" class="dot"></div>    
+            <div [ngStyle]="{'background-color': isSelected[3]? '#3DCFB6' : 'white'}" class="dot"></div>    
         <!-- </div> -->
 
         <div (click)="nextRef()" class="arrow-right">
