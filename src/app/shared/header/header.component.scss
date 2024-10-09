@@ -8,9 +8,12 @@ header {
     // box-sizing: border-box;
     .desktop-header {
         @include dFlex($jc: space-between);
-        padding: 80px 8%;
+        padding: 5% 5% 80px 8%;
         width: 100%;
         box-sizing: border-box;
+        @media(min-width: 1440px) {
+            padding-right: 88px;
+        }
             >nav{
             @include dFlex($jc: space-between, $g: 20px);
             >a {
@@ -38,12 +41,12 @@ header {
             // }
         }
         >img {
-            height: 112px;
+            height: 88px;
         }
     }
     .mobile-header {
         @include dFlex($jc: space-between);
-        padding: 6% 8%;
+        padding: 8%;
         width: 100%;
         box-sizing: border-box;
         >img {
