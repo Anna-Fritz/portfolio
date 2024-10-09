@@ -3,16 +3,16 @@
         <nav>
             <div class="language-toggle">
                 <div [ngClass]="toggleDirection" class="toggle-element">{{currantLanguage}}</div>
-                <span (click)="toggleLanguage()">EN</span>
-                <span (click)="toggleLanguage()">DE</span>
+                <span (click)="translate.switchLanguage('en'); toggleLanguage()">EN</span>
+                <span (click)="translate.switchLanguage('de'); toggleLanguage()">DE</span>
             </div>
-            <a href="#about-me">About me
+            <a href="#about-me">{{ 'about' | translate}}
                 <div class="hover-dot"></div>
             </a>
-            <a href="#skills">Skills
+            <a href="#skills">{{ 'skills' | translate}}
                 <div class="hover-dot"></div>
             </a>
-                <a href="#projects">Projects
+                <a href="#projects">{{ 'projects' | translate}}
                 <div class="hover-dot"></div>
             </a>
         </nav>
