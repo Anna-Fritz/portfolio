@@ -7,10 +7,14 @@ section {
     height: auto;
     box-sizing: border-box;
     @include dFlex($jc: space-between, $ai: flex-start, $g:5%);
+    @media(min-width: 1440px) {
+        width: 1440px;
+        margin: 0 auto;
+        padding: 0 132px 120px 132px;
+    }
     @media(max-width: 942px) {
         flex-direction: column;
         align-items: space-between;
-        height: 100vh;
     }
     @media(max-width: 500px) {
         padding: 0 15px 64px 15px;
@@ -25,7 +29,6 @@ section {
         .headline {
             color: $lightGreen;
             >span {
-                // color: $lightGreen;
                 font-size: 24px;
                 font-family: 'Karla';
                 margin-bottom: 24px;

@@ -9,7 +9,7 @@ footer {
             width: 1440px;
             margin: 0 auto;
     }
-    @media(max-width: 400px) {
+    @media(max-width: 431px) {
         flex-direction: column;
         gap: 20px;
     }
@@ -23,7 +23,7 @@ footer {
             color: white;
             font-family: 'Karla';
             margin-bottom: 12px;
-            @media(max-width: 400px) {
+            @media(max-width: 431px) {
                 text-align: center;
             }        
         }
@@ -50,7 +50,7 @@ footer {
             &:hover .hover-dot {
                 visibility: visible;
             }
-            @media(max-width: 400px) {
+            @media(max-width: 431px) {
                 align-self: center;
             }        
         }
