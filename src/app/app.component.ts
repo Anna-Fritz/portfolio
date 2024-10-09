@@ -6,11 +6,12 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { SingleProjectComponent } from './main-content/projects/single-project/single-project.component';
 import { ProjectdataService } from './projectdata.service';
+import { ImprintComponent } from './imprint/imprint.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MainContentComponent, HeaderComponent, FooterComponent, SingleProjectComponent],
+  imports: [CommonModule, RouterOutlet, MainContentComponent, HeaderComponent, FooterComponent, SingleProjectComponent, ImprintComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

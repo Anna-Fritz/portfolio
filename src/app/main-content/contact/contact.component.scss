@@ -1,2 +1,171 @@
 @import './../../../styles.scss';
 
+section {
+    padding: 0 8% 120px 8%;
+    width: 100%;
+    height: 70vh;
+    box-sizing: border-box;
+    @include dFlex($jc: space-between, $ai: flex-start, $g:5%);
+    .contact-text {
+        @include dFlex($jc: space-between, $ai: flex-start);
+        flex-direction: column;
+        height: 70%;
+        .headline {
+            color: $lightGreen;
+            >span {
+                // color: $lightGreen;
+                font-size: 24px;
+                font-family: 'Karla';
+                margin-bottom: 24px;
+            }
+            >h1 {
+                font-size: 64px;
+                margin: 0;
+            }
+        }
+        .main-text {
+            padding-top: 40px;
+            >span {
+                color: $lightGreen;
+                font-size: 24px;
+                margin-bottom: 24px;
+            }
+            >p {
+                // font-size: 16px;
+                color: white;
+                font-family: 'Karla';
+                >a {
+                    text-decoration: none;
+                    color: $lightGreen;
+                }
+            }
+        }
+    }
+    .contact-form {
+        height: 100%;
+        width: 100%;    
+        >form {
+            height: 100%;
+            width: 100%;    
+            @include dFlex($jc: space-between, $ai: flex-start);
+            flex-direction: column;
+            .form-element {
+                @include dFlex($ai: flex-start, $g: 10px);
+                flex-direction: column;
+                padding-left: 32px;
+                width: 100%;
+                >label {
+                    font-size: 24px;
+                    color: $lightGreen;
+                }
+                >input {
+                    width: 100%;
+                    font-family: 'Karla';
+                    border: none;
+                    outline: none;
+                    color: white;
+                    background-color: transparent;
+                    font-size: 18px;
+                    &::placeholder {
+                        font-size: 18px;
+                    }
+                    &:active {
+                        border: none;
+                    }
+                }
+                >textarea {
+                    width: 90%;
+                    font-family: 'Karla';
+                    border: none;
+                    outline: none;
+                    color: white;
+                    background-color: transparent;
+                    font-size: 18px;
+                    resize: vertical;
+                    &::placeholder {
+                        font-size: 18px;
+                    }
+                    &::-webkit-resizer {
+                        display: none;
+                      }
+                }
+            }
+            .checkbox-policy {
+                // display: block;
+                @include dFlex($jc: flex-start, $g: 15px);
+                position: relative;
+                padding-left: 35px;
+                cursor: pointer;
+                font-size: 22px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                >input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0; 
+                    &:checked ~ .checkmark:after {
+                        display: block;
+                    }               
+                }
+                .checkmark {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 20px;
+                    width: 20px;
+                    border: solid 2px $lightGreen;
+                    border-radius: 5px;
+                    &:hover {
+                        filter: drop-shadow(0px 0px 8px $lightGreen);
+                    }
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        display: none;
+
+                        left: 6px;
+                        top: 2px;
+                        width: 5px;
+                        height: 10px;
+                        border: solid 1px $lightGreen;
+                        border-width: 0 3px 3px 0;
+                        -webkit-transform: rotate(45deg);
+                        -ms-transform: rotate(45deg);
+                        transform: rotate(45deg);
+        
+                    }
+
+                }
+                >p {
+                    color: white;
+                    font-size: 15px;
+                    font-family: 'Karla';
+                    margin: 4px 0 0 0;
+                    >a {
+                        text-decoration: none;
+                        color: $lightGreen;
+                        &:hover {
+                            color: white;
+                        }
+                    }
+                }
+            }
+            .submit-btn {
+                position: relative;
+                align-self: center;
+                >input {
+                    position: absolute;
+                    // height: 0;
+                    // width: 0; 
+                    opacity: 0;
+                    // outline: none;
+                    // border: none;
+                }
+            }
+        }
+    }
+}
