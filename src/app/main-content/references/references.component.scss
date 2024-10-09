@@ -92,11 +92,13 @@ section {
             padding: 56px 0 56px 246%;
             gap: 10vw;
         }
-        @media(max-width: 540px) {
-            padding: 48px 0 48px 248%;
+        @media(max-width: 580px) {
+            padding: 48px 0 48px 233%;
+            gap: 5vw;
         }
-        @media(max-width: 370px) {
-            padding-left: 252%;
+        @media(max-width: 430px) {
+            padding-left: 276%;
+            gap: 2vw;
         }
 
 
@@ -123,9 +125,12 @@ section {
             @media(max-width: 650px) {
                 width: 70vw;
             }
+            @media(max-width: 430px) {
+                width: 90vw;
+            }
             >span {
                 color: $blurredWhite;
-                font-size: 17px;
+                font-size: 18px;
                 font-family: 'Karla';
             }
             .referee {
@@ -197,4 +202,13 @@ section {
     @media(max-width: 1170px) {
         transform: scale(1.25);
     }
+    @media(max-width: 580px) {
+        transform: scale(1);
+        min-height: 500px !important;
+    }
+    @media(max-width: 450px) {
+        transform: scale(1);
+        min-height: 400px !important;
+    }
+
 }

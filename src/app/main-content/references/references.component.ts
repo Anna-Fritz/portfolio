@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-references',
@@ -8,14 +8,13 @@ import { Component } from '@angular/core';
   templateUrl: './references.component.html',
   styleUrl: './references.component.scss'
 })
-export class ReferencesComponent {
+export class ReferencesComponent implements OnInit {
 
   currentIndex = 0;
   referenceWidth = 732;
   isSelected = [
     true, false, false, false
-  ]
-
+  ];
 
   references: {
     content: string,
@@ -73,6 +72,30 @@ export class ReferencesComponent {
   //   }
   // }
 
+  ngOnInit() {
+    if (window.screen.width <= 430) {
+      this.referenceWidth = 0.92 * window.screen.width;
+    } else if (window.screen.width <= 580) {
+      this.referenceWidth = 0.75 * window.screen.width;
+    } else if (window.screen.width <= 650) {
+        this.referenceWidth = 0.80 * window.screen.width;
+        console.log("check",window.screen.width);
+      
+        // this.referenceWidth = 520;
+        } else if (window.screen.width <= 950) {
+          this.referenceWidth = 0.69 * window.screen.width;
+          // this.referenceWidth = 656;
+          } else if (window.screen.width < 1440) {
+            this.referenceWidth = 0.47 * window.screen.width;
+          // this.referenceWidth = 677;
+      console.log("check",window.screen.width);
+    }
+
+    window.addEventListener('resize', () => {
+      console.log(`Screen size changed to ${window.screen.width}x${window.screen.height}`);
+    });
+  }
+
   nextRef(){
     this.currentIndex = (this.currentIndex + 1) % this.references.length;
     this.isSelected[this.currentIndex] = true;
@@ -96,6 +119,9 @@ export class ReferencesComponent {
       this.references[this.currentIndex+1].inFocus = true;
 
     }
+    console.log("referenceWidth", this.referenceWidth);
+    
+    
   }
 
 
@@ -155,5 +181,28 @@ export class ReferencesComponent {
   //     this.isSelected[this.isSelected.length-3] = true;
   //   }
   // }
+
+  private startX = 0;
+  private deltaX = 0;
+
+  @HostListener('touchstart', ['$event'])
+  onTouchStart(event: TouchEvent) {
+    this.startX = event.touches[0].clientX;
+  }
+
+  @HostListener('touchmove', ['$event'])
+  onTouchMove(event: TouchEvent) {
+    this.deltaX = event.touches[0].clientX - this.startX;
+  }
+
+  @HostListener('touchend', ['$event'])
+  onTouchEnd() {
+    if (this.deltaX > 50 && this.currentIndex > 0) {
+      this.previousRef();
+    } else if (this.deltaX < -50) {
+      this.nextRef();
+    }
+    this.deltaX = 0;
+  }
 
 }

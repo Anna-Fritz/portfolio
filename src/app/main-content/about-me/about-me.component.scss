@@ -12,7 +12,7 @@ section {
         padding: 132px;
     }
     @media(max-width: 450px) {
-        padding: 0 15px;
+        padding: 56px 15px 120px 15px;
     }
     
     .main-content {
@@ -106,7 +106,7 @@ section {
             margin-top: 200px;
             @media(max-width: 850px) {
                 margin-top: 56px;
-                margin-bottom: 56px;
+                // margin-bottom: 56px;
             }
             .about-me-description {
                 font-size: 24px;
