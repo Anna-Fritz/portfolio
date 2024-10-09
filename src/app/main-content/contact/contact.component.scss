@@ -3,13 +3,25 @@
 section {
     padding: 0 8% 120px 8%;
     width: 100%;
-    height: 70vh;
+    // height: 65vh;
+    height: auto;
     box-sizing: border-box;
     @include dFlex($jc: space-between, $ai: flex-start, $g:5%);
+    @media(max-width: 942px) {
+        flex-direction: column;
+        align-items: space-between;
+        height: 100vh;
+    }
+    @media(max-width: 500px) {
+        padding: 0 15px 64px 15px;
+    }  
+    @media(max-width: 400px) {
+        height: auto;
+    }
     .contact-text {
         @include dFlex($jc: space-between, $ai: flex-start);
         flex-direction: column;
-        height: 70%;
+        height: 60%;
         .headline {
             color: $lightGreen;
             >span {
@@ -17,10 +29,16 @@ section {
                 font-size: 24px;
                 font-family: 'Karla';
                 margin-bottom: 24px;
+                @media(max-width: 630px) {
+                    font-size: 18px;
+                }    
             }
             >h1 {
                 font-size: 64px;
                 margin: 0;
+                @media(max-width: 850px) {
+                    font-size: 56px;
+                }       
             }
         }
         .main-text {
@@ -29,6 +47,9 @@ section {
                 color: $lightGreen;
                 font-size: 24px;
                 margin-bottom: 24px;
+                @media(max-width: 630px) {
+                    font-size: 20px;
+                }    
             }
             >p {
                 // font-size: 16px;
@@ -47,13 +68,20 @@ section {
         >form {
             height: 100%;
             width: 100%;    
-            @include dFlex($jc: space-between, $ai: flex-start);
+            @include dFlex($jc: space-between, $ai: flex-start, $g: 32px);
             flex-direction: column;
+            @media(max-width: 400px) {
+                gap: 20px;
+            }
             .form-element {
                 @include dFlex($ai: flex-start, $g: 10px);
                 flex-direction: column;
                 padding-left: 32px;
                 width: 100%;
+                box-sizing: border-box;
+                @media(max-width: 430px) {
+                    padding-left: 15px;
+                }
                 >label {
                     font-size: 24px;
                     color: $lightGreen;
@@ -75,6 +103,7 @@ section {
                 }
                 >textarea {
                     width: 90%;
+                    field-sizing: content;
                     font-family: 'Karla';
                     border: none;
                     outline: none;
@@ -95,6 +124,7 @@ section {
                 @include dFlex($jc: flex-start, $g: 15px);
                 position: relative;
                 padding-left: 35px;
+                margin-top: 20px;
                 cursor: pointer;
                 font-size: 22px;
                 -webkit-user-select: none;
@@ -157,6 +187,11 @@ section {
             .submit-btn {
                 position: relative;
                 align-self: center;
+                margin-top: 20px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
                 >input {
                     position: absolute;
                     // height: 0;
