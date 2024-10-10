@@ -1,7 +1,7 @@
 @import './../../../styles.scss';
 
 section {
-    padding: 0 8% 120px 8%;
+    padding: 120px 8% 120px 8%;
     width: 100%;
     // height: 65vh;
     height: auto;
@@ -10,14 +10,14 @@ section {
     @media(min-width: 1440px) {
         width: 1440px;
         margin: 0 auto;
-        padding: 0 132px 120px 132px;
+        padding: 120px 132px 120px 132px;
     }
     @media(max-width: 942px) {
         flex-direction: column;
         align-items: space-between;
     }
     @media(max-width: 500px) {
-        padding: 0 15px 64px 15px;
+        padding: 64px 15px 64px 15px;
     }  
     @media(max-width: 400px) {
         height: auto;

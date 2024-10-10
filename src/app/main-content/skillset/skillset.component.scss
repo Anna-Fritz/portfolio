@@ -6,16 +6,16 @@
 
 section {
     width: 100%;
-    padding: 0 8% 120px 8%; 
+    padding: 120px 8% 0 8%; 
     box-sizing: border-box;
     @include dFlex();
     @media(min-width: 1440px) {
         width: 1440px;
         margin: 0 auto;
-        padding: 0 132px 132px 132px;
+        padding: 120px 132px 0 132px;
     }
     @media(max-width: 450px) {
-        padding: 0 15px 64px 15px;
+        padding: 64px 15px 0 15px;
     }
     .main-content {
         @include dFlex($jc: space-between, $ai: space-between, $g: 8%);

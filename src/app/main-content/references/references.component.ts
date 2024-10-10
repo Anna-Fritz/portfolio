@@ -80,8 +80,9 @@ export class ReferencesComponent implements OnInit {
     } else if (window.screen.width <= 650) {
         this.referenceWidth = 0.80 * window.screen.width;
         console.log("check",window.screen.width);
-      
         // this.referenceWidth = 520;
+        } else if (window.screen.width <= 850) {
+          this.referenceWidth = 0.75 * window.screen.width;
         } else if (window.screen.width <= 950) {
           this.referenceWidth = 0.69 * window.screen.width;
           // this.referenceWidth = 656;

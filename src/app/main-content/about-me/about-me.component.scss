@@ -3,16 +3,16 @@
 section {
     background: #1C1C1C;
     width: 100%;
-    padding: 8%; 
+    padding: 8% 8% 0 8%; 
     box-sizing: border-box;
     @include dFlex();
     @media(min-width: 1440px) {
         width: 1440px;
         margin: 0 auto;
-        padding: 132px;
+        padding: 120px 132px 0 132px;
     }
     @media(max-width: 450px) {
-        padding: 56px 15px 120px 15px;
+        padding: 56px 15px 0 15px;
     }
     
     .main-content {
