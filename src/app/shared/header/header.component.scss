@@ -8,7 +8,7 @@ header {
     // box-sizing: border-box;
     .desktop-header {
         @include dFlex($jc: space-between);
-        padding: 5% 5% 80px 8%;
+        padding: 5% 5.5% 80px 8%;
         width: 100%;
         box-sizing: border-box;
         @media(min-width: 1440px) {
@@ -40,8 +40,11 @@ header {
             //     }
             // }
         }
-        >img {
+        >a >img {
             height: 88px;
+            &:hover {
+                filter: drop-shadow(0px 0px 8px $lightGreen);
+            }
         }
     }
     .mobile-header {
@@ -49,8 +52,11 @@ header {
         padding: 8%;
         width: 100%;
         box-sizing: border-box;
-        >img {
-            height: 8vh;  
+        >a >img {
+            height: 8vh;
+            &:hover {
+                filter: drop-shadow(0px 0px 8px $lightGreen);
+            }  
         }
         .menu-cont {
             position: relative;
