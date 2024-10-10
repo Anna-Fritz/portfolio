@@ -87,38 +87,37 @@ section {
         // @include dFlex($jc: space-between, $g: 6vw);
         // overflow-x: scroll;
         white-space: nowrap;
-        // padding: 56px 0 56px 2030px;
-
-        padding: 56px 0 56px 143%;
+        padding: 56px 0 56px 193%;
+        // padding: 56px 0 56px 143%;
         // width: auto;
         // height: auto;
         // height: 27vh;
         transition: transform 0.3s ease-in-out;
         @media(min-width: 1440px) {
-            padding-left: 2244px;
+            padding-left: 2974px;
             gap: 102px;
         }
         @media(max-width: 1170px) {
-            padding: 64px 0 64px 143%;
+            padding: 64px 0 64px 190%;
         }
         @media(max-width: 950px) {
-            padding: 72px 0 72px 211%;
+            padding: 72px 0 72px 281%;
             gap: 9vw;
         }
         @media(max-width: 850px) {
-            padding-left: 224%;
+            padding-left: 304%;
             gap: 10vw;
         }
         @media(max-width: 650px) {
-            padding: 56px 0 56px 246%;
+            padding: 56px 0 56px 326%;
             gap: 10vw;
         }
         @media(max-width: 580px) {
-            padding: 32px 0 32px 233%;
+            padding: 32px 0 32px 308%;
             gap: 5vw;
         }
         @media(max-width: 430px) {
-            padding-left: 276%;
+            padding-left: 368%;
             gap: 2vw;
         }
 

@@ -43,6 +43,11 @@ export class ReferencesComponent implements OnInit {
       inFocus: false
     },
     {
+      content: 'With incredible flair and talent - Anna is a team player you can rely on in every project phase.',
+      name: 'Fabian Roeseler - Project Partner',
+      inFocus: false
+    },
+    {
       content: 'Working with Anna is simply fantastic! Anna could certainly work in the field of design. Everything she does is well-rounded, accurately planned, and truly executed in an appealing manner. Her communication with her teammates is always on point, friendly, and her entire demeanor is a real asset to any team! I would gladly and wholeheartedly work with her anytime.',
       name: 'Ingolf Stein - Project Partner',
       inFocus: false
@@ -80,6 +85,11 @@ export class ReferencesComponent implements OnInit {
       inFocus: false
     },
     {
+      content: 'Mit unglaublichem Gespür und Talent – Anna ist eine Teamspielerin, auf die man sich in jeder Projektphase verlassen kann.',
+      name: 'Fabian Roeseler - Projekt Partner',
+      inFocus: false
+    },
+    {
       content: 'Die Zusammenarbeit mit Anna ist einfach fantastisch! Anna könnte durchaus im Bereich Design arbeiten. Alles, was sie tut, ist gut durchdacht, genau geplant und wirklich ansprechend ausgeführt. Ihre Kommunikation mit ihren Teamkollegen ist immer auf den Punkt, freundlich, und ihr gesamtes Auftreten ist eine echte Bereicherung für jedes Team! Ich würde jederzeit gerne und von ganzem Herzen mit ihr zusammenarbeiten.',
       name: 'Ingolf Stein - Projekt Partner',
       inFocus: false
@@ -90,11 +100,15 @@ export class ReferencesComponent implements OnInit {
       inFocus: false
     },
     {
-      content: 'It was a pleasure working with Anna and the team. Thanks to the excellent communication and Annas tireless dedication, we achieved our goal on schedule and successfully completed the project. Anna is an outstanding team player, and I would be happy to work with her again in the future. I wish her all the best for the future.',
+      content: 'Es war ein Vergnügen, mit Anna und dem Team zusammenzuarbeiten. Dank der hervorragenden Kommunikation und Annas unermüdlichem Einsatz haben wir unser Ziel termingerecht erreicht und das Projekt erfolgreich abgeschlossen. Anna ist ein hervorragender Teamplayer, und ich würde mich freuen, auch in Zukunft mit ihr zusammenzuarbeiten. Ich wünsche ihr alles Gute für die Zukunft.',
       name: 'Vadim Wart - Projekt Partner',
       inFocus: false
     },
   ];
+
+  fabian = [
+  ]
+
 
   // nextRef(){
   //   this.currentIndex = (this.currentIndex + 1) % this.references.length;
@@ -122,16 +136,12 @@ export class ReferencesComponent implements OnInit {
     } else if (window.screen.width <= 650) {
         this.referenceWidth = 0.80 * window.screen.width;
         console.log("check",window.screen.width);
-        // this.referenceWidth = 520;
         } else if (window.screen.width <= 850) {
           this.referenceWidth = 0.75 * window.screen.width;
         } else if (window.screen.width <= 950) {
           this.referenceWidth = 0.69 * window.screen.width;
-          // this.referenceWidth = 656;
           } else if (window.screen.width < 1440) {
             this.referenceWidth = 0.47 * window.screen.width;
-          // this.referenceWidth = 677;
-      console.log("check",window.screen.width);
     }
 
     window.addEventListener('resize', () => {
