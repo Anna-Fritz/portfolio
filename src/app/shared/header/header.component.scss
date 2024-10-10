@@ -24,6 +24,9 @@ header {
                 &:hover .hover-dot {
                     visibility: visible;
                 }
+                &:hover {
+                    color: $lightGreen;
+                }
             }
             // .language-toggle {
             //     position: relative;

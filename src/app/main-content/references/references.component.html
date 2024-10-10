@@ -1,6 +1,6 @@
 <section>
      <span>What my colleagues say about me</span>
-     <img src="./../../../assets/icons/quotes.svg" alt="quotes" class="quotes">
+     <img src="assets/icons/quotes.svg" alt="quotes" class="quotes">
      <div class="main-content" [ngStyle]="{'transform': 'translateX(-' + currentIndex * referenceWidth + 'px)'}">
         @for (reference of references; track $index) {
             <div class="reference" [ngClass]="{'reference-in-focus': references[$index].inFocus}">
