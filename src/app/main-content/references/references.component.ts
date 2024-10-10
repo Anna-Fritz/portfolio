@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit, HostListener, inject } from '@angular/core';
 import { TranslationService } from '../../translation.service';
 import { TranslateModule } from '@ngx-translate/core';
+import { ProjectdataService } from '../../projectdata.service';
 
 @Component({
   selector: 'app-references',
@@ -12,6 +13,7 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class ReferencesComponent implements OnInit {
 
+  project = inject(ProjectdataService);
   translate = inject(TranslationService);
 
   currentIndex = 0;
@@ -57,6 +59,42 @@ export class ReferencesComponent implements OnInit {
     },
   ];
 
+  referencesDE: {
+    content: string,
+    name: string,
+    inFocus: boolean
+  }[] = [
+    {
+      content: 'Anna war ein äußerst engagiertes Teammitglied aus der DA, die stets ihr Bestes gegeben hat, unser Gruppenprojekt voranzutreiben. Ihre Kreativität und ihr Blick fürs Detail haben unsere Arbeit auf ein neues Niveau gehoben. Sie war nicht nur fachlich kompetent, sondern auch eine großartige Kommunikatorin, die effektiv Ideen vermitteln kann. Durch Ihre detaillierte Recherche konnten wir das Projekt mit erhöhter Effizienz erfolgreich abschließen.',
+      name: 'Jennifer Petrus - Projekt Partnerin',
+      inFocus: false
+    },
+    {
+      content: 'Es war ein Vergnügen, mit Anna und dem Team zusammenzuarbeiten. Dank der hervorragenden Kommunikation und Annas unermüdlichem Einsatz haben wir unser Ziel termingerecht erreicht und das Projekt erfolgreich abgeschlossen. Anna ist ein hervorragender Teamplayer, und ich würde mich freuen, auch in Zukunft mit ihr zusammenzuarbeiten. Ich wünsche ihr alles Gute für die Zukunft.',
+      name: 'Vadim Wart - Projekt Partner',
+      inFocus: true
+    },
+    {
+      content: 'Anna hat während unserer Zusammenarbeit durch ihre herausragenden Fähigkeiten in HTML und CSS überzeugt. Besonders in JavaScript zeigte sie ein tiefes Verständnis und trug wesentlich zur Lösung komplexer Herausforderungen bei. Ihre Fähigkeit, Probleme schnell zu identifizieren und effizient zu beheben, hat das Team entscheidend vorangebracht. Ihr außergewöhnliches Engagement, auch über die regulären Arbeitszeiten hinaus, war von unschätzbarem Wert für den Projekterfolg.',
+      name: 'Salmai Safi - Projekt Partner',
+      inFocus: false
+    },
+    {
+      content: 'Die Zusammenarbeit mit Anna ist einfach fantastisch! Anna könnte durchaus im Bereich Design arbeiten. Alles, was sie tut, ist gut durchdacht, genau geplant und wirklich ansprechend ausgeführt. Ihre Kommunikation mit ihren Teamkollegen ist immer auf den Punkt, freundlich, und ihr gesamtes Auftreten ist eine echte Bereicherung für jedes Team! Ich würde jederzeit gerne und von ganzem Herzen mit ihr zusammenarbeiten.',
+      name: 'Ingolf Stein - Projekt Partner',
+      inFocus: false
+    },
+    {
+      content: 'Anna war ein äußerst engagiertes Teammitglied aus der DA, die stets ihr Bestes gegeben hat, unser Gruppenprojekt voranzutreiben. Ihre Kreativität und ihr Blick fürs Detail haben unsere Arbeit auf ein neues Niveau gehoben. Sie war nicht nur fachlich kompetent, sondern auch eine großartige Kommunikatorin, die effektiv Ideen vermitteln kann. Durch Ihre detaillierte Recherche konnten wir das Projekt mit erhöhter Effizienz erfolgreich abschließen.',
+      name: 'Jennifer Petrus - Projekt Partner',
+      inFocus: false
+    },
+    {
+      content: 'It was a pleasure working with Anna and the team. Thanks to the excellent communication and Annas tireless dedication, we achieved our goal on schedule and successfully completed the project. Anna is an outstanding team player, and I would be happy to work with her again in the future. I wish her all the best for the future.',
+      name: 'Vadim Wart - Projekt Partner',
+      inFocus: false
+    },
+  ];
 
   // nextRef(){
   //   this.currentIndex = (this.currentIndex + 1) % this.references.length;

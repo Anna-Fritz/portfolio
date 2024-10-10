@@ -2,15 +2,27 @@
      <span>{{ "referenceHeadline" | translate }}</span>
      <img src="assets/icons/quotes.svg" alt="quotes" class="quotes">
      <div class="main-content" [ngStyle]="{'transform': 'translateX(-' + currentIndex * referenceWidth + 'px)'}">
-        @for (reference of references; track $index) {
-            <div class="reference" [ngClass]="{'reference-in-focus': references[$index].inFocus}">
-                <span>{{reference.content}}</span>
-                <div class="referee">
-                    <div class="line"></div>
-                    <span>{{reference.name}}</span>
+        @if (project.isEN) {
+            @for (reference of references; track $index) {
+                <div class="reference" [ngClass]="{'reference-in-focus': references[$index].inFocus}">
+                    <span>{{reference.content}}</span>
+                    <div class="referee">
+                        <div class="line"></div>
+                        <span>{{reference.name}}</span>
+                    </div>
                 </div>
-            </div>
-    }
+            }    
+        } @else {
+            @for (reference of referencesDE; track $index) {
+                <div class="reference" [ngClass]="{'reference-in-focus': references[$index].inFocus}">
+                    <span>{{reference.content}}</span>
+                    <div class="referee">
+                        <div class="line"></div>
+                        <span>{{reference.name}}</span>
+                    </div>
+                </div>
+            }    
+        }
      </div>    
 
      <div class="switch-cont">
