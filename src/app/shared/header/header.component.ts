@@ -22,9 +22,11 @@ export class HeaderComponent {
     if (this.currantLanguage == 'DE') {
       this.currantLanguage = 'EN';
       this.toggleDirection = 'left';
+      this.project.isEN = true;
     } else {
       this.currantLanguage = 'DE';
       this.toggleDirection = 'right';
+      this.project.isEN = false;
     }
   }
   

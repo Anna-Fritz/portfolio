@@ -106,10 +106,12 @@ section {
         .main-details {
             @include dFlex($ai: flex-start, $jc: space-between, $g: 15px);
             flex-direction: column;
+            width: 100%;
             .subtitle {
                 font-size: 24px;
                 color: $lightGreen;
                 font-weight: 700;
+                padding-top: 16px;
                 @media(max-width: 850px) {
                     font-size: 20px;
                 }
@@ -120,7 +122,9 @@ section {
                 color: white;
             }
             .skills {
-                @include dFlex($jc: space-between, $g:15px);
+                @include dFlex($jc: flex-start, $g:15px);
+                width: 100%;
+                flex-wrap: wrap;
                 @media(max-width: 500px) {
                     flex-wrap: wrap;
                     justify-content: flex-start;
@@ -139,6 +143,7 @@ section {
         }
         .buttons {
             @include dFlex($jc: space-between, $g: 24px);
+            padding-top: 16px;
             @media(max-width: 400px) {
                 flex-direction: column;
                 align-self: center;
@@ -174,7 +179,7 @@ section {
         @include dFlex($ai: flex-end, $jc: space-between);
         flex-direction: column;
         height: 100%;
-        // width: auto;
+        width: 50%;
         @media(max-width: 980px) {
             width: 100%;
             height: auto;

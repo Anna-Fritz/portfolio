@@ -24,8 +24,12 @@
         </div>
       </div>
       <div class="main-details">
-        <div class="subtitle">What is this project about?</div>
-        <p>{{ projectdata.project[projectdata.index].description }}</p>
+        <div class="subtitle">{{ "kindOfProject" | translate}}</div>
+        @if (projectdata.isEN) {
+          <p>{{ projectdata.project[projectdata.index].descriptionEN }}</p>
+        } @else {
+          <p>{{ projectdata.project[projectdata.index].descriptionDE }}</p>
+        }
         <div class="skills">
           @for(skill of projectdata.project[projectdata.index].skills; track
           projectdata.project[projectdata.index].name) {
@@ -75,7 +79,7 @@
         alt="project image"
       />
       <div (click)="showNextProject(projectdata.index)" class="next-project">
-        <span>Next project</span>
+        <span>{{ "nextProject" | translate}}</span>
         <img src="assets/icons/arrow_forward.svg" alt="arrow forward" />
       </div>
     </div>
@@ -83,7 +87,7 @@
 
   <div (click)="showNextProject(projectdata.index)" class="popup-next-project">
     <div>
-        <span>Next project</span>
+        <span>{{ "nextProject" | translate}}</span>
         <img src="assets/icons/arrow_forward.svg" alt="arrow forward" />    
     </div>
   </div>
