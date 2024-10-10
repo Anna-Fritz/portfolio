@@ -129,8 +129,8 @@ section {
                 // display: block;
                 @include dFlex($jc: flex-start, $g: 15px);
                 position: relative;
-                padding-left: 35px;
-                margin-top: 20px;
+                padding-left: 40px;
+                // margin-top: 20px;
                 cursor: pointer;
                 font-size: 22px;
                 -webkit-user-select: none;
@@ -149,8 +149,9 @@ section {
                 }
                 .checkmark {
                     position: absolute;
-                    top: 0;
+                    // top: 0;
                     left: 0;
+                    // bottom: 0;
                     height: 20px;
                     width: 20px;
                     border: solid 2px $lightGreen;
@@ -180,7 +181,7 @@ section {
                     color: white;
                     font-size: 15px;
                     font-family: 'Karla';
-                    margin: 4px 0 0 0;
+                    margin: 0;
                     >a {
                         text-decoration: none;
                         color: $lightGreen;
