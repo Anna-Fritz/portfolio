@@ -1,5 +1,5 @@
 <section>
-     <span>What my colleagues say about me</span>
+     <span>{{ "referenceHeadline" | translate }}</span>
      <img src="assets/icons/quotes.svg" alt="quotes" class="quotes">
      <div class="main-content" [ngStyle]="{'transform': 'translateX(-' + currentIndex * referenceWidth + 'px)'}">
         @for (reference of references; track $index) {

@@ -2,16 +2,18 @@
 <section>
     <div class="main-content">
         <div class="skills-text-cont">
-            <span class="skills-subtitle">Technologies</span>
+            <span class="skills-subtitle">{{ "technologies" | translate }}</span>
             <div class="skills-text">
-                <span class="headline">Skill Set</span>
-                <p class="paragraph">My journey has involved working on diverse projects, employing a range of frontend technologies and concepts. I am open to embracing new technologies and methodologies to Continously enhance my skills and stay ahead in the ever-evolving landscape of web development.</p>
+                <span class="headline">{{ "skillSet" | translate }}</span>
+                <p class="paragraph">{{ "skillsGeneral" | translate }}</p>
                 <div>
-                    <span class="skill-question">You need <span class="green">another skill?</span></span>
-                    <p>Feel free to contact me. I look forward to<br> expanding on my previous knowledge.</p>    
+                    <span class="skill-question">
+                        {{ "skillsQuestionFirst" | translate }}<span class='green'>{{ "skillsQuestionFocus" | translate }}</span>{{ "skillsQuestionLast" | translate}}
+                    </span>
+                    <p [innerHTML]="'skillsInvite' | translate"></p>    
                 </div>
                 <a href="#contact" class="btn">
-                    <span>Let's Talk</span>
+                    <span>{{ "letsTalk" | translate }}</span>
                 </a>
             </div>
         </div>
@@ -27,7 +29,7 @@
                     <img src="assets/icons/skills/growth_mindset.svg" alt="">
                     <div class="growth-popup">
                         <div class="popup-bubble">
-                            <span>I have a special interest in learning</span>
+                            <span>{{ "learning" | translate }}</span>
                             <div class="popup-icons">
                                 <div class="popup-icon">
                                     <img src="./../../../assets/icons/skills/React.svg" alt="">
@@ -42,19 +44,19 @@
                         <img src="./../../../assets/icons/skills/popup-triangle.svg">
                     </div>
                 </div>
-                <span>Growth Mindset</span>
+                <span>{{ "growthMind" | translate }}</span>
             </div>
             <div class="icon-cont challenge-icon">
                 <div class="icon-img">
                     <img src="assets/icons/skills/challenge_me.svg" alt="">
                     <div class="challenge-popup">
                         <div class="popup-bubble">
-                            <span>I am always happy to learn new technonogies, just tell me what you need.</span>
+                            <span>{{ "challengeText" | translate }}</span>
                         </div>
                         <img src="./../../../assets/icons/skills/popup-triangle.svg">
                     </div>    
                 </div>
-                <span>Challenge me</span>
+                <span>{{ "challenge" | translate }}</span>
             </div>
         </div>
     </div>

@@ -7,5 +7,48 @@
     "contactMe" : "Kontaktieren",
     "basedIn" : "Ansässig in Laufenburg (Baden)",
     "openToWork" : "Offen für neue Jobangebote",
-    "remote" : "Offen für Remote / Homeoffice"
+    "remote" : "Offen für Remote / Homeoffice",
+
+    "who" : "Das bin ich",
+    "aboutGeneral" : "Motiviert von den grenzenlosen Möglichkeiten in der IT, begeistert es mich als Web-Entwicklerin, visuell ansprechende und anspruchsvolle Webseiten sowie Anwendungen zu gestalten.",
+    "aboutRemote" : "Im Bezug auf die Arbeitsumgebung, arbeite ich sowohl gerne vor Ort in Laufenburg (Baden) und Umgebung, als auch gerne Remote oder im HomeOffice.",
+    "aboutMind" : "Ich bin aufgeschlossen und stets auf der Suche nach neuen Herausforderungen, um mein Wissen und meine Fähigkeiten kontinuierlich zu entwickeln",
+    "aboutSolving" : "Beim Programmieren geht es für mich nicht nur darum, verständlichen und sauberen Code zu schreiben. Es ist eine kreative Form der Problemlösung. Ich bin stolz darauf, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu übersetzen. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen umzusetzen.",
+
+    "technologies" : "Technologien",
+    "skillSet" : "Kompetenzen",
+    "skillsGeneral" : "Im Laufe meiner beruflichen Reise in der IT habe ich an verschiedenen Projekten gearbeitet und dabei ein breites Spektrum an Frontend-Technologien und -Konzepten eingesetzt. Ich bin stets bereit, neue Technologien und Methoden zu erkunden, um meine Fähigkeiten kontinuierlich zu verbessern und in der dynamischen Welt der Webentwicklung immer auf dem neuesten Stand zu bleiben.",
+    "skillsQuestionFirst" : "Sie benötigen eine andere ",
+    "skillsQuestionFocus" : "Programmiersprache oder Kompetenz",
+    "skillsQuestionLast" : ", die hier nicht aufgeführt ist?",
+    "skillsInvite" : "Nehmen Sie gerne Kontakt auf. Ich entwickle mich gerne und stetig weiter.",
+    "letsTalk" : "Lassen Sie uns sprechen",
+    "growthMind" : "Stetiges Wachstum",
+    "learning" : "Ich bin sehr daran interessiert folgendes zu lernen",
+    "challenge" : "Herausforderung",
+    "challengeText" : "Ich bin immer und gerne bereit, neue Technologien zu lernen. Sagen Sie mir gerne Bescheid, was Sie brauchen.",
+
+    "featuredProjects" : "Signifikante Projekte",
+    "projectExplain" : "Entdecken Sie hier eine Auswahl meiner Arbeiten – interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+
+    "referenceHeadline" : "Das sagen meine Kollegen und Kolleginnen über mich",
+
+    "contact" : "Kontakt",
+    "letsWork" : "Lassen Sie uns gemeinsam etwas Neues erschaffen!",
+    "gotProblem" : "Bei welcher Herausforderung oder welchem Projekt kann ich Sie unterstützen?",
+    "contactText" : "Kontaktieren Sie mich gerne über dieses Formular. Ich freue mich von Ihnen zu lesen, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen." ,
+    "needDeveloper" : "Sie brauchen eine Web-Entwicklerin? ",
+    "letsTalk2" : "Lassen Sie uns reden!",
+    "formName" : "Ihr Name",
+    "placeholderName" : "Hier kommt der Name rein",
+    "formMail" : "Ihre Email",
+    "placeholderMail" : "meinemail@email.com",
+    "formMessage" : "Ihre Nachricht",
+    "placeholderMessage" : "Hallo Anna, ich bin daran interessiert...",
+    "acceptPrivacyFirst" : "Ich habe die ",
+    "privacyLink" : "Datenschutzbestimmungen ",
+    "acceptPrivacyLast" : "gelesen und und stimme der Verarbeitung meiner Daten wie darin beschrieben zu.",
+    "sayHello" : "Gruß hinterlassen",
+
+    "imprint" : "Datenschutz"
 }

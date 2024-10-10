@@ -1,10 +1,8 @@
 <section>
   <div class="content">
     <span>Portfolio</span>
-    <h1>Featured Projects</h1>
-    <p>
-      Explore a selection of my work here - <br>Interact with projects to see my skills in action.
-    </p>
+    <h1>{{ "featuredProjects" | translate }}</h1>
+    <p [innerHTML]="'projectExplain' | translate"></p>
     <div class="projects-overview">
       @for (project of projectdata.project; track $index) {
         <div class="line"></div>
@@ -27,10 +25,6 @@
       <div class="line"></div>
     </div>
   </div>
-
-  <!-- @if (projectdata.isOpen) {
-  <app-single-project #projectPopup class="project-popup"></app-single-project>
-} -->
 
 </section>
 

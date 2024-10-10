@@ -1,14 +1,18 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, inject } from '@angular/core';
+import { TranslationService } from '../../translation.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-references',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './references.component.html',
   styleUrl: './references.component.scss'
 })
 export class ReferencesComponent implements OnInit {
+
+  translate = inject(TranslationService);
 
   currentIndex = 0;
   referenceWidth = 732;

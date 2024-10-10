@@ -1,13 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslationService } from '../../translation.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skillset',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './skillset.component.html',
   styleUrl: './skillset.component.scss'
 })
 export class SkillsetComponent {
+
+  translate = inject(TranslationService);
   
   skillIcons: {
     name: string,
