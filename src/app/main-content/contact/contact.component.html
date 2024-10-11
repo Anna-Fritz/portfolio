@@ -14,26 +14,35 @@
         </div>
     </div>
     <div class="contact-form">
-        <form>
+        <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
             <div class="green-line"></div>
 
             <div class="form-element">
                 <label for="name">{{ "formName" | translate }}</label>
-                <input type="text" id="name" name="name" placeholder="{{ 'placeholderName' | translate }}">
+                <input #inputName #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="{{ 'placeholderName' | translate }}" required [ngClass]="{ 'hide' : !name.valid && name.touched}">
+                @if (!name.valid && name.touched) {
+                    <span (click)="showInput(inputName)">{{ "alertName" | translate }}</span>
+                }
             </div>
 
             <div class="green-line"></div>
 
             <div class="form-element">
                 <label for="email">{{ "formMail" | translate }}</label>
-                <input type="text" id="email" name="email" placeholder="{{ 'placeholderMail' | translate }}">
+                <input #inputEmail #email="ngModel" [(ngModel)]="contactData.email" type="text" id="email" name="email" placeholder="{{ 'placeholderMail' | translate }}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" [ngClass]="{'hide': !email.valid && email.touched }">
+                @if (!email.valid && email.touched) {
+                    <span (click)="showInput(inputEmail)">{{ "alertMail" | translate }}</span>
+                }
             </div>
 
             <div class="green-line"></div>
 
             <div class="form-element">
                 <label for="message">{{ "formMessage" | translate }}</label>
-                <textarea name="message" id="message" placeholder="{{ 'placeholderMessage' | translate }}"></textarea>
+                <textarea #inputMessage #message="ngModel" minlength="5" [(ngModel)]="contactData.message" name="message" id="message" placeholder="{{ 'placeholderMessage' | translate }}" required [ngClass]="{ 'hide' : !message.valid && message.touched}"></textarea>
+                @if (!message.valid && message.touched) {
+                    <span (click)="showInput(inputMessage)">{{ "alertMessage" | translate }}</span>
+                }
             </div>
 
             <div class="green-line"></div>
