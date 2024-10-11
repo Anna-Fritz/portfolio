@@ -82,6 +82,7 @@ section {
                 font-size: 18px;
                 transform: rotate(-90deg);
                 margin-bottom: 88px;
+                text-wrap: nowrap;
                 font-family: 'Karla';
                 &:hover {
                     color: $lightGreen;

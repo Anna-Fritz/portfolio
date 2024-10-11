@@ -34,7 +34,7 @@
 
             @for (dot of isSelected; track $index) {
                 @if ($index < references.length-2) {
-                    <div [ngStyle]="{'background-color': isSelected[$index]? '#3DCFB6' : 'white'}" class="dot"></div>
+                    <div [ngClass]="{'dot-in-focus': isSelected[$index]}" class="dot"></div>
                 }
             }
 

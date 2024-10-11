@@ -238,5 +238,10 @@ section {
     @media(max-width: 430px) {
         min-height: 500px !important;
     }
+}
 
+.dot-in-focus {
+    background-color: $lightGreen !important;
+    height: 10px;
+    width: 10px;
 }

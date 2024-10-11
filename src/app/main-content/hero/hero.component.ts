@@ -12,7 +12,7 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class HeroComponent {
 
-  mail = 'anna.fritz@email.com';
+  mail = 'mail@anna-fritz.dev';
   translate = inject(TranslationService);
 
 

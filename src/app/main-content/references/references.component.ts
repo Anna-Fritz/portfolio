@@ -19,7 +19,7 @@ export class ReferencesComponent implements OnInit {
   currentIndex = 0;
   referenceWidth = 732;
   isSelected = [
-    true, false, false, false
+    true, false, false, false, false
   ];
 
   references: {

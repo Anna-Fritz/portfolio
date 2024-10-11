@@ -19,7 +19,7 @@
 
             <div class="form-element">
                 <label for="name">{{ "formName" | translate }}</label>
-                <input #inputName #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="{{ 'placeholderName' | translate }}" required [ngClass]="{ 'hide' : !name.valid && name.touched}">
+                <input #inputName #name="ngModel" minlength="3" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="{{ 'placeholderName' | translate }}" required [ngClass]="{ 'hide' : !name.valid && name.touched}">
                 @if (!name.valid && name.touched) {
                     <span (click)="showInput(inputName)">{{ "alertName" | translate }}</span>
                 }
