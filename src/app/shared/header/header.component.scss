@@ -8,11 +8,11 @@ header {
     // box-sizing: border-box;
     .desktop-header {
         @include dFlex($jc: space-between);
-        padding: 5% 5.5% 80px 8%;
+        padding: 5% 8% 80px 8%;
         width: 100%;
         box-sizing: border-box;
         @media(min-width: 1440px) {
-            padding-right: 88px;
+            padding-right: 120px;
         }
             >nav{
             @include dFlex($jc: space-between, $g: 20px);
@@ -44,7 +44,7 @@ header {
             // }
         }
         >a >img {
-            height: 88px;
+            height: 80px;
             &:hover {
                 filter: drop-shadow(0px 0px 8px $lightGreen);
             }
@@ -136,24 +136,28 @@ header {
     @include dFlex();
     color: white;
     font-weight: 600;
+    transition: 2s ease;
+    // transition: right 0.5s ease;
 }
 
 .right {
     right: -1px;
+    transform: rotate(360deg);
 }
 
 .left {
     left: -1px;
+    transform: rotate(-360deg);
 }
 
 
 
-@media(min-width: 750px) {
+@media(min-width: 850px) {
     .mobile-header {
         display: none !important;
     }
 }
-@media(max-width: 750px) {
+@media(max-width: 850px) {
     .desktop-header {
         display: none !important;
     }

@@ -13,5 +13,7 @@ export class FooterComponent {
 
   translate = inject(TranslationService);
 
+  screenwidth = window.screen.width;
+
 
 }

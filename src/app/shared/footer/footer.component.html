@@ -1,6 +1,11 @@
 <footer>
     <div class="left-section">
-        <img src="assets/icons/logoAF.svg" alt="Logo Anna Fritz">
+        @if (screenwidth <= 430) {
+            <img src="assets/icons/logoAF.svg" alt="Logo Anna Fritz">
+
+        } @else {
+            <img src="assets/icons/logoAFbig.svg" alt="Logo Anna Fritz">
+        }   
         <p>{{ "developer" | translate }}</p>
         <p>Laufenburg (Baden), <br>Germany</p>
     </div>
