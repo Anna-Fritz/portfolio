@@ -14,7 +14,7 @@
         </div>
     </div>
     <div class="contact-form">
-        <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm, checkbox)">
+        <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm, checkbox, popup)">
             <div class="green-line"></div>
 
             <div class="form-element">
@@ -63,5 +63,12 @@
             </label>
 
         </form>
+    </div>
+
+    <div #popup class="success-popup-cont">
+        <div class="success-popup">
+            <span>{{ "successHeadline" | translate }}</span>
+            <span>{{ "successText" | translate }}</span>
+        </div>
     </div>
 </section>

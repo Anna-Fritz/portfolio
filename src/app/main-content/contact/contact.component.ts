@@ -43,7 +43,7 @@ export class ContactComponent {
     },
   };
 
-  onSubmit(ngForm: NgForm, checkbox: HTMLInputElement) {
+  onSubmit(ngForm: NgForm, checkbox: HTMLInputElement, popup: HTMLDivElement) {
     if (!checkbox.checked && ngForm.form.valid) {
       this.isAccepted = false;
     }
@@ -62,10 +62,11 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
+
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest && checkbox.checked) {
       ngForm.resetForm();
       console.log("Hey!");
-      
+      this.showSuccessPopup(popup);
     }
   }
 
@@ -81,6 +82,36 @@ export class ContactComponent {
     } else {
       checkboxPolicy.style.filter = "drop-shadow(0px 0px 40px #3DCFB6";
       this.isAccepted = false;
+    }
+  }
+
+  showSuccessPopup(popup: HTMLDivElement) {
+    if(window.screen.width > 1440) {
+      setTimeout(() => {
+        popup.style.left = "504px";
+      }, 200);
+      setTimeout(() => {
+        popup.style.left = "1880px";
+      }, 3000);
+      return;  
+
+    } else if (window.screen.width < 942) {
+      setTimeout(() => {
+        popup.style.left = "30vw";
+      }, 200);
+      setTimeout(() => {
+        popup.style.left = "110%";
+      }, 3000);      
+      return;
+      
+    } else {
+      setTimeout(() => {
+        popup.style.left = "35vw";
+      }, 200);
+      setTimeout(() => {
+        popup.style.left = "110%";
+      }, 3000);
+      return;
     }
   }
 }
