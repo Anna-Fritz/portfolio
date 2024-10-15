@@ -17,6 +17,9 @@ export class ContactComponent {
   translate = inject(TranslationService);
   http = inject(HttpClient);
 
+  isAccepted = true;
+  isEmpty = false;
+
   contactData: {
     name: string,
     email: string,
@@ -27,7 +30,7 @@ export class ContactComponent {
     message: ""
   }
 
-  mailTest = false;
+  mailTest = true;
 
   post = {
     endPoint: 'https://annafritz.dev/sendMail.php',
@@ -40,8 +43,14 @@ export class ContactComponent {
     },
   };
 
-  onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+  onSubmit(ngForm: NgForm, checkbox: HTMLInputElement) {
+    if (!checkbox.checked && ngForm.form.valid) {
+      this.isAccepted = false;
+    }
+    if (!ngForm.form.valid) {
+      this.isEmpty = true;
+    }
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest && checkbox.checked) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -53,13 +62,25 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest && checkbox.checked) {
       ngForm.resetForm();
+      console.log("Hey!");
+      
     }
   }
 
   showInput(inputfield: HTMLElement) {
     inputfield.style.display = "block";
+    this.isEmpty = false;
+  }
+
+  acceptPolicy(checkboxPolicy: HTMLElement, checkbox: HTMLInputElement, submitBtn: HTMLInputElement) {
+    if (checkbox.checked) {
+      checkboxPolicy.style.filter = "none";
+      this.isAccepted = true;
+    } else {
+      checkboxPolicy.style.filter = "drop-shadow(0px 0px 40px #3DCFB6";
+      this.isAccepted = false;
+    }
   }
 }

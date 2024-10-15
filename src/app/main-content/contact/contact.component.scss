@@ -211,6 +211,9 @@ section {
                     }
                 }
             }
+            .acceptHint {
+                color: $validationRed;
+            }
             .submit-btn {
                 position: relative;
                 align-self: center;
@@ -229,5 +232,6 @@ section {
                 }
             }
         }
+        
     }
 }

@@ -14,13 +14,13 @@
         </div>
     </div>
     <div class="contact-form">
-        <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+        <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm, checkbox)">
             <div class="green-line"></div>
 
             <div class="form-element">
                 <label for="name">{{ "formName" | translate }}</label>
                 <input #inputName #name="ngModel" minlength="3" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="{{ 'placeholderName' | translate }}" required [ngClass]="{ 'hide' : !name.valid && name.touched}">
-                @if (!name.valid && name.touched) {
+                @if (!name.valid && name.touched || !name.valid && isEmpty) {
                     <span (click)="showInput(inputName)">{{ "alertName" | translate }}</span>
                 }
             </div>
@@ -30,7 +30,7 @@
             <div class="form-element">
                 <label for="email">{{ "formMail" | translate }}</label>
                 <input #inputEmail #email="ngModel" [(ngModel)]="contactData.email" type="text" id="email" name="email" placeholder="{{ 'placeholderMail' | translate }}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" [ngClass]="{'hide': !email.valid && email.touched }">
-                @if (!email.valid && email.touched) {
+                @if (!email.valid && email.touched || !email.valid && isEmpty) {
                     <span (click)="showInput(inputEmail)">{{ "alertMail" | translate }}</span>
                 }
             </div>
@@ -40,21 +40,25 @@
             <div class="form-element">
                 <label for="message">{{ "formMessage" | translate }}</label>
                 <textarea #inputMessage #message="ngModel" minlength="5" [(ngModel)]="contactData.message" name="message" id="message" placeholder="{{ 'placeholderMessage' | translate }}" required [ngClass]="{ 'hide' : !message.valid && message.touched}"></textarea>
-                @if (!message.valid && message.touched) {
+                @if (!message.valid && message.touched || !message.valid && isEmpty) {
                     <span (click)="showInput(inputMessage)">{{ "alertMessage" | translate }}</span>
                 }
             </div>
 
             <div class="green-line"></div>
 
-            <label class="checkbox-policy">
+            <label #checkboxPolicy (click)="acceptPolicy(checkboxPolicy, checkbox, submitBtn)" class="checkbox-policy">
                 <p>{{ "acceptPrivacyFirst" | translate }}<a href='imprint'>{{ "privacyLink" | translate }}</a>{{ "acceptPrivacyLast" | translate }}</p>
-                <input type="checkbox" id="privacy-policy" name="privacy-policy">
+                <input #checkbox type="checkbox" id="privacy-policy" name="privacy-policy">
                 <span class="checkmark"></span>
             </label>
 
+            @if (!isAccepted) {
+                <span class="acceptHint">Please accept the privacy policy!</span>
+            }
+
             <label class="submit-btn btn">
-                <input type="submit" value="">
+                <input #submitBtn type="submit" value="">
                 <span>{{ "sayHello" | translate }}</span>
             </label>
 
