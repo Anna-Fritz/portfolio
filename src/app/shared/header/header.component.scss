@@ -162,3 +162,8 @@ header {
         display: none !important;
     }
 }
+@media(max-width: 350px) {
+    .dropdown {
+        padding: 40px 60px !important; 
+    }
+}

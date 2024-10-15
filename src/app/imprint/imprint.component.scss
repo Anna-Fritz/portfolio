@@ -8,6 +8,14 @@
     @include dFlex();
     flex-direction: column;
     color: white;
+    @media(min-width: 1440px) {
+        width: 1440px;
+        margin: 0 auto;
+        padding: 156px 132px 48px 132px;
+    }
+    @media(max-width: 450px) {
+        padding: 120px 15px 48px 15px;
+    }
     .legal-notice-text {
         font-family: 'Karla';
         text-align: center;
