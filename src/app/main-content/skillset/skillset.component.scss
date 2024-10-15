@@ -44,6 +44,8 @@ section {
                 background-color: #3DCFB61A;
                 @include dFlex($ai: flex-start, $g:40px);
                 flex-direction: column;
+                width: 100%;
+                box-sizing: border-box;
                 .headline{
                     font-size: 64px;
                     font-weight: 700;
@@ -51,9 +53,12 @@ section {
                     @media(max-width: 850px) {
                         font-size: 56px;
                     }   
-                    @media(max-width: 415px) {
+                    @media(max-width: 530px) {
                         font-size: 38px;
-                    }             
+                    }  
+                    @media(max-width: 350px) {
+                        font-size: 32px;
+                    }
                 }
                 .paragraph {
                     color: white;
@@ -61,22 +66,29 @@ section {
                     font-size: 18px;
                     margin: 0;
                 }
-                .skill-question {
-                    color: white;
-                    font-size: 24px;
-                    font-weight: 700;
-                    .green {
-                        color: $lightGreen;
+                >div {
+                    width: 100%;
+                    box-sizing: border-box;
+                    .skill-question {
+                        color: white;
+                        font-size: 24px;
+                        font-weight: 700;
+                        .green {
+                            color: $lightGreen;
+                            word-break: break-all;
+                        }
                     }
+                    >p {
+                        color: white;
+                        font-family: 'Karla';
+                        margin: 16px 0 0 0;
+                    }    
                 }
-                >div >p {
-                    color: white;
-                    font-family: 'Karla';
-                    margin: 16px 0 0 0;
+                >a >span{
+                    text-wrap: wrap;
+                    text-align: center;
+                    color: pink
                 }
-                // >a {
-                //     width: 104px;
-                // }
             }                
         }
     }
@@ -131,6 +143,11 @@ section {
                 transform: scale(1.15);
                 // filter: drop-shadow(0px 0px 8px $lightGreen);
             }
+            >span {
+                @media(max-width: 450px) {
+                    word-break:break-all
+                }
+            }
             .icon-img {
                 transition: 0.4s ease;
                 position: relative;
@@ -147,7 +164,7 @@ section {
     @include dFlex();
     flex-direction: column;
     right: -30px;
-    @media(max-width: 400px) {
+    @media(max-width: 393px) {
         align-items: flex-end;
     }        
     .popup-bubble {
@@ -182,7 +199,7 @@ section {
         position: relative;
         top: -1px;
         box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-        @media(max-width: 400px) {
+        @media(max-width: 393px) {
             margin-right: 43px;
         }            
     }
@@ -199,7 +216,7 @@ section {
     @media(max-width: 650px) {
         right: 0;
     }
-    @media(max-width: 400px) {
+    @media(max-width: 393px) {
         right: -38px;
     }            
     .popup-bubble {
@@ -225,7 +242,7 @@ section {
         @media(max-width: 650px) {
             margin-left: 80px;
         }   
-        @media(max-width: 400px) {
+        @media(max-width: 393px) {
             margin-left: 0;
         }                 
     }

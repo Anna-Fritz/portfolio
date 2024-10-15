@@ -33,6 +33,7 @@ section {
             font-size: 128px;
             font-weight: 700;
             margin-bottom: 32px;
+            text-align: center;
         }
         .headline-btns {
             @include dFlex($g: 8%);
