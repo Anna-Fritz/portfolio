@@ -88,7 +88,7 @@ section {
             justify-content: center;
         }
         .icon-cont {
-            @include dFlex($g: 20px);
+            @include dFlex($jc: flex-start, $g: 20px);
             flex-direction: column;
             width: 104px;
             @media(max-width: 1050px) {
@@ -113,7 +113,13 @@ section {
             &:hover .growth-popup {
                 visibility: visible;
             }
+            &:hover .icon-img {
+                transform: scale(1.15);
+                // filter: drop-shadow(0px 0px 6px $lightGreen);
+
+            }
             .icon-img {
+                transition: 0.4s ease;
                 position: relative;
             }
         }
@@ -121,7 +127,12 @@ section {
             &:hover .challenge-popup {
                 visibility: visible;
             }
+            &:hover .icon-img {
+                transform: scale(1.15);
+                // filter: drop-shadow(0px 0px 8px $lightGreen);
+            }
             .icon-img {
+                transition: 0.4s ease;
                 position: relative;
             }
         }

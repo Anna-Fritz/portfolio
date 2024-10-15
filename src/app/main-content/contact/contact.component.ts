@@ -27,7 +27,7 @@ export class ContactComponent {
     message: ""
   }
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
     endPoint: 'https://annafritz.dev/sendMail.php',
