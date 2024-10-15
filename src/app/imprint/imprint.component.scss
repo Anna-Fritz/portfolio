@@ -1,5 +1,22 @@
 @import './../../styles.scss';
 
-.test {
+.legal-notice-content {
+    background: $bgColorGradient;
+    width: 100%;
+    padding: 156px 8% 48px 8%; 
+    box-sizing: border-box;
+    @include dFlex();
+    flex-direction: column;
     color: white;
+    .legal-notice-text {
+        font-family: 'Karla';
+        text-align: center;
+        >p >a {
+            color: $lightGreen;
+            text-decoration: none;
+        }    
+        .main-content {
+            text-align: left;
+        }
+    }
 }

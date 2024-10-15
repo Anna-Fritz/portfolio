@@ -11,6 +11,8 @@ export class ProjectdataService {
   isOpen: boolean = false;
   index: number = 0;
 
+  mail = 'mail@annafritz.dev';
+
   project: Project[] = [
     {
     start: 0,

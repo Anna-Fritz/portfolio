@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { HeaderComponent } from '../../shared/header/header.component';
 import { TranslationService } from '../../translation.service';
 import { TranslateModule } from '@ngx-translate/core';
+import { ProjectdataService } from '../../projectdata.service';
 
 @Component({
   selector: 'app-hero',
@@ -12,7 +13,7 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class HeroComponent {
 
-  mail = 'mail@annafritz.dev';
+  projectdata = inject(ProjectdataService)
   translate = inject(TranslationService);
 
 

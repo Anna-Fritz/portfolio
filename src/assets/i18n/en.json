@@ -53,6 +53,7 @@
     "acceptPrivacyFirst" : "I've read the ",  
     "privacyLink" : "and agree to the processing of my data as outlined.",
     "acceptPrivacyLast" : "",
+    "acceptHint" : "Please accept the privacy policy!",
     "sayHello" : "Say hello:)",
 
     "imprint" : "Legal Notice"

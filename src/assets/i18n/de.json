@@ -54,6 +54,7 @@
     "acceptPrivacyFirst" : "Ich habe die ",
     "privacyLink" : "Datenschutzbestimmungen ",
     "acceptPrivacyLast" : "gelesen und und stimme der Verarbeitung meiner Daten wie darin beschrieben zu.",
+    "acceptHint" : "Bitte stimmten Sie den Datenschutzbestimmungen zu!",
     "sayHello" : "Gruß hinterlassen",
 
     "imprint" : "Datenschutz"
