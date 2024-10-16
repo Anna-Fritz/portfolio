@@ -10,7 +10,7 @@
     "remote" : "Offen für Remote / Homeoffice",
 
     "who" : "Das bin ich",
-    "aboutGeneral" : "Motiviert von den grenzenlosen Möglichkeiten in der IT, begeistert es mich als Web-Entwicklerin, visuell ansprechende und anspruchsvolle Webseiten sowie Anwendungen zu gestalten.",
+    "aboutGeneral" : "Motiviert von den grenzenlosen Möglichkeiten der IT, begeistert es mich als Web-Entwicklerin, visuell ansprechende und anspruchsvolle Webseiten sowie Anwendungen zu gestalten.",
     "aboutRemote" : "Im Bezug auf die Arbeitsumgebung, arbeite ich sowohl gerne vor Ort in Laufenburg (Baden) und Umgebung, als auch gerne Remote oder im HomeOffice.",
     "aboutMind" : "Ich bin aufgeschlossen und stets auf der Suche nach neuen Herausforderungen, um mein Wissen und meine Fähigkeiten kontinuierlich zu entwickeln",
     "aboutSolving" : "Beim Programmieren geht es für mich nicht nur darum, verständlichen und sauberen Code zu schreiben. Es ist eine kreative Form der Problemlösung. Ich bin stolz darauf, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu übersetzen. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen umzusetzen.",
@@ -24,7 +24,7 @@
     "skillsInvite" : "Nehmen Sie gerne Kontakt auf. Ich entwickle mich gerne und stetig weiter.",
     "letsTalk" : "Lassen Sie uns sprechen",
     "growthMind" : "Stetiges Wachstum",
-    "learning" : "Ich bin sehr daran interessiert folgendes zu lernen",
+    "learning" : "Ich bin sehr daran interessiert folgendes zu lernen:",
     "challenge" : "Herausforderung",
     "challengeText" : "Ich bin immer und gerne bereit, neue Technologien zu lernen. Sagen Sie mir gerne Bescheid, was Sie brauchen.",
 
@@ -56,7 +56,7 @@
     "acceptPrivacyLast" : "gelesen und und stimme der Verarbeitung meiner Daten wie darin beschrieben zu.",
     "acceptHint" : "Bitte stimmen Sie den Datenschutzbestimmungen zu!",
     "sayHello" : "Gruß hinterlassen",
-    "successHeadline" : "Vielen Dank für Ihre Nachricht!",
+    "successHeadline" : "Vielen Dank für Ihre / Deine Nachricht,",
     "successText" : "Ich habe Ihre Anfrage erhalten und werde mich schnellstmöglich bei Ihnen melden.",
 
     "imprint" : "Impressum",

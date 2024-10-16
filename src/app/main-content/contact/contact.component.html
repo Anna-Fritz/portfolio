@@ -64,11 +64,12 @@
 
         </form>
     </div>
-
-    <div #popup class="success-popup-cont">
-        <div class="success-popup">
-            <span>{{ "successHeadline" | translate }}</span>
-            <span>{{ "successText" | translate }}</span>
+        <div #popup class="success-popup-cont">
+            @if (sentSuccessfully) {
+            <div class="success-popup">
+                <span><span>{{ "successHeadline" | translate }}</span><br><span class="username">{{naming}}!</span></span>
+                <span>{{ "successText" | translate }}</span>
+            </div>
+        }
         </div>
-    </div>
 </section>
