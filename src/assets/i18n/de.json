@@ -20,7 +20,7 @@
     "skillsGeneral" : "Im Laufe meiner beruflichen Reise in der IT habe ich an verschiedenen Projekten gearbeitet und dabei ein breites Spektrum an Frontend-Technologien und -Konzepten eingesetzt. Ich bin stets bereit, neue Technologien und Methoden zu erkunden, um meine Fähigkeiten kontinuierlich zu verbessern und in der dynamischen Welt der Webentwicklung immer auf dem neuesten Stand zu bleiben.",
     "skillsQuestionFirst" : "Sie benötigen eine andere ",
     "skillsQuestionFocus" : "Programmiersprache oder Kompetenz",
-    "skillsQuestionLast" : ", die hier nicht aufgeführt ist?",
+    "skillsQuestionLast" : "?",
     "skillsInvite" : "Nehmen Sie gerne Kontakt auf. Ich entwickle mich gerne und stetig weiter.",
     "letsTalk" : "Lassen Sie uns sprechen",
     "growthMind" : "Stetiges Wachstum",
@@ -55,7 +55,7 @@
     "privacyLink" : "Datenschutzbestimmungen ",
     "acceptPrivacyLast" : "gelesen und und stimme der Verarbeitung meiner Daten wie darin beschrieben zu.",
     "acceptHint" : "Bitte stimmen Sie den Datenschutzbestimmungen zu!",
-    "sayHello" : "Gruß hinterlassen",
+    "sayHello" : "Gruß hinterlassen :)",
     "successHeadline" : "Vielen Dank für Ihre / Deine Nachricht,",
     "successText" : "Ich habe Ihre Anfrage erhalten und werde mich schnellstmöglich bei Ihnen melden.",
 

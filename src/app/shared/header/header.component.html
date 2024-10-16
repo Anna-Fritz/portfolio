@@ -6,17 +6,17 @@
                 <span (click)="translate.switchLanguage('en'); toggleLanguage()">EN</span>
                 <span (click)="translate.switchLanguage('de'); toggleLanguage()">DE</span>
             </div>
-            <a href="#about-me">{{ 'about' | translate}}
+            <a #aboutLink (click)="scrollToSection('about-me', aboutLink)">{{ 'about' | translate}}
                 <div class="hover-dot"></div>
             </a>
-            <a href="#skills">{{ 'skills' | translate}}
+            <a #skillsetLink (click)="scrollToSection('skillset', skillsetLink)">{{ 'skills' | translate}}
                 <div class="hover-dot"></div>
             </a>
-                <a href="#projects">{{ 'projects' | translate}}
+            <a #projectsLink (click)="scrollToSection('projects', projectsLink)">{{ 'projects' | translate}}
                 <div class="hover-dot"></div>
             </a>
         </nav>
-        <a href="#contact">
+        <a #contactLink (click)="scrollToSection('contact', contactLink)">
             <img src="assets/icons/logoAFbig.svg" alt="Anna Fritz Logo">
         </a>
     </div>
@@ -32,9 +32,9 @@
             </div>
             @if (project.menuIsOpen){
                 <div class="dropdown">
-                    <a href="#about-me">{{ 'about' | translate}}</a>
-                    <a href="#skills">{{ 'skills' | translate}}</a>
-                    <a href="#projects">{{ 'projects' | translate}}</a>
+                    <a #aboutLink (click)="scrollToSection('about-me', aboutLink)" href="#about-me">{{ 'about' | translate}}</a>
+                    <a #skillsetLink (click)="scrollToSection('skillset', skillsetLink)">{{ 'skills' | translate}}</a>
+                    <a #projectsLink (click)="scrollToSection('projects', projectsLink)">{{ 'projects' | translate}}</a>
                     <div class="language-toggle">
                         <div [ngClass]="toggleDirection" class="toggle-element">{{currantLanguage}}</div>
                         <span (click)="translate.switchLanguage('en'); toggleLanguage()">EN</span>

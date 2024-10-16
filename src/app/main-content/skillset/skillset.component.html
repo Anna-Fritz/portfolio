@@ -1,4 +1,4 @@
-<div class="bg-area">
+<div id="skillset" class="bg-area">
 <section>
     <div class="main-content">
         <div class="skills-text-cont">
@@ -12,7 +12,7 @@
                     </span>
                     <p [innerHTML]="'skillsInvite' | translate"></p>    
                 </div>
-                <a href="#contact" class="btn">
+                <a (click)="scrollToSection('contact')" class="btn">
                     <span>{{ "letsTalk" | translate }}</span>
                 </a>
             </div>

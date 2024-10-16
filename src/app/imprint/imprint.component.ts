@@ -16,5 +16,7 @@ export class ImprintComponent {
   projectdata = inject(ProjectdataService);
   translate = inject(TranslationService);
 
+  constructor() {
+  }
 
 }
