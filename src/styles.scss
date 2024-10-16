@@ -25,13 +25,12 @@ body {
     background-color: $bgColor;
     font-family: 'Fira Code';
     scroll-behavior: smooth;
-    scrollbar-color: gray;
-    scrollbar-width: thin;    
+    scrollbar-color: $bgColor;
+    scrollbar-width: thin;
+    scrollbar-track-color: $lightGreen;
+    scrollbar-arrow-color: $lightGreen;    
 }
 
-// body::-webkit-scrollbar {
-
-// }
 
 @keyframes moveBtnText {
     0% {
@@ -96,15 +95,13 @@ body {
     src: url('./assets/fonts/karla-v31-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-// scrollbar styling
+// ::-webkit-scrollbar styling
 
 ::-webkit-scrollbar {
     width: 12px;
     height: 12px;
   }
   ::-webkit-scrollbar-track {
-    // border: none;
-    // border: 3px solid #5e6472;
     border-radius: 15px;
     background-color: $bgColor;
   }
