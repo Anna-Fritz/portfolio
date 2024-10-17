@@ -21,6 +21,6 @@ export class AboutMeComponent {
   }
 
   setNavbarBlack() {
-    this.projectdata.isBlack = true;    
+    this.projectdata.isBlack = true;        
   }
 }

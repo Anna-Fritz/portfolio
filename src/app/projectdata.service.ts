@@ -7,6 +7,7 @@ import { Project } from './interfaces/project.interface'
 export class ProjectdataService {
   menuIsOpen: boolean = false;
   isEN: boolean = false;
+  isColored: boolean = false;
   isBlack: boolean = false;
   atImprint: boolean = false;
 

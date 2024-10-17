@@ -14,3 +14,33 @@
     background: rgba(0, 0, 0, 0.2);
 }
 
+.main-container {
+    // height: auto;
+    height: 8220px;
+    // overflow: hidden;
+    @media(min-width: 1440px) {
+        height: 5220px;
+    }
+}
+.header {
+    position: sticky;
+    z-index: 2;
+    top: -7vh;
+    z-index: 99;
+    @media(min-width: 1440px) {
+        top: -64px;
+    }
+    @media(max-width: 920px) {
+        top: 0;
+    }
+}
+.main-content {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    @media(min-width: 1440px) {
+        margin: 0 auto;
+    }
+}

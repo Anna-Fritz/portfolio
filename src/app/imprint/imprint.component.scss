@@ -1,16 +1,9 @@
 @import './../../styles.scss';
 
-.header {
-    position: sticky;
-    top: -6vh;
-    @media(max-width: 920px) {
-        top: 0;
-    }
-}
 .legal-notice-content {
     background: $bgColor;
     width: 100%;
-    padding: 56px 8% 48px 8%; 
+    padding: 156px 8% 48px 8%; 
     box-sizing: border-box;
     @include dFlex();
     flex-direction: column;
@@ -18,7 +11,7 @@
     @media(min-width: 1440px) {
         width: 1440px;
         margin: 0 auto;
-        padding: 56px 132px 48px 132px;
+        padding: 156px 132px 48px 132px;
     }
     @media(max-width: 920px) {
         padding-top: 32px;

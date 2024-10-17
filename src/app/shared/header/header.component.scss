@@ -1,13 +1,14 @@
 @import './../../../styles.scss';
 
 header {
-    background: linear-gradient(85.22deg, #1C1C1C 4.26%, #08463B 93.28%);
+    // background: pink;
+    // background: linear-gradient(85.22deg, #1C1C1C 4.26%, #08463B 93.28%);
     .desktop-header {
         @include dFlex($jc: space-between);
         padding: 7vh 8% 0 8%;
         width: 100%;
         box-sizing: border-box;
-        background: linear-gradient(164.22deg, #1C1C1C 36.26%, #08463B 93.28%);
+        // background: linear-gradient(164.22deg, #1C1C1C 36.26%, #08463B 93.28%);
         @media(min-width: 1440px) {
             width: 1440px;
             margin: 0 auto;
@@ -43,16 +44,16 @@ header {
         padding: 1vh 8% 1vh 8%;
         width: 100%;
         box-sizing: border-box;
-        background: linear-gradient(95.22deg, rgb(28, 28, 28, 0.7) -15%, rgb(8, 70, 59) 93.28%);
-        @media(max-width: 720px) {
-            background: linear-gradient(95.22deg, rgb(28, 28, 28, 0.7) -25%, rgb(8, 70, 59) 93.28%);
-        }
-        @media(max-width: 620px) {
-            background: linear-gradient(115.22deg, rgb(28, 28, 28, 0.7) -35%, rgb(8, 70, 59) 93.28%);
-        }
-        @media(max-width: 480px) {
-            background: linear-gradient(145.22deg, rgb(28, 28, 28, 0.7) -35%, rgb(8, 70, 59) 93.28%);
-        }
+        // background: linear-gradient(95.22deg, rgb(28, 28, 28, 0.7) -15%, rgb(8, 70, 59) 93.28%);
+        // @media(max-width: 720px) {
+        //     background: linear-gradient(95.22deg, rgb(28, 28, 28, 0.7) -25%, rgb(8, 70, 59) 93.28%);
+        // }
+        // @media(max-width: 620px) {
+        //     background: linear-gradient(115.22deg, rgb(28, 28, 28, 0.7) -35%, rgb(8, 70, 59) 93.28%);
+        // }
+        // @media(max-width: 480px) {
+        //     background: linear-gradient(145.22deg, rgb(28, 28, 28, 0.7) -35%, rgb(8, 70, 59) 93.28%);
+        // }
         >a >img {
             height: 8vh;
             &:hover {
@@ -86,7 +87,8 @@ header {
                 border: solid 1px $lightGreen;
                 border-radius: 30px;
                 background: $bgColorGradient;
-                padding: 40px 80px;
+                padding: 40px 70px;
+                text-wrap: nowrap;
                 >a {
                     text-decoration: none;
                     color: white;
@@ -146,6 +148,10 @@ header {
 .left {
     left: -1px;
     transform: rotate(-360deg);
+}
+
+.bg-hero {
+    background: linear-gradient(85.22deg, #1C1C1C 4.26%, #08463B 93.28%);
 }
 
 .black {

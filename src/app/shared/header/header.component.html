@@ -1,5 +1,5 @@
-<header [ngClass]="{'black': project.isBlack}" [ngClass]="{'imprint': project.atImprint}">
-    <div class="desktop-header" [ngClass]="{'black': project.isBlack}" [ngClass]="{'imprint': project.atImprint}">
+<header [ngClass]="{'black': project.isBlack}" [ngClass]="{'imprint': project.atImprint}" [ngClass]="{'bg-hero': project.isColored}">
+    <div class="desktop-header">
         <nav>
             <div class="language-toggle">
                 <div [ngClass]="toggleDirection" class="toggle-element">{{currantLanguage}}</div>
