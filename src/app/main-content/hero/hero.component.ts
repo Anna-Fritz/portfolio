@@ -16,5 +16,8 @@ export class HeroComponent {
   projectdata = inject(ProjectdataService)
   translate = inject(TranslationService);
 
+  resetNavbarColor() {
+    this.projectdata.isBlack = false;
+  }
 
 }

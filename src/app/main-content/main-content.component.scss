@@ -1,2 +1,17 @@
 @import './../../styles.scss';
 
+// .upper-space {
+//     height: 7vh;
+//     background: linear-gradient(175.22deg, #1C1C1C 36.26%, #08463B 93.28%);
+// }
+.header {
+    position: sticky;
+    top: -7vh;
+    z-index: 99;
+    @media(min-width: 1440px) {
+        top: -64px;
+    }
+    @media(max-width: 920px) {
+        top: 0;
+    }
+}

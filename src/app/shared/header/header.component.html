@@ -1,26 +1,26 @@
-<header>
-    <div class="desktop-header">
+<header [ngClass]="{'black': project.isBlack}" [ngClass]="{'imprint': project.atImprint}">
+    <div class="desktop-header" [ngClass]="{'black': project.isBlack}" [ngClass]="{'imprint': project.atImprint}">
         <nav>
             <div class="language-toggle">
                 <div [ngClass]="toggleDirection" class="toggle-element">{{currantLanguage}}</div>
                 <span (click)="translate.switchLanguage('en'); toggleLanguage()">EN</span>
                 <span (click)="translate.switchLanguage('de'); toggleLanguage()">DE</span>
             </div>
-            <a #aboutLink (click)="scrollToSection('about-me', aboutLink)">{{ 'about' | translate}}
+            <a #aboutLink (click)="project.scrollToSection('about-me', aboutLink)">{{ 'about' | translate}}
                 <div class="hover-dot"></div>
             </a>
-            <a #skillsetLink (click)="scrollToSection('skillset', skillsetLink)">{{ 'skills' | translate}}
+            <a #skillsetLink (click)="project.scrollToSection('skillset', skillsetLink)">{{ 'skills' | translate}}
                 <div class="hover-dot"></div>
             </a>
-            <a #projectsLink (click)="scrollToSection('projects', projectsLink)">{{ 'projects' | translate}}
+            <a #projectsLink (click)="project.scrollToSection('projects', projectsLink)">{{ 'projects' | translate}}
                 <div class="hover-dot"></div>
             </a>
         </nav>
-        <a #contactLink (click)="scrollToSection('contact', contactLink)">
+        <a #heroLink (click)="project.scrollToSection('hero', heroLink)">
             <img src="assets/icons/logoAFbig.svg" alt="Anna Fritz Logo">
         </a>
     </div>
-    <div class="mobile-header">
+    <div class="mobile-header" [ngClass]="{'black': project.isBlack}" [ngClass]="{'imprint': project.atImprint}">
         <a href="#contact">
             <img src="assets/icons/logoAF.svg" alt="logo initials">
         </a>
@@ -32,9 +32,9 @@
             </div>
             @if (project.menuIsOpen){
                 <div class="dropdown">
-                    <a #aboutLink (click)="scrollToSection('about-me', aboutLink)" href="#about-me">{{ 'about' | translate}}</a>
-                    <a #skillsetLink (click)="scrollToSection('skillset', skillsetLink)">{{ 'skills' | translate}}</a>
-                    <a #projectsLink (click)="scrollToSection('projects', projectsLink)">{{ 'projects' | translate}}</a>
+                    <a #aboutLink (click)="project.scrollToSection('about-me', aboutLink)" href="#about-me">{{ 'about' | translate}}</a>
+                    <a #skillsetLink (click)="project.scrollToSection('skillset', skillsetLink)">{{ 'skills' | translate}}</a>
+                    <a #projectsLink (click)="project.scrollToSection('projects', projectsLink)">{{ 'projects' | translate}}</a>
                     <div class="language-toggle">
                         <div [ngClass]="toggleDirection" class="toggle-element">{{currantLanguage}}</div>
                         <span (click)="translate.switchLanguage('en'); toggleLanguage()">EN</span>

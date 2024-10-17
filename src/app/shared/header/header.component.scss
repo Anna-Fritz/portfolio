@@ -1,18 +1,23 @@
 @import './../../../styles.scss';
 
 header {
-    position: absolute;
+    // position: absolute;
     // @include dFlex($jc: space-between);
     // padding: 80px 8%;
-    width: 100%;
+    // width: 100%;
     // box-sizing: border-box;
+    background: linear-gradient(85.22deg, #1C1C1C 4.26%, #08463B 93.28%);
     .desktop-header {
         @include dFlex($jc: space-between);
-        padding: 5% 8% 80px 8%;
+        padding: 7vh 8% 0 8%;
         width: 100%;
         box-sizing: border-box;
+        background: linear-gradient(163.22deg, #1C1C1C 36.26%, #08463B 93.28%);
         @media(min-width: 1440px) {
-            padding-right: 120px;
+            width: 1440px;
+            margin: 0 auto;
+            padding: 85px 115px 0 115px;
+            background: none;
         }
             >nav{
             @include dFlex($jc: space-between, $g: 20px);
@@ -40,9 +45,19 @@ header {
     }
     .mobile-header {
         @include dFlex($jc: space-between);
-        padding: 8%;
+        padding: 1vh 8% 1vh 8%;
         width: 100%;
         box-sizing: border-box;
+        background: linear-gradient(95.22deg, rgb(28, 28, 28, 0.7) -15%, rgb(8, 70, 59) 93.28%);
+        @media(max-width: 720px) {
+            background: linear-gradient(95.22deg, rgb(28, 28, 28, 0.7) -25%, rgb(8, 70, 59) 93.28%);
+        }
+        @media(max-width: 620px) {
+            background: linear-gradient(115.22deg, rgb(28, 28, 28, 0.7) -35%, rgb(8, 70, 59) 93.28%);
+        }
+        @media(max-width: 480px) {
+            background: linear-gradient(145.22deg, rgb(28, 28, 28, 0.7) -35%, rgb(8, 70, 59) 93.28%);
+        }
         >a >img {
             height: 8vh;
             &:hover {
@@ -138,14 +153,22 @@ header {
     transform: rotate(-360deg);
 }
 
+.black {
+    background: #1C1C1C !important;
+}
+
+.imprint {
+    background: linear-gradient(0deg, #1C1C1C 5%, #08463B 93.28%) !important;
+}
 
 
-@media(min-width: 850px) {
+
+@media(min-width: 920px) {
     .mobile-header {
         display: none !important;
     }
 }
-@media(max-width: 850px) {
+@media(max-width: 920px) {
     .desktop-header {
         display: none !important;
     }

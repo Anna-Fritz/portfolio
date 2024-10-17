@@ -1,10 +1,13 @@
 <footer>
     <div class="left-section">
         @if (screenwidth <= 430) {
-            <img src="assets/icons/logoAF.svg" alt="Logo Anna Fritz">
-
+            <a #heroLink (click)="project.scrollToSection('hero', heroLink)">
+                <img src="assets/icons/logoAF.svg" alt="Logo Anna Fritz">
+            </a>
         } @else {
-            <img src="assets/icons/logoAFbig.svg" alt="Logo Anna Fritz">
+            <a #heroLink (click)="project.scrollToSection('hero', heroLink)">
+                <img src="assets/icons/logoAFbig.svg" alt="Logo Anna Fritz">
+            </a>
         }   
         <p>{{ "developer" | translate }}</p>
         <p>Laufenburg (Baden), <br>Germany</p>

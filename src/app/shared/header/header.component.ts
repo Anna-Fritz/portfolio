@@ -29,15 +29,6 @@ export class HeaderComponent {
       this.project.isEN = false;
     }
   };
-
-  scrollToSection(sectionId: string, idLink: HTMLAnchorElement) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      idLink.setAttribute('href', "#"+sectionId);
-    }
- }
   
 }
 

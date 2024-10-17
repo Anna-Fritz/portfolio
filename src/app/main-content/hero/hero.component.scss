@@ -14,15 +14,34 @@
 
 section {
     position: relative;
-    height: 100vh;
+    height: 84vh;
     width: 100%;
     @include dFlex();
     overflow: hidden;
+    @media(min-width: 1440px) {
+        height: 765px;
+    }
+    @media(max-width: 920px) {
+        height: 93.2vh;
+    }
+    @media(max-width: 394px) {
+
+    }
     .headline {
         @include dFlex();
         flex-direction: column;
         font-family: 'Karla';
         z-index: 5;
+        margin-bottom: 16vh;
+        @media(max-width: 1440px) {
+            margin-bottom: 146px;
+        }
+        @media(max-width: 920px) {
+            margin-bottom: 13.5vh;
+        }
+        @media(max-width: 394px) {
+            margin-bottom: 16vh;
+        }
         >span {
             color: $lightGray;
         }

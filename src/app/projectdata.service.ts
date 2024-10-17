@@ -7,11 +7,13 @@ import { Project } from './interfaces/project.interface'
 export class ProjectdataService {
   menuIsOpen: boolean = false;
   isEN: boolean = false;
+  isBlack: boolean = false;
+  atImprint: boolean = false;
 
   isOpen: boolean = false;
   index: number = 0;
 
-  mail = 'mail@annafritz.dev';
+  mail: string = 'mail@annafritz.dev';
 
   project: Project[] = [
     {
@@ -149,5 +151,15 @@ export class ProjectdataService {
       this.menuIsOpen = true;
     }
    }
+
+   scrollToSection(sectionId: string, idLink: HTMLAnchorElement) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      idLink.setAttribute('href', "#"+sectionId);
+    }
+ }
+
 
 }

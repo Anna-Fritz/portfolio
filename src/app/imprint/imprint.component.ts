@@ -17,6 +17,7 @@ export class ImprintComponent {
   translate = inject(TranslationService);
 
   constructor() {
+    this.projectdata.atImprint = true;
   }
 
 }
