@@ -19,7 +19,6 @@ export class ContactComponent {
 
   isAccepted = true;
   isEmpty = false;
-  sentSuccessfully = false;
 
   contactData: {
     name: string,
@@ -32,7 +31,7 @@ export class ContactComponent {
   }
 
   naming = "";
-
+  sentSuccessfully = false;
   mailTest = true;
 
   post = {
@@ -67,7 +66,6 @@ export class ContactComponent {
         });
 
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest && checkbox.checked) {
-      console.log("Hey!", this.naming);
       this.showSuccessPopup(popup);
       ngForm.resetForm();
 
@@ -96,28 +94,24 @@ export class ContactComponent {
       setTimeout(() => {
         popup.style.left = "504px";
       }, 200);
-      setTimeout(() => {
-        popup.style.left = "1880px";
-      }, 3000);
-      return;  
-
+      this.hidePopup(popup);
     } else if (window.screen.width < 942) {
       setTimeout(() => {
         popup.style.left = "30vw";
       }, 200);
-      setTimeout(() => {
-        popup.style.left = "110%";
-      }, 3000);      
-      return;
-
+      this.hidePopup(popup);
     } else {
       setTimeout(() => {
         popup.style.left = "35vw";
       }, 200);
-      setTimeout(() => {
-        popup.style.left = "110%";
-      }, 3000);
-      return;
+      this.hidePopup(popup);
     }
+  }
+
+  hidePopup(popup: HTMLDivElement) {
+    setTimeout(() => {
+      popup.style.left = "110%";
+    }, 5000);
+    return;
   }
 }

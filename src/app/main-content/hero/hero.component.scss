@@ -18,15 +18,6 @@ section {
     width: 100%;
     @include dFlex();
     overflow: hidden;
-    @media(min-width: 1440px) {
-        height: 765px;
-    }
-    @media(max-width: 920px) {
-        height: 93.2vh;
-    }
-    @media(max-width: 394px) {
-
-    }
     .headline {
         @include dFlex();
         flex-direction: column;
@@ -180,11 +171,17 @@ section {
 
 @media(min-width: 1440px) {
     section {
-        height: 945px;
+        height: 765px;
         width: 1440px;
         margin: 0 auto;
     }
 }
+@media(max-width: 920px) {
+    .section {
+        height: 93.2vh;
+    }
+}
+
 @media(max-width: 900px) {
     .mail {
         display: none;

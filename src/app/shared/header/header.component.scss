@@ -1,22 +1,17 @@
 @import './../../../styles.scss';
 
 header {
-    // position: absolute;
-    // @include dFlex($jc: space-between);
-    // padding: 80px 8%;
-    // width: 100%;
-    // box-sizing: border-box;
     background: linear-gradient(85.22deg, #1C1C1C 4.26%, #08463B 93.28%);
     .desktop-header {
         @include dFlex($jc: space-between);
         padding: 7vh 8% 0 8%;
         width: 100%;
         box-sizing: border-box;
-        background: linear-gradient(163.22deg, #1C1C1C 36.26%, #08463B 93.28%);
+        background: linear-gradient(164.22deg, #1C1C1C 36.26%, #08463B 93.28%);
         @media(min-width: 1440px) {
             width: 1440px;
             margin: 0 auto;
-            padding: 85px 115px 0 115px;
+            padding: 64px 115px 0 115px;
             background: none;
         }
             >nav{
