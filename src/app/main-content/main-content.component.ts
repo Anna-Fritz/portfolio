@@ -33,8 +33,6 @@ export class MainContentComponent implements AfterViewInit {
     updateHeight() {
       const desiredHeight = this.totalHeight; // Beispielhöhe, du kannst hier die tatsächliche Höhe berechnen
       this.heightService.setHeight(desiredHeight);
-      console.log("hats geklappt?", desiredHeight);
-      console.log('New Height:', desiredHeight)
       
     }
     calculateTotalHeight() {

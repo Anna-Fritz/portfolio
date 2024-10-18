@@ -22,7 +22,6 @@ export class HeroComponent {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
     if (scrollPosition > 150) {
-      console.log('Mehr als 100 Pixel gescrollt!');
       this.projectdata.isColored = true;
     } else {
       this.projectdata.isColored = false;

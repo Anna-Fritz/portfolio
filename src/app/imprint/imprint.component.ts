@@ -33,8 +33,6 @@ export class ImprintComponent implements AfterViewInit {
   updateHeight(imprintHeight: number) {
     const desiredHeight = imprintHeight + this.projectdata.footerHeight; 
     this.heightService.setHeight(desiredHeight);
-    console.log("Imprint hats geklappt?", desiredHeight);
-    console.log('Imprint New Height:', desiredHeight)
   }
 
 

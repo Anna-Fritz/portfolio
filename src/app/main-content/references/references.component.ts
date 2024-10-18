@@ -135,7 +135,7 @@ export class ReferencesComponent implements OnInit {
       this.referenceWidth = 0.75 * window.screen.width;
     } else if (window.screen.width <= 650) {
         this.referenceWidth = 0.80 * window.screen.width;
-        console.log("check",window.screen.width);
+        // console.log("check",window.screen.width);
         } else if (window.screen.width <= 850) {
           this.referenceWidth = 0.75 * window.screen.width;
         } else if (window.screen.width <= 950) {
@@ -145,7 +145,7 @@ export class ReferencesComponent implements OnInit {
     }
 
     window.addEventListener('resize', () => {
-      console.log(`Screen size changed to ${window.screen.width}x${window.screen.height}`);
+      // console.log(`Screen size changed to ${window.screen.width}x${window.screen.height}`);
     });
   }
 

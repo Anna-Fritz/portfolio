@@ -10,7 +10,6 @@ export class HeightService {
 
   setHeight(height: number) {
     this.heightSubject.next(height);
-    console.log("Höhe geändert", height);
     
   }
   constructor() { }

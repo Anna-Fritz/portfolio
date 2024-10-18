@@ -24,7 +24,6 @@ export class FooterComponent implements AfterViewInit {
   ngAfterViewInit() {
     // Berechne die Höhe der Komponente
     this.footerHeight = this.footer.nativeElement.offsetHeight;
-    console.log('Höhe des footers:', this.footerHeight);
     this.project.footerHeight = this.footerHeight;
   }
 
