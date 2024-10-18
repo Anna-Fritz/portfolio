@@ -15,11 +15,12 @@
 }
 
 .main-container {
+    // position: relative;
     // height: auto;
-    height: 8220px;
+    // height: 8220px;
     // overflow: hidden;
     @media(min-width: 1440px) {
-        height: 5220px;
+        // height: 5220px;
     }
 }
 .header {

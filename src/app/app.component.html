@@ -1,7 +1,9 @@
-<div class="main-container">
+<div id ="projectContainer">
   <app-header class="header"></app-header>
   <div class="main-content">
-    <router-outlet></router-outlet>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
     <app-footer></app-footer>
       @if (projectdata.isOpen) {
       <app-single-project #projectPopup class="project-popup"></app-single-project>

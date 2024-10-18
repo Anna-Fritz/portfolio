@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { TranslationService } from '../../translation.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { ProjectdataService } from '../../projectdata.service';
@@ -10,12 +10,22 @@ import { ProjectdataService } from '../../projectdata.service';
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
-export class FooterComponent {
+export class FooterComponent implements AfterViewInit {
 
   project = inject(ProjectdataService);
   translate = inject(TranslationService);
 
   screenwidth = window.screen.width;
 
+  @ViewChild('footer', { static: true, read: ElementRef }) footer!: ElementRef;
+
+  footerHeight: number = 0;
+
+  ngAfterViewInit() {
+    // Berechne die Höhe der Komponente
+    this.footerHeight = this.footer.nativeElement.offsetHeight;
+    console.log('Höhe des footers:', this.footerHeight);
+    this.project.footerHeight = this.footerHeight;
+  }
 
 }

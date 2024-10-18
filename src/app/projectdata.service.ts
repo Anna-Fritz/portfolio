@@ -10,6 +10,8 @@ export class ProjectdataService {
   isColored: boolean = false;
   isBlack: boolean = false;
   atImprint: boolean = false;
+  mainContentHeight: number = 0;
+  footerHeight: number = 0;
 
   isOpen: boolean = false;
   index: number = 0;
@@ -143,24 +145,21 @@ export class ProjectdataService {
   }
 ];
 
-  constructor() { }
-
-   toggleMenu() {
+  toggleMenu() {
     if(this.menuIsOpen) {
       this.menuIsOpen = false;
     } else {
       this.menuIsOpen = true;
     }
-   }
+  }
 
-   scrollToSection(sectionId: string, idLink: HTMLAnchorElement) {
+  scrollToSection(sectionId: string, idLink: HTMLAnchorElement) {
     const element = document.getElementById(sectionId);
     if (element) {
        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else {
       idLink.setAttribute('href', "#"+sectionId);
     }
- }
-
+  }
 
 }
