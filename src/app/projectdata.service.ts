@@ -47,7 +47,7 @@ export class ProjectdataService {
       }
     ],
     githubSrc: 'https://',
-    liveTestSrc: 'https://',
+    liveTestSrc: 'https://annafritz.de',
     img: 'assets/img/portfolio.png',
   },
   {
@@ -73,7 +73,7 @@ export class ProjectdataService {
       }
     ],
     githubSrc: 'https://',
-    liveTestSrc: 'https://',
+    liveTestSrc: 'https://annafritz.de/el_pollo_loco',
     img: 'assets/img/el_pollo_loco.png',
   },
   {
@@ -109,7 +109,7 @@ export class ProjectdataService {
       }
     ],
     githubSrc: 'https://',
-    liveTestSrc: 'https://',
+    liveTestSrc: 'https://annafritz.de/join',
     img: 'assets/img/join.png',
   },
   {
@@ -140,7 +140,7 @@ export class ProjectdataService {
       }
     ],
     githubSrc: 'https://',
-    liveTestSrc: 'https://',
+    liveTestSrc: 'https://annafritz.de/pokedex',
     img: 'assets/img/pokedex.png',
   }
 ];

@@ -32,7 +32,7 @@ export class ContactComponent {
 
   naming = "";
   sentSuccessfully = false;
-  mailTest = true;
+  mailTest = false;
 
   post = {
     endPoint: 'https://annafritz.de/sendMail.php',
