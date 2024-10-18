@@ -17,7 +17,7 @@
             </a>
         </nav>
         <a href="https://annafritz.de">
-            <img src="assets/icons/logoAFbig.svg" alt="Anna Fritz Logo">
+            <img src="assets/icons/logoAFbig.svg" alt="Anna Fritz Logo" [ngClass]="{'newLogoSize' : project.isColored}">
         </a>
     </div>
     <div class="mobile-header" [ngClass]="{'black': project.isBlack}" [ngClass]="{'imprint': project.atImprint}">
