@@ -2,9 +2,11 @@
     <div class="desktop-header">
         <nav>
             <div class="language-toggle">
-                <div [ngClass]="toggleDirection" class="toggle-element">{{currantLanguage}}</div>
-                <span (click)="translate.switchLanguage('en'); toggleLanguage()">EN</span>
-                <span (click)="translate.switchLanguage('de'); toggleLanguage()">DE</span>
+                <input type="checkbox" id="switch" [(ngModel)]="translate.isChecked">
+                <label for="switch">
+                    <span (click)="translate.switchLanguage('de')">DE</span>    
+                    <span (click)="translate.switchLanguage('en')">EN</span>
+                </label>
             </div>
             <a #aboutLink (click)="project.scrollToSection('about-me', aboutLink)">{{ 'about' | translate}}
                 <div class="hover-dot"></div>
@@ -33,13 +35,15 @@
             @if (project.menuIsOpen){
                 <div class="dropdown">
                     <a #aboutLink (click)="project.scrollToSection('about-me', aboutLink)" href="#about-me">{{ 'about' | translate}}</a>
-                    <a #skillsetLink (click)="project.scrollToSection('skillset', skillsetLink)">{{ 'skills' | translate}}</a>
-                    <a #projectsLink (click)="project.scrollToSection('projects', projectsLink)">{{ 'projects' | translate}}</a>
+                    <a #skillsetLink (click)="project.scrollToSection('skillset', skillsetLink)" href="#skills">{{ 'skills' | translate}}</a>
+                    <a #projectsLink (click)="project.scrollToSection('projects', projectsLink)" href="#projects">{{ 'projects' | translate}}</a>
                     <div class="language-toggle">
-                        <div [ngClass]="toggleDirection" class="toggle-element">{{currantLanguage}}</div>
-                        <span (click)="translate.switchLanguage('en'); toggleLanguage()">EN</span>
-                        <span (click)="translate.switchLanguage('de'); toggleLanguage()">DE</span>
-                    </div>    
+                        <input type="checkbox" id="switchMobile" [(ngModel)]="translate.isChecked">
+                        <label for="switchMobile">
+                            <span (click)="translate.switchLanguage('de')">DE</span>    
+                            <span (click)="translate.switchLanguage('en')">EN</span>
+                        </label>
+                    </div>
                 </div>    
             }
         </div>
