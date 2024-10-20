@@ -172,9 +172,7 @@ export class ReferencesComponent implements OnInit {
       this.references[this.currentIndex+1].inFocus = true;
 
     }
-    console.log("referenceWidth", this.referenceWidth);
-    
-    
+    // console.log("referenceWidth", this.referenceWidth);
   }
 
 
