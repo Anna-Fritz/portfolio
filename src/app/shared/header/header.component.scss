@@ -63,26 +63,55 @@ header {
         }
         .menu-cont {
             position: relative;
-            // @include dFlex($jc: flex-end, $ai: space-between);
-            // flex-direction: column;
-            .menu {
-                @include dFlex($jc: space-between, $g: 12px);
-                flex-direction: column;
-                cursor: pointer;
-                &:hover .line {
-                    background-color: $lightGreen;
+            >input {
+                display: none;
+                &:checked + .hamburger1 .top {
+                    -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                    margin-top: 22.5px;
                 }
-                .line {
-                    height: 3px;
-                    width: 56px;
-                    border-radius: 5px;
-                    background-color: white;
+                &:checked + .hamburger1 .meat {
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    margin-top: -3px;
+                }
+                &:checked + .hamburger1 .bottom {
+                    -webkit-transform: scale(0);
+                    transform: scale(0);
+                }
+                &:checked .dropdown {
+                    margin-top: 30px;
+                    background-color: aqua;
                 }
             }
+            >label {
+                margin-left: 0;
+                margin-right: 0;
+                cursor: pointer;
+                &:hover >div {
+                    background-color: $lightGreen;
+                    }
+
+                >div {
+                    background-color: #ffffff;
+                    position: relative;
+                    width: 60px;
+                    height: 3px;
+                    -webkit-transition: all 0.2s ease-in-out;
+                    transition: 0.2s ease-in-out;
+                    border-radius: 3px;    
+                }   
+                .meat {
+                    margin-top: 12px;
+                }
+                .bottom {
+                    margin-top: 12px;
+                }
+            }           
             .dropdown {
                 position: absolute;
                 right: 0;
-                margin-top: 15px;
+                margin-top: 25px;
                 @include dFlex($jc: space-between, $ai: flex-start, $g: 30px);
                 flex-direction: column;
                 border: solid 1px $lightGreen;
@@ -90,6 +119,7 @@ header {
                 background: $bgColorGradient;
                 padding: 40px 70px;
                 text-wrap: nowrap;
+                transform: 0.5s ease;
                 >a {
                     text-decoration: none;
                     color: white;
@@ -214,3 +244,33 @@ header {
         padding: 40px 60px !important; 
     }
 }
+// label {
+//     margin-left: 0;
+//     margin-right: 0;
+// }
+  
+  
+// #toggle1 {
+//     display: none;
+// }
+  
+// #toggle1:checked + .hamburger1 .top {
+//    -webkit-transform: rotate(-45deg);
+//             transform: rotate(-45deg);
+//     margin-top: 22.5px;
+// }
+  
+// #toggle1:checked + .hamburger1 .meat {
+//    -webkit-transform: rotate(45deg);
+//             transform: rotate(45deg);
+//    margin-top: -5px;
+// }
+  
+// #toggle1:checked + .hamburger1 .bottom {
+//     -webkit-transform: scale(0);
+//             transform: scale(0);
+// }
+  
+// #toggle1:checked ~ .menu1 {
+//    height: 520px;
+// }
