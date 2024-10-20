@@ -15,7 +15,7 @@ section {
         padding: 120px 132px 0 132px;
     }
     @media(max-width: 450px) {
-        padding: 64px 15px 0 15px;
+        padding: 96px 15px 0 15px;
     }
     .main-content {
         @include dFlex($jc: space-between, $ai: space-between, $g: 8%);

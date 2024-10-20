@@ -11,8 +11,11 @@ section {
         margin: 0 auto;
         padding: 120px 132px 0 132px;
     }
+    @media(max-width: 920px) {
+        padding-top: 130px;
+    }
     @media(max-width: 450px) {
-        padding: 56px 15px 0 15px;
+        padding: 88px 15px 0 15px;
     }
     
     .main-content {

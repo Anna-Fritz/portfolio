@@ -18,26 +18,26 @@
                 <div class="hover-dot"></div>
             </a>
         </nav>
-        <a href="https://annafritz.de">
+        <a href="#hero">
             <img src="assets/icons/logoAFbig.svg" alt="Anna Fritz Logo" [ngClass]="{'newLogoSize' : project.isColored}">
         </a>
     </div>
     <div class="mobile-header" [ngClass]="{'black': project.isBlack}" [ngClass]="{'imprint': project.atImprint}">
-        <a href="https://annafritz.de">
+        <a href="#hero">
             <img src="assets/icons/logoAF.svg" alt="logo initials">
         </a>
         <div class="menu-cont">
-                <input (click)="project.toggleMenu()" type="checkbox" id="toggle1">
-                <label for="toggle1" class="hamburger1">
+                <input (click)="project.toggleMenu()" [(ngModel)]="project.menuToggle" type="checkbox" id="toggle">
+                <label for="toggle" class="hamburger">
                     <div class="top"></div>
                     <div class="meat"></div>
                     <div class="bottom"></div>
                 </label>
             @if (project.menuIsOpen){
                 <div class="dropdown">
-                    <a #aboutLink (click)="project.scrollToSection('about-me', aboutLink)" href="#about-me">{{ 'about' | translate}}</a>
-                    <a #skillsetLink (click)="project.scrollToSection('skillset', skillsetLink)" href="#skills">{{ 'skills' | translate}}</a>
-                    <a #projectsLink (click)="project.scrollToSection('projects', projectsLink)" href="#projects">{{ 'projects' | translate}}</a>
+                    <a #aboutLink (click)="project.scrollToSection('about-me', aboutLink); project.closeMenu()">{{ 'about' | translate}}</a>
+                    <a #skillsetLink (click)="project.scrollToSection('skillset', skillsetLink); project.closeMenu()">{{ 'skills' | translate}}</a>
+                    <a #projectsLink (click)="project.scrollToSection('projects', projectsLink); project.closeMenu()">{{ 'projects' | translate}}</a>
                     <div class="language-toggle">
                         <input type="checkbox" id="switchMobile" [(ngModel)]="translate.isChecked">
                         <label for="switchMobile">
