@@ -1,11 +1,11 @@
 <footer #footer>
     <div class="left-section">
         @if (screenwidth <= 430) {
-            <a href="https://annafritz.de">
+            <a #hero (click)="project.scrollToSection('hero', hero)">
                 <img src="assets/icons/logoAF.svg" alt="Logo Anna Fritz">
             </a>
         } @else {
-            <a href="https://annafritz.de">
+            <a #hero (click)="project.scrollToSection('hero', hero)">
                 <img src="assets/icons/logoAFbig.svg" alt="Logo Anna Fritz">
             </a>
         }   
@@ -24,7 +24,7 @@
             <span>LinkedIn</span>
             <div class="hover-dot"></div>
         </a>
-        <a href="#contact">
+        <a #contactBtn (click)="project.scrollToSection('contact', contactBtn)">
             <span>Email</span>
             <div class="hover-dot"></div>
         </a>

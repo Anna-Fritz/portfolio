@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { TranslationService } from '../../translation.service';
 import { TranslateModule } from '@ngx-translate/core';
+import { ProjectdataService } from '../../projectdata.service';
 
 @Component({
   selector: 'app-skillset',
@@ -12,6 +13,7 @@ import { TranslateModule } from '@ngx-translate/core';
 export class SkillsetComponent {
 
   translate = inject(TranslationService);
+  projectdata = inject(ProjectdataService);
   
   skillIcons: {
     name: string,
@@ -70,12 +72,5 @@ export class SkillsetComponent {
       src: 'assets/icons/skills/bootstrap.svg'
     },
   ];
-
-  scrollToSection(sectionId: string) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
- }
 
 }

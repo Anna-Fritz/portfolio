@@ -18,12 +18,12 @@
                 <div class="hover-dot"></div>
             </a>
         </nav>
-        <a href="#hero">
+        <a #hero (click)="project.scrollToSection('hero', hero)">
             <img src="assets/icons/logoAFbig.svg" alt="Anna Fritz Logo" [ngClass]="{'newLogoSize' : project.isColored}">
         </a>
     </div>
     <div class="mobile-header" [ngClass]="{'black': project.isBlack}" [ngClass]="{'imprint': project.atImprint}">
-        <a href="#hero">
+        <a hero (click)="project.scrollToSection('hero', hero)">
             <img src="assets/icons/logoAF.svg" alt="logo initials">
         </a>
         <div class="menu-cont">

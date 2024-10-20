@@ -12,7 +12,7 @@
                     </span>
                     <p [innerHTML]="'skillsInvite' | translate"></p>    
                 </div>
-                <a (click)="scrollToSection('contact')" class="btn">
+                <a #contactBtn (click)="projectdata.scrollToSection('contact', contactBtn)" class="btn">
                     <span>{{ "letsTalk" | translate }}</span>
                 </a>
             </div>

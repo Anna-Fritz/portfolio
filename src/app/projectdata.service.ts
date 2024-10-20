@@ -162,14 +162,8 @@ export class ProjectdataService {
   scrollToSection(sectionId: string, idLink: HTMLAnchorElement) {
     const element = document.getElementById(sectionId);
     if (element) {
-      if (window.screen.width < 920) {
-        
-      }
        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else {
-      if (sectionId == "about-me") {
-        idLink.setAttribute('href', "#"+sectionId+"100px");
-      }
       idLink.setAttribute('href', "#"+sectionId);
     }
   }

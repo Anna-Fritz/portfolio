@@ -5,10 +5,10 @@
         <span class="job-title">{{ "developer" | translate}}</span>
         <span class="name">Anna Fritz</span>
         <div class="headline-btns">
-            <a href="#projects" class="btn">
+            <a #projectsBtn (click)="projectdata.scrollToSection('projects', projectsBtn)" class="btn">
                 <span>{{ "checkWork" | translate}}</span>
             </a>
-            <a href="#contact" class="btn">
+            <a #contactBtn (click)="projectdata.scrollToSection('contact', contactBtn)" class="btn">
                 <span>{{ "contactMe" | translate}}</span>
             </a>
         </div>
