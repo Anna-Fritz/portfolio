@@ -1,7 +1,7 @@
 <footer #footer>
     <div class="left-section">
         @if (screenwidth <= 430) {
-            <a #hero (click)="project.scrollToSection('hero', hero)">
+            <a href="">
                 <img src="assets/icons/logoAF.svg" alt="Logo Anna Fritz">
             </a>
         } @else {
@@ -10,7 +10,7 @@
             </a>
         }   
         <p>{{ "developer" | translate }}</p>
-        <p>Laufenburg (Baden), <br>Germany</p>
+        <p>Laufenburg (Baden), <br>{{ "germany" | translate}}</p>
     </div>
     <div class="middle-section">
         <span>© Anna Fritz 2024</span>
@@ -28,7 +28,7 @@
             <span>Email</span>
             <div class="hover-dot"></div>
         </a>
-        <a href="imprint">
+        <a [routerLink]="['imprint']">
             <span>{{ "imprint" | translate }}</span>
             <div class="hover-dot"></div>
         </a>

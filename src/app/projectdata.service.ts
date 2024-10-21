@@ -164,7 +164,7 @@ export class ProjectdataService {
     if (element) {
        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else {
-      idLink.setAttribute('href', "#"+sectionId);
+      idLink.setAttribute('href', sectionId);
     }
   }
 

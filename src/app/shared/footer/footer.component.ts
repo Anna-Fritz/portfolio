@@ -2,11 +2,12 @@ import { AfterViewInit, Component, ElementRef, inject, ViewChild } from '@angula
 import { TranslationService } from '../../translation.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { ProjectdataService } from '../../projectdata.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, RouterLink],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
