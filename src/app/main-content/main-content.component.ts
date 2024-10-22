@@ -40,6 +40,7 @@ export class MainContentComponent implements AfterViewInit{
       this.heightService.setHeight(desiredHeight);
       
     }
+    
     calculateTotalHeight() {
       this.totalHeight = this.sections.reduce((acc, section: ElementRef) => {
         return acc + section.nativeElement.offsetHeight;

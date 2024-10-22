@@ -1,11 +1,11 @@
 <footer #footer>
     <div class="left-section">
         @if (screenwidth <= 430) {
-            <a routerLink="" fragment="hero">
+            <a routerLink="" fragment="hero" (click)="project.resetNavbarColor()">
                 <img src="assets/icons/logoAF.svg" alt="Logo Anna Fritz">
             </a>
         } @else {
-            <a routerLink="" fragment="hero">
+            <a routerLink="" fragment="hero" (click)="project.resetNavbarColor()">
                 <img src="assets/icons/logoAFbig.svg" alt="Logo Anna Fritz">
             </a>
         }   

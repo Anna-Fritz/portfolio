@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { TranslationService } from '../../translation.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { ProjectdataService } from '../../projectdata.service';
@@ -10,7 +10,7 @@ import { ProjectdataService } from '../../projectdata.service';
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss'
 })
-export class AboutMeComponent {
+export class AboutMeComponent implements OnInit {
 
   projectdata = inject(ProjectdataService);
   translate = inject(TranslationService);
@@ -19,8 +19,8 @@ export class AboutMeComponent {
     stripes.style.top = "5%";
     stripes.style.left = "-8%";
   }
-
-  setNavbarBlack() {
-    this.projectdata.isBlack = true;        
+  
+  ngOnInit() {
+    this.projectdata.isColored = false;
   }
 }

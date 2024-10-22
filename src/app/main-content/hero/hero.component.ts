@@ -32,8 +32,4 @@ export class HeroComponent implements OnInit {
     this.projectdata.atImprint = false;
   }
 
-  resetNavbarColor() {
-    this.projectdata.isBlack = false;
-  }
-
 }

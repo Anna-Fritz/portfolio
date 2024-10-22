@@ -158,4 +158,13 @@ export class ProjectdataService {
     this.menuIsOpen = false;
     this.menuToggle = false;
   }
+
+  resetNavbarColor() {
+    this.isBlack = false;
+  }
+
+  setNavbarBlack() {
+    this.isBlack = true;  
+  }
+
 }

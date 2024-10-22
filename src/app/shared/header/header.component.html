@@ -8,22 +8,22 @@
                     <span (click)="translate.switchLanguage('en')">EN</span>
                 </label>
             </div>
-            <a routerLink="" fragment="about-me">{{ 'about' | translate}}
+            <a (click)="project.setNavbarBlack()" routerLink="" fragment="about-me">{{ 'about' | translate}}
                 <div class="hover-dot"></div>
             </a>
-            <a routerLink="" fragment="skills">{{ 'skills' | translate}}
+            <a (click)="project.setNavbarBlack()" routerLink="" fragment="skills">{{ 'skills' | translate}}
                 <div class="hover-dot"></div>
             </a>
-            <a routerLink="" fragment="projects">{{ 'projects' | translate}}
+            <a (click)="project.setNavbarBlack()" routerLink="" fragment="projects">{{ 'projects' | translate}}
                 <div class="hover-dot"></div>
             </a>
         </nav>
-        <a routerLink="" fragment="hero">
+        <a routerLink="" fragment="hero" (click)="project.resetNavbarColor()">
             <img src="assets/icons/logoAFbig.svg" alt="Anna Fritz Logo" [ngClass]="{'newLogoSize' : project.isColored}">
         </a>
     </div>
     <div class="mobile-header" [ngClass]="{'black': project.isBlack}" [ngClass]="{'imprint': project.atImprint}">
-        <a routerLink="" fragment="hero">
+        <a routerLink="" fragment="hero" (click)="project.resetNavbarColor()">
             <img src="assets/icons/logoAF.svg" alt="logo initials">
         </a>
         <div class="menu-cont">
@@ -35,13 +35,9 @@
                 </label>
             @if (project.menuIsOpen){
                 <div class="dropdown">
-                    <a (click)="project.closeMenu()" routerLink="" fragment="about-me">{{ 'about' | translate}}</a>
-
-                    <!-- <a #aboutLink (click)="project.scrollToSection('about-me', aboutLink); project.closeMenu()">{{ 'about' | translate}}</a> -->
-                    <a (click)="project.closeMenu()" routerLink="" fragment="skills">{{ 'skills' | translate}}</a>
-                    <a (click)="project.closeMenu()" routerLink="" fragment="projects">{{ 'projects' | translate}}</a>
-                    <!-- <a #projectsLink (click)="project.scrollToSection('projects', projectsLink); project.closeMenu()">{{ 'projects' | translate}}</a> -->
-
+                    <a (click)="project.closeMenu(); project.setNavbarBlack()" routerLink="" fragment="about-me">{{ 'about' | translate}}</a>
+                    <a (click)="project.closeMenu(); project.setNavbarBlack()" routerLink="" fragment="skills">{{ 'skills' | translate}}</a>
+                    <a (click)="project.closeMenu(); project.setNavbarBlack()" routerLink="" fragment="projects">{{ 'projects' | translate}}</a>
                     <div class="language-toggle">
                         <input type="checkbox" id="switchMobile" [(ngModel)]="translate.isChecked">
                         <label for="switchMobile">

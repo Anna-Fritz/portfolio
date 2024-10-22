@@ -5,6 +5,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { RouterLink } from '@angular/router';
+import { ProjectdataService } from '../../projectdata.service';
 
 @Component({
   selector: 'app-contact',
@@ -16,6 +17,7 @@ import { RouterLink } from '@angular/router';
 export class ContactComponent {
 
   translate = inject(TranslationService);
+  projectdata = inject(ProjectdataService);
   http = inject(HttpClient);
 
   isAccepted = true;
