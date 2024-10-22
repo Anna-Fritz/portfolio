@@ -1,14 +1,11 @@
 @import './../../../styles.scss';
 
 header {
-    // background: pink;
-    // background: linear-gradient(85.22deg, #1C1C1C 4.26%, #08463B 93.28%);
     .desktop-header {
         @include dFlex($jc: space-between);
         padding: 7vh 8% 0 8%;
         width: 100%;
         box-sizing: border-box;
-        // background: linear-gradient(164.22deg, #1C1C1C 36.26%, #08463B 93.28%);
         @media(min-width: 1440px) {
             width: 1440px;
             margin: 0 auto;
@@ -17,7 +14,6 @@ header {
         }
             >nav{
             @include dFlex($jc: space-between, $g: 20px);
-            
             >a {
                 position: relative;
                 color: white;
@@ -45,16 +41,6 @@ header {
         padding: 1vh 8% 0 8%;
         width: 100%;
         box-sizing: border-box;
-        // background: linear-gradient(95.22deg, rgb(28, 28, 28, 0.7) -15%, rgb(8, 70, 59) 93.28%);
-        // @media(max-width: 720px) {
-        //     background: linear-gradient(95.22deg, rgb(28, 28, 28, 0.7) -25%, rgb(8, 70, 59) 93.28%);
-        // }
-        // @media(max-width: 620px) {
-        //     background: linear-gradient(115.22deg, rgb(28, 28, 28, 0.7) -35%, rgb(8, 70, 59) 93.28%);
-        // }
-        // @media(max-width: 480px) {
-        //     background: linear-gradient(145.22deg, rgb(28, 28, 28, 0.7) -35%, rgb(8, 70, 59) 93.28%);
-        // }
         >a >img {
             height: 8vh;
             cursor: pointer;
@@ -109,7 +95,6 @@ header {
                     @media(max-width: 430px) {
                         margin-top: 1.5vh;
                     }   
-
                 }
                 .bottom {
                     margin-top: 12px;
@@ -154,18 +139,10 @@ header {
 
 .language-toggle {
     @include dFlex();
-    @media(max-width: 920px) {
-        // position: relative;
-    }
     >input {
         height: 0;
         width: 0;
-        visibility: hidden;
-        // @include dFlex();
-        @media(max-width: 920px) {
-            // position: absolute;
-        }
-    
+        visibility: hidden;   
         &:checked + label::after {
             transform: translate(78%);
             content: 'EN';
@@ -173,7 +150,6 @@ header {
     }
     >label {
         cursor: pointer;
-        // text-indent: -9999px;
         width: 87px;
         height: 33px;
         display: block;
@@ -206,7 +182,6 @@ header {
             @include dFlex();
             color: white;
             font-weight: 600;
-        
         }
     }
 }
@@ -237,8 +212,6 @@ header {
     height: 60px !important;
     padding: 6px 0 2px 0;
 }
-
-
 
 @media(min-width: 921px) {
     .mobile-header {

@@ -1,18 +1,17 @@
 import { Component, AfterViewInit, ElementRef, ViewChildren, QueryList, inject, ViewChild, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { MainContentComponent } from './main-content/main-content.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { SingleProjectComponent } from './main-content/projects/single-project/single-project.component';
 import { ProjectdataService } from './projectdata.service';
-import { ImprintComponent } from './imprint/imprint.component';
 import { HeightService } from './height.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MainContentComponent, HeaderComponent, FooterComponent, SingleProjectComponent, ImprintComponent],
+  imports: [CommonModule, RouterOutlet, MainContentComponent, HeaderComponent, FooterComponent, SingleProjectComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

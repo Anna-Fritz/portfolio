@@ -15,17 +15,14 @@ export class FooterComponent implements AfterViewInit {
 
   project = inject(ProjectdataService);
   translate = inject(TranslationService);
-
+  footerHeight: number = 0;
   screenwidth = window.screen.width;
 
   @ViewChild('footer', { static: true, read: ElementRef }) footer!: ElementRef;
-
-  footerHeight: number = 0;
 
   ngAfterViewInit() {
     // Berechne die Höhe der Komponente
     this.footerHeight = this.footer.nativeElement.offsetHeight;
     this.project.footerHeight = this.footerHeight;
   }
-
 }

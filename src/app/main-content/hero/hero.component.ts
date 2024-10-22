@@ -19,7 +19,6 @@ export class HeroComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    // Überprüfe die Scroll-Position und führe deine Logik aus
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
     if (scrollPosition > 150) {

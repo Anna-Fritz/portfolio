@@ -106,28 +106,6 @@ export class ReferencesComponent implements OnInit {
     },
   ];
 
-  fabian = [
-  ]
-
-
-  // nextRef(){
-  //   this.currentIndex = (this.currentIndex + 1) % this.references.length;
-  //   this.references[this.currentIndex+1].isSelected = true;
-  //   this.references[this.currentIndex-1].isSelected = false;
-
-  //   // this.isSelected[this.currentIndex] = true;
-  //   // this.isSelected[this.currentIndex-1] = false;
-  //   if (this.currentIndex == 0) {
-  //     this.references[this.references.length-2].isSelected = false;
-  //     // this.isSelected[this.isSelected.length-1] = false;
-  //   }
-  //   if (this.currentIndex == this.references.length-2) {
-  //     this.currentIndex = 0;
-  //     this.references[1].isSelected = true;
-  //     // this.isSelected[0] = true;
-  //   }
-  // }
-
   ngOnInit() {
     if (window.screen.width <= 430) {
       this.referenceWidth = 0.92 * window.screen.width;
@@ -135,7 +113,6 @@ export class ReferencesComponent implements OnInit {
       this.referenceWidth = 0.75 * window.screen.width;
     } else if (window.screen.width <= 650) {
         this.referenceWidth = 0.80 * window.screen.width;
-        // console.log("check",window.screen.width);
         } else if (window.screen.width <= 850) {
           this.referenceWidth = 0.75 * window.screen.width;
         } else if (window.screen.width <= 950) {
@@ -143,10 +120,6 @@ export class ReferencesComponent implements OnInit {
           } else if (window.screen.width < 1440) {
             this.referenceWidth = 0.47 * window.screen.width;
     }
-
-    window.addEventListener('resize', () => {
-      // console.log(`Screen size changed to ${window.screen.width}x${window.screen.height}`);
-    });
   }
 
   nextRef(){
@@ -161,33 +134,16 @@ export class ReferencesComponent implements OnInit {
     if (this.currentIndex == 0) {
       this.isSelected[this.isSelected.length-1] = false;
 
-    this.references[this.references.length-2].inFocus = false;
-    this.references[this.references.length-1].inFocus = false;
-
+      this.references[this.references.length-2].inFocus = false;
+      this.references[this.references.length-1].inFocus = false;
     }
+
     if (this.currentIndex == this.references.length-2) {
       this.currentIndex = 0;
       this.isSelected[this.currentIndex] = true;
-
       this.references[this.currentIndex+1].inFocus = true;
-
     }
-    // console.log("referenceWidth", this.referenceWidth);
   }
-
-
-  // nextRef(){
-  //   this.currentIndex = (this.currentIndex + 1) % this.references.length;
-  //   this.isSelected[this.currentIndex] = true;
-  //   this.isSelected[this.currentIndex-1] = false;
-  //   if (this.currentIndex == 0) {
-  //     this.isSelected[this.isSelected.length-1] = false;
-  //   }
-  //   if (this.currentIndex == this.references.length-2) {
-  //     this.currentIndex = 0;
-  //     this.isSelected[0] = true;
-  //   }
-  // }
 
   previousRef(){
     this.currentIndex = (this.currentIndex - 1 + this.references.length) % this.references.length;
@@ -197,14 +153,13 @@ export class ReferencesComponent implements OnInit {
     this.references[this.currentIndex+1].inFocus = true;
     this.references[this.currentIndex+2].inFocus = false;
     this.references[this.references.length-1].inFocus = false;
-  }
-    
+    }
+
     if(this.currentIndex < this.isSelected.length-1) {
       this.isSelected[this.currentIndex+1] = false;
-
       this.references[this.currentIndex+2].inFocus = false;
-
     }
+
     if (this.currentIndex >= this.isSelected.length-1) {
       this.isSelected[0] = false;
       this.currentIndex = this.isSelected.length-3;
@@ -212,26 +167,8 @@ export class ReferencesComponent implements OnInit {
 
       this.references[1].inFocus = false;
       this.references[this.references.length-2].inFocus = true;
-
-
     }
   }
-
-
-  // previousRef(){
-  //   this.currentIndex = (this.currentIndex - 1 + this.references.length) % this.references.length;
-  //   this.isSelected[this.currentIndex] = true;
-  //   console.log("currentIndex:", this.currentIndex);
-    
-  //   if(this.currentIndex < this.isSelected.length-1) {
-  //     this.isSelected[this.currentIndex+1] = false;
-  //   }
-  //   if (this.currentIndex == this.isSelected.length-1) {
-  //     this.isSelected[0] = false;
-  //     this.currentIndex = this.isSelected.length-3;
-  //     this.isSelected[this.isSelected.length-3] = true;
-  //   }
-  // }
 
   private startX = 0;
   private deltaX = 0;
@@ -255,5 +192,4 @@ export class ReferencesComponent implements OnInit {
     }
     this.deltaX = 0;
   }
-
 }

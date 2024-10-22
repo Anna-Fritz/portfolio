@@ -22,6 +22,7 @@ export class ImprintComponent implements AfterViewInit, OnInit{
   constructor(private heightService: HeightService) {
     this.projectdata.atImprint = true;
   }
+  
   ngOnInit(): void {
     window.scrollTo(0,0);
   }
@@ -37,7 +38,5 @@ export class ImprintComponent implements AfterViewInit, OnInit{
     const desiredHeight = imprintHeight + this.projectdata.footerHeight; 
     this.heightService.setHeight(desiredHeight);
   }
-
-
 
 }

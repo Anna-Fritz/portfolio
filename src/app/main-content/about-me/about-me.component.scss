@@ -17,7 +17,6 @@ section {
     @media(max-width: 450px) {
         padding: 88px 15px 0 15px;
     }
-    
     .main-content {
         @include dFlex($jc: space-between, $ai: space-between, $g: 8%);
         width: 100%;
@@ -81,7 +80,6 @@ section {
                 @media(max-width: 450px) {
                     display: none;
                 }
-
             }
             .upper-photo {
                 position: absolute;
@@ -109,7 +107,6 @@ section {
             margin-top: 200px;
             @media(max-width: 850px) {
                 margin-top: 56px;
-                // margin-bottom: 56px;
             }
             .about-me-description {
                 font-size: 24px;
@@ -151,7 +148,6 @@ section {
                 color: white;
             }
         }
-    
     }
 }
 

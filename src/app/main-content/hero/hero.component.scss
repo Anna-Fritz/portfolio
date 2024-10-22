@@ -1,13 +1,5 @@
 @import './../../../styles.scss';
 
-// .header {
-//     position: absolute;
-//     z-index: 99;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-// }
-
 .bg-area{
     background: $bgColorGradient;
 }
@@ -23,16 +15,6 @@ section {
         flex-direction: column;
         font-family: 'Karla';
         z-index: 5;
-        // margin-bottom: 16vh;
-        // @media(max-width: 1440px) {
-        //     margin-bottom: 146px;
-        // }
-        // @media(max-width: 920px) {
-        //     margin-bottom: 13.5vh;
-        // }
-        // @media(max-width: 394px) {
-        //     margin-bottom: 16vh;
-        // }
         >span {
             color: $lightGray;
         }
@@ -68,7 +50,6 @@ section {
                 >img {
                     animation: moveArrow 0.7s alternate-reverse infinite;
                 }
-
             }
             .left-line {
                 width: 1px;
@@ -104,7 +85,6 @@ section {
                 &:hover >a >svg >path {
                     fill: white;
                 }
-    
             }
             .right-line {
                 width: 1px;
@@ -236,7 +216,3 @@ section {
         gap: 20px !important;
     }
 }
-
-
-
-

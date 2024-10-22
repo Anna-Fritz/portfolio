@@ -1,7 +1,6 @@
 @import './../../../../styles.scss';
 
 section {
-    // position: fixed;
     padding: 72px;
     background: $bgColorGradient;
     height: 60%;
@@ -16,26 +15,14 @@ section {
         margin: 0 auto;
     }
     @media(max-width: 980px) {
-        // flex-direction: column-reverse;
-        // align-items: flex-start;
-        // padding: 32px;
         height: 80%;
         width: 50%;
-        // overflow-y: scroll;
-        // -ms-overflow-style: none;
-        // scrollbar-width: none;
-        // &::-webkit-scrollbar {
-        //     display: none;
-        // }
     }
     @media(max-width: 750px) {
         padding: 20px;
         width: 80%;
         height: 90%;
     }
-    // @media(max-width: 400px) {
-    //     height: 80%;
-    // }
     .main-content {
         @include dFlex($jc: space-between, $g: 40px);
         flex-direction: row-reverse;
@@ -55,7 +42,6 @@ section {
         }
         @media(max-width: 750px) {
             height: 85%;
-            // gap: 20px;
         }
         @media(max-width: 600px) {
             height: auto;
@@ -200,7 +186,6 @@ section {
         .project-img {
             max-height: 80%;
             max-width: 100%;
-            // padding: 15px 0;
             border-radius: 30px;
             @media(min-width: 1440px) {
                 height: 350px;
@@ -217,9 +202,6 @@ section {
             @media(max-width: 980px) {
                 display: none;
             }    
-            // &:hover {
-            //     gap: 20px;
-            // }
             &:hover >img {
                 right: -20px;
             }
@@ -247,7 +229,6 @@ section {
             display: none;
         }
         >svg {
-            // position: absolute;
             top: 0;
             right: 0;
             cursor: pointer;
@@ -263,7 +244,6 @@ section {
     .popup-next-project {
         width: 100%;
         height: 32px;
-        // background-color: aqua;
         @include dFlex($jc: flex-end);
         margin-top: 24px;
         @media(min-width: 981px) {
@@ -274,12 +254,6 @@ section {
             z-index: 9;
             @include dFlex($g: 15px);
             cursor: pointer;
-            // &:hover {
-            //     gap: 20px;
-            // }
-            // &:hover >img {
-            //     right: -20px;
-            // }
             >span {
                 color: $lightGreen;
                 font-size: 18px;

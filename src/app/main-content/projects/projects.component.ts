@@ -16,10 +16,7 @@ export class ProjectsComponent {
   projectdata = inject(ProjectdataService);
   translate = inject(TranslationService);
 
-  constructor(private renderer: Renderer2) {
-    
-  }
-
+  constructor(private renderer: Renderer2) {}
 
   openPopup(index: number) {
     this.projectdata.isOpen = true;

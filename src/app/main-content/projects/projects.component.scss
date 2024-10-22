@@ -87,8 +87,6 @@ section {
                     @media(max-width: 1160px) {
                         right: -330px;
                     }
-                    // right: -47%;
-                    // bottom: -68%;
                 }
                 >span {
                     color: white;
@@ -111,7 +109,6 @@ section {
                 .project-stack {
                     @include dFlex($jc: flex-start, $g: 0);
                     @media(max-width: 650px) {
-                        // width: 100%;
                         height: auto;
                         flex-wrap: wrap !important;
                     }    
@@ -150,9 +147,6 @@ section {
                 .stripes-cont {
                     position: absolute;
                     right: -364px;
-                    // right: -45%;
-                    // right: -47%;
-                    // bottom: -68%;
                     height: 192px;
                     width: 296px;
                     visibility: hidden;
@@ -187,22 +181,9 @@ section {
     position: fixed;
     z-index: 10;
     @include dFlex();
-    // @include dFlex($ai: flex-end);
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    // height: 90%;
     background: rgba(0, 0, 0, 0.2);
 }
-
-
-// @media(min-width: 1440px) {
-//     section {
-//         width: 1440px;
-//         margin: 0 auto;
-//     }
-//     .project {
-//         width: 1440px;
-//     }
-// }

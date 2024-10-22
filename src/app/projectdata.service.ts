@@ -158,5 +158,4 @@ export class ProjectdataService {
     this.menuIsOpen = false;
     this.menuToggle = false;
   }
-  
 }

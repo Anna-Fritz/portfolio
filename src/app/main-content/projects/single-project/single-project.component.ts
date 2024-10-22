@@ -1,5 +1,4 @@
 import { Component, inject, Renderer2 } from '@angular/core';
-import { Project } from './../../../interfaces/project.interface'
 import { ProjectdataService } from '../../../projectdata.service';
 import { TranslationService } from '../../../translation.service';
 import { TranslateModule } from '@ngx-translate/core';
@@ -16,9 +15,7 @@ export class SingleProjectComponent {
   projectdata = inject(ProjectdataService);
   translate = inject(TranslationService);
 
-  constructor(private renderer: Renderer2) {
-    
-  }
+  constructor(private renderer: Renderer2) {}
 
   closePopup() {
     this.projectdata.isOpen = false;
