@@ -47,7 +47,7 @@ export class ProjectdataService {
         name: 'HTML'
       }
     ],
-    githubSrc: 'https://',
+    githubSrc: 'https://github.com/Anna-Fritz/portfolio',
     liveTestSrc: 'https://annafritz.de',
     img: 'assets/img/portfolio.png',
   },
@@ -109,7 +109,7 @@ export class ProjectdataService {
         name: 'Scrum'
       }
     ],
-    githubSrc: 'https://',
+    githubSrc: 'https://github.com/Anna-Fritz/JOIN_Kanban_board',
     liveTestSrc: 'https://annafritz.de/join',
     img: 'assets/img/join.png',
   },
@@ -140,7 +140,7 @@ export class ProjectdataService {
         name: 'Rest-Api'
       }
     ],
-    githubSrc: 'https://',
+    githubSrc: 'https://github.com/Anna-Fritz/pokedex',
     liveTestSrc: 'https://annafritz.de/pokedex',
     img: 'assets/img/pokedex.png',
   }
