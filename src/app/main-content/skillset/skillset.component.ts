@@ -2,11 +2,12 @@ import { Component, inject } from '@angular/core';
 import { TranslationService } from '../../translation.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { ProjectdataService } from '../../projectdata.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-skillset',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, RouterLink],
   templateUrl: './skillset.component.html',
   styleUrl: './skillset.component.scss'
 })

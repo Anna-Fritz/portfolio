@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, inject, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
 import { TranslationService } from '../translation.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { ProjectdataService } from '../projectdata.service';
@@ -12,7 +12,7 @@ import { HeightService } from '../height.service';
   templateUrl: './imprint.component.html',
   styleUrl: './imprint.component.scss'
 })
-export class ImprintComponent implements AfterViewInit {
+export class ImprintComponent implements AfterViewInit, OnInit{
 
   projectdata = inject(ProjectdataService);
   translate = inject(TranslationService);
@@ -21,6 +21,9 @@ export class ImprintComponent implements AfterViewInit {
 
   constructor(private heightService: HeightService) {
     this.projectdata.atImprint = true;
+  }
+  ngOnInit(): void {
+    window.scrollTo(0,0);
   }
 
   ngAfterViewInit() {

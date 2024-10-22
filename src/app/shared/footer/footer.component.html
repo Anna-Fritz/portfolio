@@ -1,11 +1,11 @@
 <footer #footer>
     <div class="left-section">
         @if (screenwidth <= 430) {
-            <a href="">
+            <a routerLink="" fragment="hero">
                 <img src="assets/icons/logoAF.svg" alt="Logo Anna Fritz">
             </a>
         } @else {
-            <a #hero (click)="project.scrollToSection('hero', hero)">
+            <a routerLink="" fragment="hero">
                 <img src="assets/icons/logoAFbig.svg" alt="Logo Anna Fritz">
             </a>
         }   
@@ -24,11 +24,11 @@
             <span>LinkedIn</span>
             <div class="hover-dot"></div>
         </a>
-        <a #contactBtn (click)="project.scrollToSection('contact', contactBtn)">
+        <a routerLink="" fragment="contact">
             <span>Email</span>
             <div class="hover-dot"></div>
         </a>
-        <a [routerLink]="['imprint']">
+        <a routerLink="imprint">
             <span>{{ "imprint" | translate }}</span>
             <div class="hover-dot"></div>
         </a>

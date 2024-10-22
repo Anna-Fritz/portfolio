@@ -158,14 +158,5 @@ export class ProjectdataService {
     this.menuIsOpen = false;
     this.menuToggle = false;
   }
-
-  scrollToSection(sectionId: string, idLink: HTMLAnchorElement) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      idLink.setAttribute('href', sectionId);
-    }
-  }
-
+  
 }

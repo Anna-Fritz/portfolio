@@ -48,7 +48,7 @@
             <div class="green-line"></div>
 
             <label #checkboxPolicy (click)="acceptPolicy(checkboxPolicy, checkbox, submitBtn)" class="checkbox-policy">
-                <p>{{ "acceptPrivacyFirst" | translate }}<a href='imprint'>{{ "privacyLink" | translate }}</a>{{ "acceptPrivacyLast" | translate }}</p>
+                <p>{{ "acceptPrivacyFirst" | translate }}<a routerLink="imprint">{{ "privacyLink" | translate }}</a>{{ "acceptPrivacyLast" | translate }}</p>
                 <input #checkbox type="checkbox" id="privacy-policy" name="privacy-policy">
                 <span class="checkmark"></span>
             </label>

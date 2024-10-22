@@ -1,17 +1,18 @@
-import { Component, inject, HostListener } from '@angular/core';
+import { Component, inject, HostListener, OnInit } from '@angular/core';
 import { HeaderComponent } from '../../shared/header/header.component';
 import { TranslationService } from '../../translation.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { ProjectdataService } from '../../projectdata.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [HeaderComponent, TranslateModule],
+  imports: [HeaderComponent, TranslateModule, RouterLink],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'
 })
-export class HeroComponent {
+export class HeroComponent implements OnInit {
 
   projectdata = inject(ProjectdataService)
   translate = inject(TranslationService);
@@ -26,6 +27,10 @@ export class HeroComponent {
     } else {
       this.projectdata.isColored = false;
     }
+  }
+
+  ngOnInit(): void {
+    this.projectdata.atImprint = false;
   }
 
   resetNavbarColor() {

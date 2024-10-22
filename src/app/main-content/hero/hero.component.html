@@ -5,10 +5,10 @@
         <span class="job-title">{{ "developer" | translate}}</span>
         <span class="name">Anna Fritz</span>
         <div class="headline-btns">
-            <a #projectsBtn (click)="projectdata.scrollToSection('projects', projectsBtn)" class="btn">
+            <a routerLink="" fragment="projects" class="btn">
                 <span>{{ "checkWork" | translate}}</span>
             </a>
-            <a #contactBtn (click)="projectdata.scrollToSection('contact', contactBtn)" class="btn">
+            <a routerLink="" fragment="contact" class="btn">
                 <span>{{ "contactMe" | translate}}</span>
             </a>
         </div>
