@@ -22,11 +22,16 @@ export class ImprintComponent implements AfterViewInit, OnInit{
   constructor(private heightService: HeightService) {
     this.projectdata.atImprint = true;
   }
-  
+  /**
+   * scrolls the window to the top (0,0) when the component initializes
+   */
   ngOnInit(): void {
     window.scrollTo(0,0);
   }
 
+  /**
+   * calculates the height of the "imprint" element after the view initializes and updates the height using the updateHeight method
+   */
   ngAfterViewInit() {
     setTimeout(() => {
     let imprintHeight = this.imprint.nativeElement.offsetHeight;
@@ -34,9 +39,12 @@ export class ImprintComponent implements AfterViewInit, OnInit{
     }, 0);
   }
 
+  /**
+   * updates the height by calculating the sum of the imprintHeight and the footer height, then sets the new height using the heightService
+   * @param imprintHeight - calculated height of the imprint component
+   */
   updateHeight(imprintHeight: number) {
     const desiredHeight = imprintHeight + this.projectdata.footerHeight; 
     this.heightService.setHeight(desiredHeight);
   }
-
 }

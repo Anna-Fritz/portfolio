@@ -20,8 +20,10 @@ export class FooterComponent implements AfterViewInit {
 
   @ViewChild('footer', { static: true, read: ElementRef }) footer!: ElementRef;
 
+  /**
+   * sets the footerHeight property in the project object based on the footer's offset height after view initialization.
+   */
   ngAfterViewInit() {
-    // Berechne die Höhe der Komponente
     this.footerHeight = this.footer.nativeElement.offsetHeight;
     this.project.footerHeight = this.footerHeight;
   }

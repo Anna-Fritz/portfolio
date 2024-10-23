@@ -106,6 +106,9 @@ export class ReferencesComponent implements OnInit {
     },
   ];
 
+  /**
+   * sets referenceWidth based on the screen width ensuring that elements scale properly across different device sizes.
+   */
   ngOnInit() {
     if (window.screen.width <= 430) {
       this.referenceWidth = 0.92 * window.screen.width;
@@ -122,6 +125,9 @@ export class ReferencesComponent implements OnInit {
     }
   }
 
+  /**
+   * cycles through a list of references by incrementing currentIndex, It ensures that when the index reaches the last item, it wraps around to the first one
+   */
   nextRef(){
     this.currentIndex = (this.currentIndex + 1) % this.references.length;
     this.isSelected[this.currentIndex] = true;
@@ -135,6 +141,9 @@ export class ReferencesComponent implements OnInit {
     this.checkIndexIsLast();
   }
 
+  /**
+   * handles the special case when currentIndex is 0, which happens when the list wraps around
+   */
   checkIndexIsNull() {
     if (this.currentIndex == 0) {
       this.isSelected[this.isSelected.length-1] = false;
@@ -143,6 +152,9 @@ export class ReferencesComponent implements OnInit {
     }
   }
 
+  /**
+   * handles the case where currentIndex is at the last position of the references
+   */
   checkIndexIsLast() {
     if (this.currentIndex == this.references.length-2) {
       this.currentIndex = 0;
@@ -151,6 +163,9 @@ export class ReferencesComponent implements OnInit {
     }
   }
 
+  /**
+   * This logic allows for navigation backward through the reference items in a cyclic manner
+   */
   previousRef(){
     this.currentIndex = (this.currentIndex - 1 + this.references.length) % this.references.length;
     this.isSelected[this.currentIndex] = true;
@@ -159,6 +174,9 @@ export class ReferencesComponent implements OnInit {
     this.restartRefCarousel();
   }
   
+  /**
+   * This logic manages the state of references as the carousel moves backward.
+   */
   moveRefToLeft() {
     if(this.currentIndex < this.references.length-2) {
       this.references[this.currentIndex+1].inFocus = true;
@@ -168,6 +186,9 @@ export class ReferencesComponent implements OnInit {
       }  
   }
 
+  /**
+   * part of a carousel, ensuring that focus and selection are maintained as the user navigates through items.
+   */
   restartRefCarousel() {
     if (this.currentIndex >= this.isSelected.length-1) {
       this.isSelected[0] = false;
@@ -181,6 +202,10 @@ export class ReferencesComponent implements OnInit {
   private startX = 0;
   private deltaX = 0;
 
+/**
+ * enables to scroll references on mobile devices
+ * @param event 
+ */
   @HostListener('touchstart', ['$event'])
   onTouchStart(event: TouchEvent) {
     this.startX = event.touches[0].clientX;

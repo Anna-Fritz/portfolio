@@ -146,6 +146,9 @@ export class ProjectdataService {
   }
 ];
 
+/**
+ * Toggles the state of the menu between open and closed
+ */
   toggleMenu() {
     if(this.menuIsOpen) {
       this.menuIsOpen = false;
@@ -154,15 +157,24 @@ export class ProjectdataService {
     }
   }
 
+  /**
+   * Closes the menu
+   */
   closeMenu() {
     this.menuIsOpen = false;
     this.menuToggle = false;
   }
 
+  /**
+   * reset black colored bg of the navbar
+   */
   resetNavbarColor() {
     this.isBlack = false;
   }
 
+  /**
+   * colors bg of navbar in black
+   */
   setNavbarBlack() {
     this.isBlack = true;  
   }

@@ -18,6 +18,10 @@ export class ProjectsComponent {
 
   constructor(private renderer: Renderer2) {}
 
+  /**
+   * opens popup and add no-scroll attribute to body
+   * @param index 
+   */
   openPopup(index: number) {
     this.projectdata.isOpen = true;
     this.projectdata.index = index;

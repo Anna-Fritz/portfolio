@@ -15,11 +15,18 @@ export class AboutMeComponent implements OnInit {
   projectdata = inject(ProjectdataService);
   translate = inject(TranslationService);
 
+  /**
+   * moves & reveals stripes-Element from behind the image
+   * @param stripes Div element filled with stripes
+   */
   showStripes(stripes: HTMLElement) {
     stripes.style.top = "5%";
     stripes.style.left = "-8%";
   }
   
+  /**
+   *  initializes the component by remove colored bg of navbar
+   */
   ngOnInit() {
     this.projectdata.isColored = false;
   }

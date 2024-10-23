@@ -27,10 +27,16 @@ export class HeroComponent implements OnInit {
     }
   }
 
+  /**
+   *  initializes the component by remove special navbar bg for imprint
+   */
   ngOnInit(): void {
     this.projectdata.atImprint = false;
   }
 
+  /**
+   * sets special coloring for hero section
+   */
   colorNavbar() {
     this.projectdata.isColored = true;
   }

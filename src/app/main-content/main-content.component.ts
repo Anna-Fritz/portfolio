@@ -23,6 +23,9 @@ export class MainContentComponent implements AfterViewInit{
 
     constructor(private subscribeService: ProjectdataService, private heightService: HeightService, private route: ActivatedRoute) {}
   
+    /**
+     * calculates & updates total height of all sections after the view initializes - plus subscribing to route fragments to smoothly scroll to a specified component
+     */
     ngAfterViewInit() {
       setTimeout(() => {
         this.calculateTotalHeight();
@@ -35,12 +38,17 @@ export class MainContentComponent implements AfterViewInit{
         });
     }
 
+    /**
+     * updates calculated height in height service
+     */
     updateHeight() {
       const desiredHeight = this.totalHeight;
       this.heightService.setHeight(desiredHeight);
-      
     }
     
+    /**
+     * calculates the total height of all sections on the page
+     */
     calculateTotalHeight() {
       this.totalHeight = this.sections.reduce((acc, section: ElementRef) => {
         return acc + section.nativeElement.offsetHeight;

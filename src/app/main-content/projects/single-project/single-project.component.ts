@@ -17,11 +17,18 @@ export class SingleProjectComponent {
 
   constructor(private renderer: Renderer2) {}
 
+  /**
+   * closes popup & remove class for no-scroll ability
+   */
   closePopup() {
     this.projectdata.isOpen = false;
     this.renderer.removeClass(document.body, 'no-scroll');
   }
 
+  /**
+   * updates the current project index to show the next project in a list
+   * @param index 
+   */
   showNextProject(index: number) {
     if(index == this.projectdata.project.length - 1) {
       this.projectdata.index = 0;

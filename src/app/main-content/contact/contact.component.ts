@@ -48,13 +48,15 @@ export class ContactComponent {
     },
   };
 
+  /**
+   * checks Agreement of privacy policy & empty Form, posts valid & submitted form
+   * @param ngForm - contact form
+   * @param checkbox - checkbox for privacy policy agreement
+   * @param popup - hint for sent mail successfully
+   */
   onSubmit(ngForm: NgForm, checkbox: HTMLInputElement, popup: HTMLDivElement) {
-    if (!checkbox.checked && ngForm.form.valid) {
-      this.isAccepted = false;
-    }
-    if (!ngForm.form.valid) {
-      this.isEmpty = true;
-    }
+    this.checkAgreement(ngForm, checkbox);
+    this.checkEmptyForm(ngForm);
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest && checkbox.checked) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
@@ -73,11 +75,41 @@ export class ContactComponent {
     }
   }
 
+  /**
+   * prevent posting mail if form is valid, but privacy policy is not accepted
+   * @param ngForm - contact form
+   * @param checkbox - checkbox for privacy policy agreement
+   */
+  checkAgreement(ngForm: NgForm, checkbox: HTMLInputElement) {
+    if (!checkbox.checked && ngForm.form.valid) {
+      this.isAccepted = false;
+    }
+  }
+
+  /**
+   * if form is not valid, boolean 'isEmpty' initialize user hint for fill in form
+   * @param ngForm - contact form
+   */
+  checkEmptyForm(ngForm: NgForm){
+    if (!ngForm.form.valid) {
+      this.isEmpty = true;
+    }
+  }
+
+  /**
+   * reveals inputfield after click on user hint
+   * @param inputfield - input für name, mail or message
+   */
   showInput(inputfield: HTMLElement) {
     inputfield.style.display = "block";
     this.isEmpty = false;
   }
 
+  /**
+   * updates the visual appearance of the policy checkbox based on its checked state
+   * @param checkboxPolicy 
+   * @param checkbox 
+   */
   acceptPolicy(checkboxPolicy: HTMLElement, checkbox: HTMLInputElement) {
     if (checkbox.checked) {
       checkboxPolicy.style.filter = "none";
@@ -88,6 +120,10 @@ export class ContactComponent {
     }
   }
 
+  /**
+   * displays a success popup by setting its position based on the screen width
+   * @param popup 
+   */
   showSuccessPopup(popup: HTMLDivElement) {
     this.sentSuccessfully = true;
     this.naming = this.contactData.name;
@@ -109,6 +145,11 @@ export class ContactComponent {
     }
   }
 
+  /**
+   * hides the popup by moving it out of view
+   * @param popup 
+   * @returns 
+   */
   hidePopup(popup: HTMLDivElement) {
     setTimeout(() => {
       popup.style.left = "110%";

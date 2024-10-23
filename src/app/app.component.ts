@@ -20,12 +20,19 @@ export class AppComponent implements AfterViewInit{
 
   constructor(public projectdata: ProjectdataService, public heightService: HeightService) {}
 
+  /**
+   * subscribes to height changes from the height service and calls adjustHeight to update the component's height.
+   */
   ngAfterViewInit() {
     this.heightService.heightChanged$.subscribe(height => {
       this.adjustHeight(height);
     });
   }
 
+  /**
+   * adjusts the height of the project container element to the specified value in pixels
+   * @param height 
+   */
   adjustHeight(height: number) {
     const projectContainer = document.getElementById('projectContainer');
     if (projectContainer) {
