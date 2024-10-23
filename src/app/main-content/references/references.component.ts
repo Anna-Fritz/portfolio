@@ -111,14 +111,14 @@ export class ReferencesComponent implements OnInit {
       this.referenceWidth = 0.92 * window.screen.width;
     } else if (window.screen.width <= 580) {
       this.referenceWidth = 0.75 * window.screen.width;
-    } else if (window.screen.width <= 650) {
+      } else if (window.screen.width <= 650) {
         this.referenceWidth = 0.80 * window.screen.width;
         } else if (window.screen.width <= 850) {
           this.referenceWidth = 0.75 * window.screen.width;
-        } else if (window.screen.width <= 950) {
-          this.referenceWidth = 0.69 * window.screen.width;
-          } else if (window.screen.width < 1440) {
-            this.referenceWidth = 0.47 * window.screen.width;
+          } else if (window.screen.width <= 950) {
+            this.referenceWidth = 0.69 * window.screen.width;
+            } else if (window.screen.width < 1440) {
+              this.referenceWidth = 0.47 * window.screen.width;
     }
   }
 
@@ -131,13 +131,19 @@ export class ReferencesComponent implements OnInit {
     this.references[this.currentIndex].inFocus = false;
     this.references[this.references.length-1].inFocus = false;
 
+    this.checkIndexIsNull();
+    this.checkIndexIsLast();
+  }
+
+  checkIndexIsNull() {
     if (this.currentIndex == 0) {
       this.isSelected[this.isSelected.length-1] = false;
-
       this.references[this.references.length-2].inFocus = false;
       this.references[this.references.length-1].inFocus = false;
     }
+  }
 
+  checkIndexIsLast() {
     if (this.currentIndex == this.references.length-2) {
       this.currentIndex = 0;
       this.isSelected[this.currentIndex] = true;
@@ -149,22 +155,24 @@ export class ReferencesComponent implements OnInit {
     this.currentIndex = (this.currentIndex - 1 + this.references.length) % this.references.length;
     this.isSelected[this.currentIndex] = true;
 
+    this.moveRefToLeft();
+    this.restartRefCarousel();
+  }
+  
+  moveRefToLeft() {
     if(this.currentIndex < this.references.length-2) {
-    this.references[this.currentIndex+1].inFocus = true;
-    this.references[this.currentIndex+2].inFocus = false;
-    this.references[this.references.length-1].inFocus = false;
-    }
-
-    if(this.currentIndex < this.isSelected.length-1) {
-      this.isSelected[this.currentIndex+1] = false;
+      this.references[this.currentIndex+1].inFocus = true;
       this.references[this.currentIndex+2].inFocus = false;
-    }
+      this.references[this.references.length-1].inFocus = false;
+      this.isSelected[this.currentIndex+1] = false;
+      }  
+  }
 
+  restartRefCarousel() {
     if (this.currentIndex >= this.isSelected.length-1) {
       this.isSelected[0] = false;
       this.currentIndex = this.isSelected.length-3;
       this.isSelected[this.isSelected.length-3] = true;
-
       this.references[1].inFocus = false;
       this.references[this.references.length-2].inFocus = true;
     }

@@ -73,7 +73,7 @@ export class ProjectdataService {
         name: 'CSS'
       }
     ],
-    githubSrc: 'https://',
+    githubSrc: 'https://github.com/Anna-Fritz/El_pollo_loco',
     liveTestSrc: 'https://annafritz.de/el_pollo_loco',
     img: 'assets/img/el_pollo_loco.png',
   },

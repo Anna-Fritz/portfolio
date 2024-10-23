@@ -67,11 +67,9 @@ export class ContactComponent {
           },
           complete: () => console.info('send post complete'),
         });
-
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest && checkbox.checked) {
       this.showSuccessPopup(popup);
       ngForm.resetForm();
-
     }
   }
 
@@ -80,7 +78,7 @@ export class ContactComponent {
     this.isEmpty = false;
   }
 
-  acceptPolicy(checkboxPolicy: HTMLElement, checkbox: HTMLInputElement, submitBtn: HTMLInputElement) {
+  acceptPolicy(checkboxPolicy: HTMLElement, checkbox: HTMLInputElement) {
     if (checkbox.checked) {
       checkboxPolicy.style.filter = "none";
       this.isAccepted = true;

@@ -23,4 +23,5 @@ export class AboutMeComponent implements OnInit {
   ngOnInit() {
     this.projectdata.isColored = false;
   }
+
 }

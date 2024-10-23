@@ -20,11 +20,10 @@ export class HeroComponent implements OnInit {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-
-    if (scrollPosition > 150) {
-      this.projectdata.isColored = true;
-    } else {
+    if (scrollPosition < 150) {
       this.projectdata.isColored = false;
+    } else if (scrollPosition > 150) {
+      this.projectdata.isColored = true;
     }
   }
 
@@ -32,4 +31,7 @@ export class HeroComponent implements OnInit {
     this.projectdata.atImprint = false;
   }
 
+  colorNavbar() {
+    this.projectdata.isColored = true;
+  }
 }
