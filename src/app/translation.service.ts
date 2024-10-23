@@ -20,4 +20,14 @@ export class TranslationService {
     this.translate.use(language);
   }
 
+  /**
+   * toggles language, if toggle checkbox is checked language is German, else is English
+   */
+  toggleLanguage() {
+    if(this.isChecked) {
+      this.switchLanguage('de');
+    } else {
+      this.switchLanguage('en');
+    }
+  }
 }

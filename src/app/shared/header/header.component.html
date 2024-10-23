@@ -3,9 +3,9 @@
         <nav>
             <div class="language-toggle">
                 <input type="checkbox" id="switch" [(ngModel)]="translate.isChecked">
-                <label for="switch">
-                    <span (click)="translate.switchLanguage('de')">DE</span>    
-                    <span (click)="translate.switchLanguage('en')">EN</span>
+                <label for="switch" (click)="translate.toggleLanguage()">
+                    <span>DE</span>    
+                    <span>EN</span>
                 </label>
             </div>
             <a (click)="project.setNavbarBlack()" routerLink="" fragment="about-me">{{ 'about' | translate}}
@@ -40,9 +40,9 @@
                     <a (click)="project.closeMenu(); project.setNavbarBlack()" routerLink="" fragment="projects">{{ 'projects' | translate}}</a>
                     <div class="language-toggle">
                         <input type="checkbox" id="switchMobile" [(ngModel)]="translate.isChecked">
-                        <label for="switchMobile">
-                            <span (click)="translate.switchLanguage('de')">DE</span>    
-                            <span (click)="translate.switchLanguage('en')">EN</span>
+                        <label for="switchMobile" (click)="translate.toggleLanguage()">
+                            <span>DE</span>    
+                            <span>EN</span>
                         </label>
                     </div>
                 </div>    
