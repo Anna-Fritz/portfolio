@@ -1,12 +1,23 @@
-$bgColor: #1C1C1C;
-$lightGreen: #3DCFB6;
+// $bgColor: #1C1C1C;   // original dark background color
+$bgColor: #0F0027;
+
+// $lightGreen: #3DCFB6;  // original green color concept
+$lightGreen: #29e5f2; //  alternative lightblue #29c6f2
+
 $hoverGreen: #2F5B53;
 $blurredGreen: #3DCFB64D;
-$darkGreen: #2B3A37;
+// $darkGreen: #2B3A37;
+$darkGreen: #0F0027;
+
 $validationRed: #EC7B7BCC;
-$blurredWhite: #FFFFFFCC;
-$lightGray: #D9D9D9;
-$bgColorGradient: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);
+$blurredWhite: #DCE0E6;  // alternative #FFFFFFCC
+
+$lightGray: #DCE0E6;  // alternative #D9D9D9
+
+// $bgColorGradient: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);  // original green color gradient
+$mainColor: #6e0c37;  // lighter alternative color #A30046
+$bgColorGradient: linear-gradient(55.22deg, $bgColor 36.26%, $mainColor 93.28%);
+
 
 
 @mixin dFlex($jc:center, $ai:center, $g:0) {
