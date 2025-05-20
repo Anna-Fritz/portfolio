@@ -21,8 +21,73 @@ export class ProjectdataService {
 
   project: Project[] = [
     {
+      start: 0,
+      id: 1,
+      name: "Videoflix",
+      descriptionEN: "Description follows",
+      descriptionDE: "Beschreibung folgt",
+      skills: [
+        {
+          icon: 'assets/icons/project_skills/angular.svg',
+          name: 'Django Restframework',
+          separator: '|'
+        },
+        {
+          icon: 'assets/icons/project_skills/typescript.svg',
+          name: 'Python', 
+          separator: '|'
+        },
+        {
+          icon: 'assets/icons/project_skills/css.svg',
+          name: 'SQL',
+          separator: '|'
+        },
+        {
+          icon: 'assets/icons/project_skills/html.svg',
+          name: 'Docker'
+        }
+      ],
+      stacklevel: 'Fullstack',
+      githubSrc: 'https://github.com/Anna-Fritz/videoflix',
+      liveTestSrc: 'https://annafritz.de/videoflix',
+      img: 'assets/img/videoflix-proto.png',
+    },
+  
+    {
     start: 0,
-    id: 1,
+    id: 2,
+    name: "Coderr",
+    descriptionEN: "Description follows",
+    descriptionDE: "Beschreibung folgt",
+    skills: [
+      {
+        icon: 'assets/icons/project_skills/angular.svg',
+        name: 'Django Restframework',
+        separator: '|'
+      },
+      {
+        icon: 'assets/icons/project_skills/typescript.svg',
+        name: 'Python', 
+        separator: '|'
+      },
+      {
+        icon: 'assets/icons/project_skills/css.svg',
+        name: 'SQL',
+        separator: '|'
+      },
+      {
+        icon: 'assets/icons/project_skills/html.svg',
+        name: 'Docker'
+      }
+    ],
+    stacklevel: 'Backend',
+    githubSrc: 'https://github.com/Anna-Fritz/coder-backend',
+    liveTestSrc: 'https://annafritz.de/coderr',
+    img: 'assets/img/coderr.gif',
+  },
+  {
+    start: 0,
+    id: 3,
     name: "Portfolio",
     descriptionEN: "Presentation of me, my work & my exciting journey as Frontend Developer",
     descriptionDE: "Präsentation von mir, meiner Arbeit und meiner spannenden Reise als Web-Entwicklerin.",
@@ -47,13 +112,14 @@ export class ProjectdataService {
         name: 'HTML'
       }
     ],
+    stacklevel: 'Frontend',
     githubSrc: 'https://github.com/Anna-Fritz/portfolio',
     liveTestSrc: 'https://annafritz.de',
-    img: 'assets/img/portfolio.png',
+    img: 'assets/img/Portfolio2.gif',
   },
   {
     start: 0,
-    id: 2,
+    id: 4,
     name: "El Pollo Loco",
     descriptionEN: "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
     descriptionDE: "Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen.",
@@ -73,13 +139,14 @@ export class ProjectdataService {
         name: 'CSS'
       }
     ],
+    stacklevel: 'Frontend',
     githubSrc: 'https://github.com/Anna-Fritz/El_pollo_loco',
     liveTestSrc: 'https://annafritz.de/el_pollo_loco',
-    img: 'assets/img/el_pollo_loco.png',
+    img: 'assets/img/el_pollo_loco.gif',
   },
   {
     start: 0,
-    id: 3,
+    id: 5,
     name: "Join",
     descriptionEN: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
     descriptionDE: "Task-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
@@ -109,13 +176,14 @@ export class ProjectdataService {
         name: 'Scrum'
       }
     ],
+    stacklevel: 'Fullstack',
     githubSrc: 'https://github.com/Anna-Fritz/JOIN_Kanban_board',
     liveTestSrc: 'https://annafritz.de/join',
-    img: 'assets/img/join.png',
+    img: 'assets/img/join.gif',
   },
   {
     start: 0,
-    id: 4,
+    id: 6,
     name: "Pokedex",
     descriptionEN: "A Pokédex is a comprehensive digital encyclopedia that catalogues and provides detailed information about various Pokémon species, including their abilities, habitats, and evolutions.",
     descriptionDE: "Ein Pokédex ist eine umfassende digitale Enzyklopädie, die detaillierte Informationen über verschiedene Pokémon-Arten katalogisiert und bereitstellt, einschließlich ihrer Fähigkeiten, Lebensräume und Entwicklungen.",
@@ -140,9 +208,10 @@ export class ProjectdataService {
         name: 'Rest-Api'
       }
     ],
+    stacklevel: 'Frontend',
     githubSrc: 'https://github.com/Anna-Fritz/pokedex',
     liveTestSrc: 'https://annafritz.de/pokedex',
-    img: 'assets/img/pokedex.png',
+    img: 'assets/img/pokedex.gif',
   }
 ];
 

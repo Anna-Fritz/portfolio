@@ -5,6 +5,7 @@ export interface Project {
     descriptionEN: string,
     descriptionDE: string,
     skills: { icon: string, name: string, separator?: string}[],
+    stacklevel: string,
     githubSrc: string,
     liveTestSrc: string,
     img: string,
