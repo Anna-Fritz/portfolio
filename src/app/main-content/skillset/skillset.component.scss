@@ -1,7 +1,7 @@
 @import './../../../styles.scss';
 
 .bg-area {
-    background: radial-gradient(22.43% 43.85% at 1.22% 52.45%, #2F5B53 0%, #1C1C1C 100%);
+    background: radial-gradient(22.43% 43.85% at 1.22% 52.45%, $mainColor 0%, $bgColor 100%);
 }
 
 section {
@@ -93,66 +93,94 @@ section {
                 }
             }                
         }
-    }
-    .skills-icons {
-        @include dFlex($jc:space-between, $ai: space-between, $g: 20px);
-        flex-wrap: wrap;
-        margin-top: 48px;
-        @media(max-width: 400px) {
-            justify-content: center;
-        }
-        .icon-cont {
-            @include dFlex($jc: flex-start, $g: 20px);
+        .skill-icons-section {
+            @include dFlex($jc:space-between, $ai: space-between);
             flex-direction: column;
-            width: 104px;
-            @media(max-width: 1050px) {
-                margin-bottom: 20px;
-            }    
-            &:hover >span {
-                color: $lightGreen;
-            }
-            &:hover >img {
-                transform: scale(1.15);
-                filter: drop-shadow(0px 0px 8px $lightGreen);
-            }
-            >img {
-                transition: 0.4s ease;
-            }
-            >span {
-                color: white;
-                text-align: center;
-            }
-        }
-        .growth-icon {
-            &:hover .growth-popup {
-                visibility: visible;
-            }
-            &:hover .icon-img {
-                transform: scale(1.15);
-            }
-            .icon-img {
-                transition: 0.4s ease;
-                position: relative;
-            }
-        }
-        .challenge-icon {
-            &:hover .challenge-popup {
-                visibility: visible;
-            }
-            &:hover .icon-img {
-                transform: scale(1.15);
-            }
-            >span {
-                @media(max-width: 450px) {
-                    word-break: break-all;
+            .skills-icons {
+                @include dFlex($jc:space-between, $ai: space-between, $g: 20px);
+                flex-wrap: wrap;
+                margin-top: 48px;
+                flex: 1;
+                @media(max-width: 400px) {
+                    justify-content: center;
                 }
-                @media(max-width: 393px) {
-                    word-break: keep-all;
+                .icon-cont {
+                    @include dFlex($jc: flex-start, $g: 20px);
+                    flex-direction: column;
+                    width: 104px;
+                    @media(max-width: 1050px) {
+                        margin-bottom: 20px;
+                    }    
+                    &:hover >span {
+                        color: $lightGreen;
+                    }
+                    &:hover >img {
+                        transform: scale(1.15);
+                        filter: drop-shadow(0px 0px 8px $lightGreen);
+                    }
+                    >img {
+                        width: 60%;
+                        transition: 0.4s ease;
+                    }
+                    >span {
+                        color: white;
+                        text-align: center;
+                    }
+                }
+                .growth-icon {
+                    &:hover .growth-popup {
+                        visibility: visible;
+                    }
+                    &:hover .icon-img {
+                        transform: scale(1.15);
+                    }
+                    .icon-img {
+                        transition: 0.4s ease;
+                        position: relative;
+                    }
+                }
+                .challenge-icon {
+                    &:hover .challenge-popup {
+                        visibility: visible;
+                    }
+                    &:hover .icon-img {
+                        transform: scale(1.15);
+                    }
+                    >span {
+                        @media(max-width: 450px) {
+                            word-break: break-all;
+                        }
+                        @media(max-width: 393px) {
+                            word-break: keep-all;
+                        }
+                    }
+                    .icon-img {
+                        transition: 0.4s ease;
+                        position: relative;
+                    }
                 }
             }
-            .icon-img {
-                transition: 0.4s ease;
-                position: relative;
+            .stack-parts {
+                @include dFlex($g: 10%);
+                color: $lightGray;
+                font-size: 1.5em;
+                font-weight: 600;
+                cursor: pointer;
+                transform: scale(1.2);
+                .frontend {
+                    &:hover {
+                        transition: 1s ease;
+                    }    
+                }
+                // .dot-cont {
+                //     transform: 1s
+                // }
+                >div {
+                    transition: transform 1s ease;
+                    &:hover {
+                        transform: rotate(90deg);
+                    }
+                }
             }
         }
     }
@@ -193,6 +221,9 @@ section {
                     font-size: 14px;
                     text-align: center;
                     font-weight: 500;
+                }
+                >img {
+                    width: 32px;
                 }
             }
         }
@@ -248,6 +279,22 @@ section {
             margin-left: 0;
         }                 
     }
+}
+
+.selectedStack {
+    color: $lightGreen;
+}
+
+.switchToFrontend {
+    width: 35%;
+    @include dFlex($jc:start, $ai: center);
+    transition: 0.5s ease;
+}
+
+.switchToBackend {
+    width: 35%;
+    @include dFlex($jc:end, $ai: center);
+    transition: 0.5s ease;
 }
 
 

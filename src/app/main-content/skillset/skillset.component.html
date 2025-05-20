@@ -17,46 +17,86 @@
                 </a>
             </div>
         </div>
-        <div class="skills-icons">
-            @for (skill of skillIcons; track skill.name) {
-                <div class="icon-cont">
-                    <img src="{{skill.src}}" alt="">
-                    <span>{{skill.name}}</span>    
-                </div>
-            }
-            <div class="icon-cont growth-icon">
-                <div class="icon-img">
-                    <img src="assets/icons/skills/growth_mindset.svg" alt="">
-                    <div class="growth-popup">
-                        <div class="popup-bubble">
-                            <span>{{ "learning" | translate }}</span>
-                            <div class="popup-icons">
-                                <div class="popup-icon">
-                                    <img src="./../../../assets/icons/skills/React.svg" alt="">
-                                    <span>React</span>
+        <div class="skill-icons-section">
+            <div class="skills-icons">
+                @if (stackFrontend) {
+                    @for (skill of skillIcons; track skill.name) {
+                        <div class="icon-cont">
+                            <img src="{{skill.src}}" alt="">
+                            <span>{{skill.name}}</span>    
+                        </div>
+                    }
+                    <div class="icon-cont growth-icon">
+                        <div class="icon-img">
+                            <img src="assets/icons/skills/growth_mindset.svg" alt="">
+                            <div class="growth-popup">
+                                <div class="popup-bubble">
+                                    <span>{{ "learning" | translate }}</span>
+                                    <div class="popup-icons">
+                                        <div class="popup-icon">
+                                            <img src="./../../../assets/icons/skills/React.svg" alt="">
+                                            <span>React</span>
+                                        </div>
+                                        <div class="popup-icon">
+                                            <img src="./../../../assets/icons/skills/vue_js.svg" alt="">
+                                            <span>Vue Js</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="popup-icon">
-                                    <img src="./../../../assets/icons/skills/vue_js.svg" alt="">
-                                    <span>Vue Js</span>
-                                </div>
+                                <img src="./../../../assets/icons/skills/popup-triangle.svg">
                             </div>
                         </div>
-                        <img src="./../../../assets/icons/skills/popup-triangle.svg">
+                        <span>{{ "growthMind" | translate }}</span>
                     </div>
-                </div>
-                <span>{{ "growthMind" | translate }}</span>
-            </div>
-            <div class="icon-cont challenge-icon">
-                <div class="icon-img">
-                    <img src="assets/icons/skills/challenge_me.svg" alt="">
-                    <div class="challenge-popup">
-                        <div class="popup-bubble">
-                            <span>{{ "challengeText" | translate }}</span>
+                }
+                @else {
+                    @for (skill of skillIconsBackend; track skill.name) {
+                        <div class="icon-cont">
+                            <img src="{{skill.src}}" alt="">
+                            <span>{{skill.name}}</span>    
                         </div>
-                        <img src="./../../../assets/icons/skills/popup-triangle.svg">
-                    </div>    
+                    }
+                    <div class="icon-cont growth-icon">
+                        <div class="icon-img">
+                            <img src="assets/icons/skills/growth_mindset.svg" alt="">
+                            <div class="growth-popup">
+                                <div class="popup-bubble">
+                                    <span>{{ "learning" | translate }}</span>
+                                    <div class="popup-icons">
+                                        <div class="popup-icon">
+                                            <img src="./../../../assets/icons/skills_backend/php.svg" alt="">
+                                            <span>php</span>
+                                        </div>
+                                        <div class="popup-icon">
+                                            <img src="./../../../assets/icons/skills_backend/java.svg" alt="">
+                                            <span>Java</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="./../../../assets/icons/skills/popup-triangle.svg">
+                            </div>
+                        </div>
+                        <span>{{ "growthMind" | translate }}</span>
+                    </div>
+
+                }
+                <div class="icon-cont challenge-icon">
+                    <div class="icon-img">
+                        <img src="assets/icons/skills/challenge_me.svg" alt="">
+                        <div class="challenge-popup">
+                            <div class="popup-bubble">
+                                <span>{{ "challengeText" | translate }}</span>
+                            </div>
+                            <img src="./../../../assets/icons/skills/popup-triangle.svg">
+                        </div>    
+                    </div>
+                    <span>{{ "challenge" | translate }}</span>
                 </div>
-                <span>{{ "challenge" | translate }}</span>
+            </div>
+            <div class="stack-parts">
+                <span class="frontend" (click)="showFrontendIcons()" [ngClass]="{ 'selectedStack': stackFrontend }">Frontend</span>
+                <div (click)="toggleStackIcons()">|</div>
+                <span class="backend" (click)="showBackendIcons()" [ngClass]="{ 'selectedStack': stackBackend }" >Backend</span>
             </div>
         </div>
     </div>
