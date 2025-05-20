@@ -45,14 +45,14 @@ section {
             flex-direction: column;
             .arrow {
                 padding: 12px 10px;
-                border: solid 1px $lightGreen;
+                border: solid 2px $lightGreen;
                 border-radius: 20px;
                 >img {
                     animation: moveArrow 0.7s alternate-reverse infinite;
                 }
             }
             .left-line {
-                width: 1px;
+                width: 1.5px;
                 height: 28vh;
                 background-color: $lightGreen;
                 @media(min-width: 1440px) {
@@ -87,9 +87,9 @@ section {
                 }
             }
             .right-line {
-                width: 1px;
+                width: 1.5px;
                 height: 22vh;
-                background-color: white;
+                background-color: $lightGreen;
                 @media(min-width: 1440px) {
                     height: 186px;
                 }
@@ -151,10 +151,15 @@ section {
         z-index: 7;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, #1C1C1C 3%, rgba(28, 28, 28, 0) 10%, rgba(28, 28, 28, 0) 90%, #163832 96%);
+        background: linear-gradient(90deg, $bgColor 3%, rgba(28, 28, 28, 0) 10%, rgba(28, 28, 28, 0) 90%, #75003D 96%);
         @media(min-width: 1440px) {
-            background: linear-gradient(90deg, #1C1C1C 3%, rgba(28, 28, 28, 0) 10%, rgba(28, 28, 28, 0) 90%, #0F3831 96%);
-        }    
+            background: linear-gradient(90deg, $bgColor 3%, rgba(28, 28, 28, 0) 10%, rgba(28, 28, 28, 0) 90%, #37052E 96%);
+        }
+        // original green color shading
+        // background: linear-gradient(90deg, $bgColor 3%, rgba(28, 28, 28, 0) 10%, rgba(28, 28, 28, 0) 90%, #163832 96%);
+        // @media(min-width: 1440px) {
+        //     background: linear-gradient(90deg, $bgColor 3%, rgba(28, 28, 28, 0) 10%, rgba(28, 28, 28, 0) 90%, #0F3831 96%);
+        // }
     }
 }
 
