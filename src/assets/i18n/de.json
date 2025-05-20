@@ -2,7 +2,7 @@
     "about" : "Über mich",
     "skills" : "Tech Stack",
     "projects" : "Projekte",
-    "developer" : "Web Entwicklerin",
+    "developer" : "Fullstack Entwicklerin",
     "checkWork" : "Projekte testen",
     "contactMe" : "Kontakt aufnehmen",
     "basedIn" : "Ansässig in Laufenburg (Baden)",
@@ -10,14 +10,14 @@
     "remote" : "Offen für Remote / Home-Office",
 
     "who" : "Das bin ich",
-    "aboutGeneral" : "Motiviert von den grenzenlosen Möglichkeiten der IT, begeistert es mich als Web-Entwicklerin, visuell ansprechende und anspruchsvolle Webseiten sowie Anwendungen zu konzepieren.",
+    "aboutGeneral" : "Motiviert von den grenzenlosen Möglichkeiten der IT, begeistert es mich als Fullstack Entwicklerin, visuell ansprechende und anspruchsvolle Webseiten sowie Anwendungen zu konzepieren.",
     "aboutRemote" : "Im Bezug auf die Arbeitsumgebung, arbeite ich sowohl gerne vor Ort in Laufenburg (Baden) und Umgebung, als auch gerne Remote oder im Home-Office.",
     "aboutMind" : "Ich bin aufgeschlossen und stets auf der Suche nach neuen Herausforderungen, um mein Wissen und meine Fähigkeiten kontinuierlich zu entwickeln",
     "aboutSolving" : "Beim Programmieren geht es für mich nicht nur darum, verständlichen und sauberen Code zu schreiben. Es ist eine kreative Form der Problemlösung. Ich bin stolz darauf, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu übersetzen. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen umzusetzen.",
 
     "technologies" : "Technologien",
     "skillSet" : "Tech Stack",
-    "skillsGeneral" : "Im Laufe meiner beruflichen Reise in der IT habe ich an verschiedenen Projekten gearbeitet und dabei ein breites Spektrum an Frontend-Technologien und -Konzepten eingesetzt. Ich bin stets bereit, neue Technologien und Methoden zu erkunden, um meine Fähigkeiten kontinuierlich zu verbessern und in der dynamischen Welt der Webentwicklung immer auf dem neuesten Stand zu bleiben.",
+    "skillsGeneral" : "Im Laufe meiner beruflichen Reise in der IT habe ich an verschiedenen Projekten gearbeitet und dabei ein breites Spektrum an Fullstack-Technologien und -Konzepten eingesetzt. Ich bin stets bereit, neue Technologien und Methoden zu erkunden, um meine Fähigkeiten kontinuierlich zu verbessern und in der dynamischen Welt der Webentwicklung immer auf dem neuesten Stand zu bleiben.",
     "skillsQuestionFirst" : "Sie benötigen eine weitere ",
     "skillsQuestionFocus" : "Programmiersprache oder Qualifikation",
     "skillsQuestionLast" : "?",
@@ -29,7 +29,7 @@
     "challengeText" : "Ich bin immer und gerne bereit, neue Technologien zu lernen. Sagen Sie mir gerne Bescheid, was Sie brauchen.",
 
     "featuredProjects" : "Ausgewählte Projekte",
-    "projectExplain" : "Entdecken Sie hier eine Auswahl meiner Arbeiten – interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "projectExplain" : "Entdecken Sie hier eine Auswahl meiner Arbeiten – testen Sie gerne die Projekten um meine Fähigkeiten in Aktion zu sehen.",
     "kindOfProject" : "Worum geht es in diesem Projekt?",
     "nextProject" : "Nächstes Projekt",
 
