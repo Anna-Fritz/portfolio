@@ -9,6 +9,9 @@
         <div (click)="openPopup($index)" class="project">
           <span>{{project.name}}
               <img src="assets/icons/arrow-right-up.svg" alt="arrow">
+              <div>
+                <span>{{project.stacklevel}}</span>
+              </div>
           </span>
           <div class="project-stack">
             @for (skill of projectdata.project[$index].skills; track $index) {
