@@ -28,8 +28,10 @@ section {
             position: relative;
             height: 100%;
             .photo {
+                position: relative;
                 border-radius: 30px;
                 width: 25vw;
+                z-index: 4;
                 @media(min-width: 1440px) {
                     width: 418px;
                 }
@@ -46,6 +48,7 @@ section {
             }
             .bg-stripes {
                 position: absolute;
+                z-index: 1;
                 top: 0;
                 left: 0;
                 height: 98%;
@@ -85,7 +88,9 @@ section {
                 position: absolute;
                 border-radius: 30px;
                 width: 25vw;
-                z-index: 2;
+                z-index: 6;
+                pointer-events: none;
+                transition: mask-image 0.1s ease, -webkit-mask-image 0.1s ease;
                 @media(min-width: 1440px) {
                     width: 418px;
                 }

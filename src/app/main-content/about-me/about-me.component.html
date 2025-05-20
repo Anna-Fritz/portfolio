@@ -1,8 +1,9 @@
 <section (mouseenter)="projectdata.setNavbarBlack()" (touchstart)="projectdata.setNavbarBlack()">
     <div class="main-content">
-        <div (mouseenter)="showStripes(stripes)">
-            <img class="upper-photo" src="assets/img/anna_fsw.jpg" alt="">
-            <img class="photo" src="assets/img/anna_fsw.jpg" alt="">
+        <div (mouseenter)="showStripes(stripes)" (mousemove)="onMouseMove($event)"
+        (mouseleave)="hideMask()">
+            <img class="upper-photo" src="assets/img/anna_color.jpg" [ngStyle]="{ 'mask-image': mask, '-webkit-mask-image': mask }" alt="">
+            <img class="photo" src="assets/img/anna_drawn.png" alt="">
             <div #stripes class="bg-stripes"></div>
         </div>
         <div class="about-me-cont">
