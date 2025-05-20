@@ -166,19 +166,24 @@ section {
                 font-size: 1.5em;
                 font-weight: 600;
                 cursor: pointer;
-                transform: scale(1.2);
+                padding-top: 10%;
                 .frontend {
+                    transition: 0.4s ease-in-out;
                     &:hover {
-                        transition: 1s ease;
+                        transform: scale(1.1);
                     }    
                 }
-                // .dot-cont {
-                //     transform: 1s
-                // }
+                .backend {
+                    transition: 0.4s ease-in-out;
+                    &:hover {
+                        transform: scale(1.1);
+                    }    
+                }
                 >div {
                     transition: transform 1s ease;
                     &:hover {
                         transform: rotate(90deg);
+                        color: $lightGreen;
                     }
                 }
             }
