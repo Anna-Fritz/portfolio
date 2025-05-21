@@ -82,6 +82,15 @@
           <div>Live Test</div>
           <img src="assets/icons/arrow-right-up-green.svg" />
         </a>
+        @if (projectdata.project[projectdata.index].stacklevel === 'Fullstack') {
+          <a
+          class="btn"
+          href="{{ projectdata.project[projectdata.index].githubSrc }}"
+          target="_blank" rel="noopener noreferrer">
+          <div>Backend</div>
+          <img src="assets/icons/arrow-right-up-green.svg" />
+        </a>
+        }
       </div>
     </div>
   </div>
