@@ -1,11 +1,29 @@
 <section (mouseenter)="projectdata.setNavbarBlack()" (touchstart)="projectdata.setNavbarBlack()">
     <div class="main-content">
-        <div (mouseenter)="showStripes(stripes)" (mousemove)="onMouseMove($event)"
-        (mouseleave)="hideMask()">
-            <img class="upper-photo" src="assets/img/anna_color.jpg" [ngStyle]="{ 'mask-image': mask, '-webkit-mask-image': mask }" alt="">
-            <img class="photo" src="assets/img/anna_drawn.png" alt="">
-            <div #stripes class="bg-stripes"></div>
-        </div>
+        @if (animated) {
+            <div (mouseenter)="showStripes(stripes)" (mouseenter)="hovered = true"
+            (mouseleave)="hovered = false">
+                <div (click)="switchEffect()" class="wrapper">
+                    <input type="checkbox">
+                    <label><i class='icon-off'></i></label>
+                </div>
+                <img *ngIf="!hovered" class="upper-photo" [src]="staticImage" alt="">
+                <img *ngIf="hovered" class="gif" [src]="animatedGif" alt="">
+                <img class="photo" src="assets/img/anna_color.jpg" alt="">
+                <div #stripes class="bg-stripes"></div>
+            </div>
+        } @else {
+            <div (mouseenter)="showStripes(stripes)" (mousemove)="onMouseMove($event)"
+            (mouseleave)="hideMask()">
+                <div (click)="switchEffect()" class="wrapper">
+                    <input type="checkbox">
+                    <label><i class='icon-off'></i></label>
+                </div>
+                <img class="upper-photo" src="assets/img/anna_color.jpg" [ngStyle]="{ 'mask-image': mask, '-webkit-mask-image': mask }" alt="">
+                <img class="photo" src="assets/img/anna_drawn.png" alt="">
+                <div #stripes class="bg-stripes"></div>
+            </div>    
+        }
         <div class="about-me-cont">
             <span class="about-me-description">{{ "who" | translate }}</span>
             <div class="about-me">

@@ -2,12 +2,12 @@ import { Component, inject, OnInit } from '@angular/core';
 import { TranslationService } from '../../translation.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { ProjectdataService } from '../../projectdata.service';
-import { NgStyle } from '@angular/common';
+import { NgIf, NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [TranslateModule, NgStyle],
+  imports: [TranslateModule, NgStyle, NgIf],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss'
 })
@@ -34,6 +34,8 @@ export class AboutMeComponent implements OnInit {
 
   mask = 'none';
 
+  animated = true;
+
   onMouseMove(event: MouseEvent) {
     const rect = (event.target as HTMLElement).getBoundingClientRect();
     const x = event.clientX - rect.left;
@@ -45,6 +47,18 @@ export class AboutMeComponent implements OnInit {
 
   hideMask() {
     this.mask = 'none';
+  }
+
+  hovered = false;
+  staticImage = 'assets/img/anna_color.jpg';
+  animatedGif = 'assets/img/anna_smile.gif';
+
+  switchEffect() {
+    if (this.animated == true) {
+      this.animated = false;
+    } else {
+      this.animated = true;
+    }
   }
 
 }
