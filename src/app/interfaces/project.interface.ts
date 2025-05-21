@@ -7,6 +7,7 @@ export interface Project {
     skills: { icon: string, name: string, separator?: string}[],
     stacklevel: string,
     githubSrc: string,
+    githubSrcBackend: string,
     liveTestSrc: string,
     img: string,
 }

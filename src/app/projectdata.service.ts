@@ -29,26 +29,37 @@ export class ProjectdataService {
       skills: [
         {
           icon: 'assets/icons/project_skills/angular.svg',
-          name: 'Django Restframework',
+          name: 'Angular',
           separator: '|'
         },
         {
           icon: 'assets/icons/project_skills/typescript.svg',
+          name: 'TypeScript',
+          separator: '|'
+        },
+        {
+          icon: 'assets/icons/project_skills_backend/django.svg',
+          name: 'Django',
+          separator: '|'
+        },
+        {
+          icon: 'assets/icons/project_skills_backend/python.svg',
           name: 'Python', 
           separator: '|'
         },
         {
-          icon: 'assets/icons/project_skills/css.svg',
+          icon: 'assets/icons/project_skills_backend/sql.svg',
           name: 'SQL',
           separator: '|'
         },
         {
-          icon: 'assets/icons/project_skills/html.svg',
+          icon: 'assets/icons/project_skills_backend/docker.svg',
           name: 'Docker'
         }
       ],
       stacklevel: 'Fullstack',
       githubSrc: 'https://github.com/Anna-Fritz/videoflix',
+      githubSrcBackend: 'https://github.com/Anna-Fritz/videoflix_backend',
       liveTestSrc: 'https://annafritz.de/videoflix',
       img: 'assets/img/videoflix-proto.png',
     },
@@ -61,27 +72,28 @@ export class ProjectdataService {
     descriptionDE: "Beschreibung folgt",
     skills: [
       {
-        icon: 'assets/icons/project_skills/angular.svg',
-        name: 'Django Restframework',
+        icon: 'assets/icons/project_skills_backend/django.svg',
+        name: 'Django',
         separator: '|'
       },
       {
-        icon: 'assets/icons/project_skills/typescript.svg',
+        icon: 'assets/icons/project_skills_backend/python.svg',
         name: 'Python', 
         separator: '|'
       },
       {
-        icon: 'assets/icons/project_skills/css.svg',
+        icon: 'assets/icons/project_skills_backend/sql.svg',
         name: 'SQL',
         separator: '|'
       },
       {
-        icon: 'assets/icons/project_skills/html.svg',
+        icon: 'assets/icons/project_skills_backend/docker.svg',
         name: 'Docker'
       }
     ],
     stacklevel: 'Backend',
     githubSrc: 'https://github.com/Anna-Fritz/coder-backend',
+    githubSrcBackend: '',
     liveTestSrc: 'https://annafritz.de/coderr',
     img: 'assets/img/coderr.gif',
   },
@@ -103,8 +115,8 @@ export class ProjectdataService {
         separator: '|'
       },
       {
-        icon: 'assets/icons/project_skills/css.svg',
-        name: 'CSS',
+        icon: 'assets/icons/project_skills/sass.svg',
+        name: 'SCSS',
         separator: '|'
       },
       {
@@ -114,6 +126,7 @@ export class ProjectdataService {
     ],
     stacklevel: 'Frontend',
     githubSrc: 'https://github.com/Anna-Fritz/portfolio',
+    githubSrcBackend: '',
     liveTestSrc: 'https://annafritz.de',
     img: 'assets/img/Portfolio2.gif',
   },
@@ -141,6 +154,7 @@ export class ProjectdataService {
     ],
     stacklevel: 'Frontend',
     githubSrc: 'https://github.com/Anna-Fritz/El_pollo_loco',
+    githubSrcBackend: '',
     liveTestSrc: 'https://annafritz.de/el_pollo_loco',
     img: 'assets/img/el_pollo_loco.gif',
   },
@@ -162,13 +176,13 @@ export class ProjectdataService {
         separator: '|'
       },
       {
-        icon: 'assets/icons/project_skills/html.svg',
-        name: 'HTML',
+        icon: 'assets/icons/project_skills_backend/python.svg',
+        name: 'Python',
         separator: '|'
       },
       {
-        icon: 'assets/icons/project_skills/firebase.svg',
-        name: 'Firebase',
+        icon: 'assets/icons/project_skills_backend/django.svg',
+        name: 'Django',
         separator: '|'
       },
       {
@@ -178,6 +192,7 @@ export class ProjectdataService {
     ],
     stacklevel: 'Fullstack',
     githubSrc: 'https://github.com/Anna-Fritz/JOIN_Kanban_board',
+    githubSrcBackend: 'https://github.com/Anna-Fritz/join_backend',
     liveTestSrc: 'https://annafritz.de/join',
     img: 'assets/img/join.gif',
   },
@@ -210,8 +225,9 @@ export class ProjectdataService {
     ],
     stacklevel: 'Frontend',
     githubSrc: 'https://github.com/Anna-Fritz/pokedex',
+    githubSrcBackend: '',
     liveTestSrc: 'https://annafritz.de/pokedex',
-    img: 'assets/img/pokedex.gif',
+    img: 'assets/img/pokedex.png',
   }
 ];
 
