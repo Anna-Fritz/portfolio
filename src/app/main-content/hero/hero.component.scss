@@ -25,6 +25,7 @@ section {
             font-size: 128px;
             font-weight: 700;
             margin-bottom: 32px;
+            margin-top: 10px;
             text-align: center;
         }
         .headline-btns {
@@ -135,7 +136,7 @@ section {
     padding: 17px;
     background-color: #FFFFFF1F;
     transform: rotate(-3deg);
-    backdrop-filter: blur(3.5px);
+    backdrop-filter: blur(3.5px) !important;
     @include dFlex();
     overflow: hidden;
     .moving-text {

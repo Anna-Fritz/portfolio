@@ -24,8 +24,8 @@ export class ProjectdataService {
       start: 0,
       id: 1,
       name: "Videoflix",
-      descriptionEN: "Description follows",
-      descriptionDE: "Beschreibung folgt",
+      descriptionEN: "Videoflix is a streaming platform with functions such as categories, video preview and video player",
+      descriptionDE: "Videoflix ist eine Streamingplattform mit Funktionen wie Kategorien, Videopreview und Videoplayer",
       skills: [
         {
           icon: 'assets/icons/project_skills/angular.svg',
@@ -48,8 +48,8 @@ export class ProjectdataService {
           separator: '|'
         },
         {
-          icon: 'assets/icons/project_skills_backend/sql.svg',
-          name: 'SQL',
+          icon: 'assets/icons/project_skills_backend/postgresql.svg',
+          name: 'PostgreSQL',
           separator: '|'
         },
         {
@@ -68,8 +68,8 @@ export class ProjectdataService {
     start: 0,
     id: 2,
     name: "Coderr",
-    descriptionEN: "Description follows",
-    descriptionDE: "Beschreibung folgt",
+    descriptionEN: "A platform for freelance developers to offer services and manage their availability. Clients can book offers and leave reviews – guest access available for both roles.",
+    descriptionDE: "Eine Plattform für Freelancer-Entwickler:innen, auf der sie nach Registrierung Dienstleistungen anbieten und deren Status verwalten können. Kund:innen können diese Angebote buchen und Bewertungen abgeben – auch per Gastzugang testbar.",
     skills: [
       {
         icon: 'assets/icons/project_skills_backend/django.svg',
@@ -227,7 +227,7 @@ export class ProjectdataService {
     githubSrc: 'https://github.com/Anna-Fritz/pokedex',
     githubSrcBackend: '',
     liveTestSrc: 'https://annafritz.de/pokedex',
-    img: 'assets/img/pokedex.png',
+    img: 'assets/img/pokedex.gif',
   }
 ];
 
