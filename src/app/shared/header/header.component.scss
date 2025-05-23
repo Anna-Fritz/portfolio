@@ -20,9 +20,6 @@ header {
                 font-size: 20px;
                 text-decoration: none;
                 cursor: pointer;
-                &:hover .hover-dot {
-                    visibility: visible;
-                }
                 &:hover {
                     color: $lightGreen;
                 }
@@ -135,7 +132,30 @@ header {
     width: 7px;
     background-color: $lightGreen;
     border-radius: 5px;
+    transition: opacity 0.3s ease;
 }
+
+  .falling-dot {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 5px;
+    background-color: $lightGreen;
+    animation: fall 4s ease-in forwards;
+    pointer-events: none;
+    z-index: 1000;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(1000px);
+      opacity: 0;
+    }
+  }
 
 .language-toggle {
     @include dFlex();

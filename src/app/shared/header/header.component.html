@@ -8,13 +8,13 @@
                     <span>EN</span>
                 </label>
             </div>
-            <a (click)="project.setNavbarBlack()" routerLink="" fragment="about-me">{{ 'about' | translate}}
+            <a (click)="project.setNavbarBlack()" (mouseenter)="onHover($event)" (mouseleave)="onLeave($event)" routerLink="" fragment="about-me">{{ 'about' | translate}}
                 <div class="hover-dot"></div>
             </a>
-            <a (click)="project.setNavbarBlack()" routerLink="" fragment="skills">{{ 'skills' | translate}}
+            <a (click)="project.setNavbarBlack()" (mouseenter)="onHover($event)" (mouseleave)="onLeave($event)" routerLink="" fragment="skills">{{ 'skills' | translate}}
                 <div class="hover-dot"></div>
             </a>
-            <a (click)="project.setNavbarBlack()" routerLink="" fragment="projects">{{ 'projects' | translate}}
+            <a (click)="project.setNavbarBlack()" (mouseenter)="onHover($event)" (mouseleave)="onLeave($event)" routerLink="" fragment="projects">{{ 'projects' | translate}}
                 <div class="hover-dot"></div>
             </a>
         </nav>
