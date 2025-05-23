@@ -2,6 +2,7 @@ import { AfterViewInit, Component, ElementRef, inject, ViewChild } from '@angula
 import { TranslationService } from '../../services/translation.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { ProjectdataService } from '../../services/projectdata.service';
+import { AnimationService } from '../../services/animation.service';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -15,6 +16,7 @@ export class FooterComponent implements AfterViewInit {
 
   project = inject(ProjectdataService);
   translate = inject(TranslationService);
+  animation = inject(AnimationService);
   footerHeight: number = 0;
   screenwidth = window.screen.width;
 

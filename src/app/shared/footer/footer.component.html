@@ -16,19 +16,19 @@
         <span>© Anna Fritz 2025</span>
     </div>
     <div class="right-section">
-        <a href="https://github.com/Anna-Fritz" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/Anna-Fritz" target="_blank" rel="noopener noreferrer" (mouseenter)="animation.onHover($event)" (mouseleave)="animation.onLeaveToSide($event)">
             <span>Github</span>
             <div class="hover-dot"></div>
         </a>
-        <a href="https://www.linkedin.com/in/anna-fritz-718293296/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/anna-fritz-718293296/" target="_blank" rel="noopener noreferrer" (mouseenter)="animation.onHover($event)" (mouseleave)="animation.onLeaveToSide($event)">
             <span>LinkedIn</span>
             <div class="hover-dot"></div>
         </a>
-        <a routerLink="" fragment="contact">
+        <a routerLink="" fragment="contact" (mouseenter)="animation.onHover($event)" (mouseleave)="animation.onLeaveToSide($event)">
             <span>Email</span>
             <div class="hover-dot"></div>
         </a>
-        <a routerLink="imprint">
+        <a routerLink="imprint" (mouseenter)="animation.onHover($event)" (mouseleave)="animation.onLeaveToSide($event)">
             <span>{{ "imprint" | translate }}</span>
             <div class="hover-dot"></div>
         </a>

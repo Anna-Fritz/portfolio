@@ -2,13 +2,14 @@ import { Component, inject, HostListener, OnInit } from '@angular/core';
 import { HeaderComponent } from '../../shared/header/header.component';
 import { TranslationService } from '../../services/translation.service';
 import { TranslateModule } from '@ngx-translate/core';
+import { AnimationService } from '../../services/animation.service';
 import { ProjectdataService } from '../../services/projectdata.service';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [HeaderComponent, TranslateModule, RouterLink],
+  imports: [TranslateModule, RouterLink],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'
 })
@@ -16,6 +17,7 @@ export class HeroComponent implements OnInit {
 
   projectdata = inject(ProjectdataService)
   translate = inject(TranslationService);
+  animation = inject(AnimationService);
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
