@@ -310,3 +310,7 @@ section {
     position: absolute;
     cursor: pointer;
   }
+
+  body.flashlight-cursor {
+    cursor: url('/assets/icons/star.png') 10 10, auto;
+  }

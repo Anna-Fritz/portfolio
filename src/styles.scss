@@ -40,9 +40,28 @@ body {
     scrollbar-color: $bgColor;
     scrollbar-width: thin;
     scrollbar-track-color: $lightGreen;
-    scrollbar-arrow-color: $lightGreen;    
+    scrollbar-arrow-color: $lightGreen;
 }
 
+body.flashlight-cursor {
+  cursor: url('/assets/icons/star.png') 10 10, auto;
+}
+
+body.glow::after {
+  content: '';
+  position: fixed;
+  pointer-events: none;
+  top: -27px;
+  left: -27px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+  transform: translate(calc(var(--mouse-x) - 30px), calc(var(--mouse-y) - 30px));
+  transition: background-color 0.5s ease;
+  mix-blend-mode: screen;
+  z-index: 9999;
+}
 
 @keyframes moveBtnText {
     0% {

@@ -3,7 +3,7 @@
         @if (animated) {
             <div (mouseenter)="showStripes(stripes)" (mouseenter)="hovered = true"
             (mouseleave)="hovered = false">
-                <div (click)="switchEffect()" class="wrapper">
+                <div (click)="switchEffect(); toggleFlashlightCursor()" class="wrapper">
                     <input type="checkbox">
                     <label><i class='icon-off'></i></label>
                 </div>
@@ -15,7 +15,7 @@
         } @else {
             <div (mouseenter)="showStripes(stripes)" (mousemove)="onMouseMove($event)"
             (mouseleave)="hideMask()">
-                <div (click)="switchEffect()" class="wrapper">
+                <div (click)="switchEffect(); toggleFlashlightCursor()" class="wrapper">
                     <input type="checkbox">
                     <label><i class='icon-off'></i></label>
                 </div>

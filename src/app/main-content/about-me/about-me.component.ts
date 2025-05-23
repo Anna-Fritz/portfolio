@@ -16,6 +16,14 @@ export class AboutMeComponent implements OnInit {
   projectdata = inject(ProjectdataService);
   translate = inject(TranslationService);
 
+  mask = 'none';
+  animated = true;
+  isFlashlight = false;
+  glowActive = false;
+  hovered = false;
+  staticImage = 'assets/img/anna_color.jpg';
+  animatedGif = 'assets/img/anna_smile.gif';
+
   /**
    * moves & reveals stripes-Element from behind the image
    * @param stripes Div element filled with stripes
@@ -30,11 +38,12 @@ export class AboutMeComponent implements OnInit {
    */
   ngOnInit() {
     this.projectdata.isColored = false;
+
+    document.addEventListener('mousemove', (e) => {
+      document.body.style.setProperty('--mouse-x', `${e.clientX}px`);
+      document.body.style.setProperty('--mouse-y', `${e.clientY}px`);
+    });
   }
-
-  mask = 'none';
-
-  animated = true;
 
   onMouseMove(event: MouseEvent) {
     const rect = (event.target as HTMLElement).getBoundingClientRect();
@@ -49,9 +58,17 @@ export class AboutMeComponent implements OnInit {
     this.mask = 'none';
   }
 
-  hovered = false;
-  staticImage = 'assets/img/anna_color.jpg';
-  animatedGif = 'assets/img/anna_smile.gif';
+  toggleFlashlightCursor() {
+    this.isFlashlight = !this.isFlashlight;
+    this.glowActive = !this.glowActive;
+    if (this.isFlashlight) {
+      document.body.classList.add('flashlight-cursor');
+      document.body.classList.add('glow');
+    } else {
+      document.body.classList.remove('flashlight-cursor');
+      document.body.classList.remove('glow');
+    }
+  }
 
   switchEffect() {
     if (this.animated == true) {
