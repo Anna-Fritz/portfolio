@@ -1,0 +1,17 @@
+.flashlight-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(
+      circle var(--radius, 120px) at var(--x, 50%) var(--y, 50%),
+      transparent 0%,
+      rgba(0, 0, 0, var(--darkness, 0.95)) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 9999;
+  }
+  
+  .flashlight-overlay.active {
+    opacity: 1;
+  }
