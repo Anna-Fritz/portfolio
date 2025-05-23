@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, HostListener, inject } from '@angular/core';
-import { TranslationService } from '../../translation.service';
+import { TranslationService } from '../../services/translation.service';
 import { TranslateModule } from '@ngx-translate/core';
-import { ProjectdataService } from '../../projectdata.service';
+import { ProjectdataService } from '../../services/projectdata.service';
 
 @Component({
   selector: 'app-references',

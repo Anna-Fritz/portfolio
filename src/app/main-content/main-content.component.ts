@@ -5,8 +5,8 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ReferencesComponent } from './references/references.component';
 import { SkillsetComponent } from './skillset/skillset.component';
 import { HeroComponent } from './hero/hero.component';
-import { ProjectdataService } from '../projectdata.service';
-import { HeightService } from '../height.service';
+import { ProjectdataService } from '../services/projectdata.service';
+import { HeightService } from '../services/height.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({

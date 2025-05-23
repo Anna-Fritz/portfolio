@@ -1,13 +1,13 @@
 import { Component, inject, Renderer2} from '@angular/core';
 import { SingleProjectComponent } from './single-project/single-project.component';
-import { ProjectdataService } from '../../projectdata.service';
-import { TranslationService } from '../../translation.service';
+import { ProjectdataService } from '../../services/projectdata.service';
+import { TranslationService } from '../../services/translation.service';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [SingleProjectComponent, TranslateModule],
+  imports: [TranslateModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })

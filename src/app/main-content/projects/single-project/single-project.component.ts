@@ -1,6 +1,6 @@
 import { Component, inject, Renderer2 } from '@angular/core';
-import { ProjectdataService } from '../../../projectdata.service';
-import { TranslationService } from '../../../translation.service';
+import { ProjectdataService } from '../../../services/projectdata.service';
+import { TranslationService } from '../../../services/translation.service';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({

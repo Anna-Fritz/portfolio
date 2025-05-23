@@ -1,11 +1,11 @@
 import { Component, inject } from '@angular/core';
-import { TranslationService } from '../../translation.service';
+import { TranslationService } from '../../services/translation.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { RouterLink } from '@angular/router';
-import { ProjectdataService } from '../../projectdata.service';
+import { ProjectdataService } from '../../services/projectdata.service';
 
 @Component({
   selector: 'app-contact',

@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { TranslationService } from '../../translation.service';
+import { TranslationService } from '../../services/translation.service';
 import { TranslateModule } from '@ngx-translate/core';
-import { ProjectdataService } from '../../projectdata.service';
+import { ProjectdataService } from '../../services/projectdata.service';
 import { NgIf, NgStyle } from '@angular/common';
 
 @Component({

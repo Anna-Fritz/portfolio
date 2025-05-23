@@ -1,14 +1,14 @@
 import { AfterViewInit, Component, ElementRef, inject, OnInit, ViewChild } from '@angular/core';
-import { TranslationService } from '../translation.service';
+import { TranslationService } from '../services/translation.service';
 import { TranslateModule } from '@ngx-translate/core';
-import { ProjectdataService } from '../projectdata.service';
+import { ProjectdataService } from '../services/projectdata.service';
 import { HeaderComponent } from '../shared/header/header.component';
-import { HeightService } from '../height.service';
+import { HeightService } from '../services/height.service';
 
 @Component({
   selector: 'app-imprint',
   standalone: true,
-  imports: [TranslateModule, HeaderComponent],
+  imports: [TranslateModule],
   templateUrl: './imprint.component.html',
   styleUrl: './imprint.component.scss'
 })
