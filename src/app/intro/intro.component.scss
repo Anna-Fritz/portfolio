@@ -1,0 +1,36 @@
+@import "../../styles.scss";
+
+.intro-text {
+    position: fixed;
+    padding: 0 20%;
+    width: 100%;
+    box-sizing: border-box;
+    pointer-events: none;
+    font-family: Karla;
+    font-size: clamp(2rem, 4vw, 6rem);
+    color: pink;
+    white-space: pre;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+    z-index: 9999;
+    text-wrap: wrap;
+    text-align: center;
+  }
+
+.upper {
+    top: 25%;
+    @media (max-width: 860px) {
+        top: 10%;
+    }
+}
+
+.lower {
+    bottom: 20%;
+    @media (max-width: 860px) {
+        bottom: 10%;
+    }
+}
+  
+  .fade-out {
+    opacity: 0;
+}

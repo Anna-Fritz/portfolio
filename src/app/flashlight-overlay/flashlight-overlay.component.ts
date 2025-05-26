@@ -9,17 +9,33 @@ import { Component, Input, OnDestroy, OnInit, Renderer2  } from '@angular/core';
 })
 
 export class FlashlightOverlayComponent implements OnInit, OnDestroy {
-  @Input() radius = 120; // in px
-  @Input() darkness = 0.95; // 0 = transparent, 1 = voll schwarz
+  @Input() radius = 120; 
+  @Input() darkness = 0.95; 
   @Input() active = true;
 
   private mouseMoveHandler = this.updateFlashlightPosition.bind(this);
 
   constructor(private renderer: Renderer2) {}
+  flashlightShown = false;
 
   ngOnInit(): void {
-    if (this.active) {
-      document.addEventListener('mousemove', this.mouseMoveHandler);
+    const flashlightShown = localStorage.getItem('flashlightShown');
+    const overlay = document.querySelector('.flashlight-overlay') as HTMLElement;
+    if (!flashlightShown) {
+      if (this.active) {
+        document.addEventListener('mousemove', this.mouseMoveHandler);
+      }
+      setTimeout(() => {
+        if (overlay) {
+          overlay.classList.remove('active');
+          setTimeout(() => {
+            overlay.style.display = 'none';
+          }, 1000);
+        }
+      }, 17000);
+      localStorage.setItem('flashlightShown', 'true');
+    } else {
+      overlay.style.display = 'none';
     }
   }
 

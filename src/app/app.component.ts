@@ -7,11 +7,13 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { SingleProjectComponent } from './main-content/projects/single-project/single-project.component';
 import { ProjectdataService } from './services/projectdata.service';
 import { HeightService } from './services/height.service';
+import { FlashlightOverlayComponent } from './flashlight-overlay/flashlight-overlay.component';
+import { IntroComponent } from './intro/intro.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent, SingleProjectComponent],
+  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent, SingleProjectComponent, FlashlightOverlayComponent, IntroComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

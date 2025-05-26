@@ -8,10 +8,13 @@
       rgba(0, 0, 0, var(--darkness, 0.95)) 100%
     );
     opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 9999;
+    transition: opacity 1s ease-out;
+    z-index: 9998;
+    @media (max-width: 750px) {
+        background: rgba(0, 0, 0, 0.8);
+    }
   }
-  
+
   .flashlight-overlay.active {
     opacity: 1;
   }

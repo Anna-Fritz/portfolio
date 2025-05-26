@@ -32,3 +32,11 @@
         margin: 0 auto;
     }
 }
+
+.intro-text {
+    position: absolute;
+    inset: 0;
+    z-index: 99999;
+}
+
+
