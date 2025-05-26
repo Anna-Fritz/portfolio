@@ -32,11 +32,11 @@ export class ProjectdataService {
           name: 'Angular',
           separator: '|'
         },
-        {
-          icon: 'assets/icons/project_skills/typescript.svg',
-          name: 'TypeScript',
-          separator: '|'
-        },
+        // {
+        //   icon: 'assets/icons/project_skills/typescript.svg',
+        //   name: 'TypeScript',
+        //   separator: '|'
+        // },
         {
           icon: 'assets/icons/project_skills_backend/django.svg',
           name: 'Django',

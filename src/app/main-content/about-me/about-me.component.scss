@@ -144,7 +144,8 @@ section {
         }
         >p {
             color: white;
-            font-family: 'Karla'
+            font-family: 'Karla';
+            font-size: 18px;
         }
         .about-me-paragraph {
             @include dFlex($jc: space-between, $g: 12px);
@@ -152,6 +153,9 @@ section {
             font-family: 'Karla';
             &:hover {
                 color: white;
+            }
+            .icon-margin {
+                margin-right: 5px;
             }
         }
     }
@@ -212,6 +216,9 @@ section {
     top: 22px;
     left: 20px;
     z-index: 99;
+    &:hover {
+        transform: scale(1.1);
+    }
   }
   
   label {
@@ -220,9 +227,9 @@ section {
     height: 100%;
     border-radius: 50%;
     background: #b25244;
-    background: linear-gradient(#f7f2f6, #b2ac9e);
+    background: linear-gradient(#4c4a53, #38373e);
     position: relative;
-    color: #a5a39d;
+    color: #615F6A;
     font-size: 70px;
     text-align: center;
     line-height: 150px;
@@ -293,7 +300,7 @@ section {
     z-index: -1;
     margin: -35% 0 0 -35%;
     border-radius: 50%;
-    background: linear-gradient(#cbc7bc, #d2cbc3);
+    background: linear-gradient(#6f6d79, #4c4a53);
     box-shadow:
       0 -2px 5px rgba(255,255,255,0.05),
       0 2px 5px rgba(255,255,255,0.1);
