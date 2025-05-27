@@ -18,7 +18,7 @@ section {
         height: 80%;
         width: 50%;
     }
-    @media(max-width: 750px) {
+    @media(max-width: 930px) {
         padding: 20px;
         width: 80%;
         height: 90%;
@@ -130,10 +130,14 @@ section {
         .buttons {
             @include dFlex($jc: space-between, $g: 24px);
             padding-top: 16px;
+            @media(max-width: 1440px) {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
             @media(max-width: 400px) {
                 flex-direction: column;
                 align-self: center;
-                gap: 5px;
+                gap: 15px;
                 margin-top: 10px;
             }
             >a {
