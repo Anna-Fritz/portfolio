@@ -13,26 +13,21 @@ export class IntroComponent implements OnInit {
   secondPartText = 'für digitale Erlebnisse, die vom ersten Blick bis zum letzten Klick überzeugen. />';
   displayedText = '';
   displayedLowerText = '';
-  showIntro = false;
   fadeOut = false;
 
   ngOnInit() {
-    const introShown = localStorage.getItem('introShown');
-
-    if (!introShown) {
-      this.showIntro = true;
-      this.typeText(this.firstPartText, () => {
+    const overlay = document.querySelector('.intro-text') as HTMLElement;
+    this.typeText(this.firstPartText, () => {
         this.typeSecondText(this.secondPartText, () => {
           setTimeout(() => {
             this.fadeOut = true;
             setTimeout(() => {
-              this.showIntro = false;
+              overlay.style.display = 'none';
             }, 1000);
           }, 3000);
         });
-      });
-      localStorage.setItem('introShown', 'true');
-    }
+    });
+    localStorage.setItem('introShown', 'true');
   }
 
   typeText(text: string, callback: () => void) {

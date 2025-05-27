@@ -1,6 +1,8 @@
 <div id ="projectContainer">
-  <app-intro class="intro-text"></app-intro>
-  <app-flashlight-overlay [radius]="150" [darkness]="0.9" [active]="true"></app-flashlight-overlay>
+  @if (!introShown) {
+    <app-intro class="intro-text"></app-intro>
+    <app-flashlight-overlay [radius]="150" [darkness]="0.9" [active]="true"></app-flashlight-overlay>
+    }
   <app-header class="header"></app-header>
   <div class="main-content">
     <div>
